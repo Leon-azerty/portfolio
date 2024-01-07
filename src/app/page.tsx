@@ -1,10 +1,17 @@
-import { ModeToggle } from './ModeToggle';
+import Header from './header';
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <p>Hello world</p>
-      <ModeToggle />
+    <main>
+      <Header />
+      <div className="h-screen">
+        <p>Icon de sidebar</p>
+        <p>Le reste de votre contenu</p>
+      </div>
+      <div className="h-screen">
+        <p>Icon de sidebar</p>
+        <p>Le reste de votre contenu</p>
+      </div>
     </main>
   );
 }
