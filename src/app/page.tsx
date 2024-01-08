@@ -1,4 +1,5 @@
 import Banner from './banner';
+import Contact from './contact';
 import Experiences from './experiences';
 import Header from './header';
 import Internships from './internships';
@@ -16,6 +17,7 @@ export default function Home() {
       <Projects />
       <Internships />
       <Experiences />
+      <Contact />
     </main>
   );
 }
