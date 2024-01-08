@@ -5,7 +5,7 @@ import Ellipse from './ellipse';
 
 export default function Banner() {
   return (
-    <section>
+    <section id="about">
       <div className="min-w-screen p-4 flex justify-around items-center ">
         <Image
           className="left-element rounded-full"

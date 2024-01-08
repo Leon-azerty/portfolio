@@ -1,6 +1,7 @@
 import Banner from './banner';
 import Contact from './contact';
 import Experiences from './experiences';
+import Footer from './footer';
 import Header from './header';
 import Internships from './internships';
 import Line from './line';
@@ -18,6 +19,7 @@ export default function Home() {
       <Internships />
       <Experiences />
       <Contact />
+      <Footer />
     </main>
   );
 }

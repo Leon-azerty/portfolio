@@ -31,7 +31,7 @@ export default function Contact() {
   }
 
   return (
-    <section className="mt-20">
+    <section className="mt-20" id="contact">
       <p className="text-3xl">Contact Me</p>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
