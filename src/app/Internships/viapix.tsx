@@ -33,7 +33,7 @@ export default function Viapix() {
           <br />I could train a Deep Learning model to recognize the road on image with Pytorch, in addition to that I
           labelized image used for the training. It was a semantic segmentation so the training was really long, during
           this time I was also able to develop a map like Google map thanks to the Open Street Map tiles, this map was
-          used to display the road precisely (thanks to the DL model).{' '}
+          used to display the road precisely (thanks to the DL model).
         </CardContent>
       </Card>
     </section>

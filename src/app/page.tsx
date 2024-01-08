@@ -1,4 +1,5 @@
 import Banner from './banner';
+import Experiences from './experiences';
 import Header from './header';
 import Internships from './internships';
 import Line from './line';
@@ -14,6 +15,7 @@ export default function Home() {
       <Line />
       <Projects />
       <Internships />
+      <Experiences />
     </main>
   );
 }
