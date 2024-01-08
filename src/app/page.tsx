@@ -1,6 +1,7 @@
 import Banner from './banner';
 import Header from './header';
 import Line from './line';
+import Projects from './projects';
 import Stack from './stack';
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
       <Banner />
       <Stack />
       <Line />
+      <Projects />
     </main>
   );
 }
