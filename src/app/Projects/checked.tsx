@@ -1,7 +1,6 @@
 import Image from 'next/image';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import { ExternalLinkIcon } from '@radix-ui/react-icons';
-import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { badgeVariants } from '@/components/ui/badge';
 
@@ -10,7 +9,9 @@ export default function Checked() {
     <section className="mt-4">
       <div className="flex items-center">
         <p className="text-2xl">Checked, Todo app</p>
-        <ExternalLinkIcon className="h-4 w-4 ml-2" />
+        <a href="https://checkd.online/login" target="_blank">
+          <ExternalLinkIcon className="h-4 w-4 ml-2" />
+        </a>
       </div>
       <Image alt="screenshot of Checked" src="/checked.png" width={90} height={90} layout="responsive" />
 

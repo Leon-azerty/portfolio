@@ -1,6 +1,5 @@
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardTitle } from '@/components/ui/card';
 import Image from 'next/image';
-import { TfiCup } from 'react-icons/tfi';
 
 export default function Berlin() {
   return (

@@ -1,7 +1,5 @@
 import Image from 'next/image';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { ExternalLinkIcon } from '@radix-ui/react-icons';
-import { Badge } from '@/components/ui/badge';
+import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
 import { badgeVariants } from '@/components/ui/badge';
 
