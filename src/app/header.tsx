@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 
 export default function Header() {
   return (
-    <header className="min-w-screen p-4 flex justify-between items-center ">
+    <header className="min-w-screen pt-4 flex justify-between items-center ">
       <div className="left-element">
         <Button variant="outline">
           <HamburgerMenuIcon className="h-4 w-4" />

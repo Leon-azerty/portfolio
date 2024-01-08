@@ -10,7 +10,7 @@ import Stack from './stack';
 
 export default function Home() {
   return (
-    <main>
+    <main className="px-4">
       <Header />
       <Banner />
       <Stack />
