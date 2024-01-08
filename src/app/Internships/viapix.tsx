@@ -10,7 +10,7 @@ export default function Viapix() {
     <section className="mt-4">
       <div className="flex items-center">
         <Image src="/logo_viapix.png" alt="logo of Viapix" width={90} height={60} />
-        <p className="text-2xl">Viapix</p>
+        <p className="text-2xl ml-2">Viapix</p>
       </div>
 
       <div className="flex overflow-x-auto whitespace-no-wrap mt-4" /* animate-infinite-left-to-right */>

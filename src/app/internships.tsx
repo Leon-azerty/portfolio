@@ -1,3 +1,4 @@
+import GnConsulting from './Internships/gnConsulting';
 import Piwio from './Internships/piwio';
 import Viapix from './Internships/viapix';
 
@@ -8,6 +9,8 @@ export default function Internships() {
       <Piwio />
       <div className="my-10">&nbsp;</div>
       <Viapix />
+      <div className="my-10">&nbsp;</div>
+      <GnConsulting />
     </section>
   );
 }

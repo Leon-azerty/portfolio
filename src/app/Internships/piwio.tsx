@@ -10,7 +10,7 @@ export default function Piwio() {
     <section className="mt-4">
       <div className="flex items-center">
         <Image src="/logo_piwio.png" alt="logo of Piwio" width={90} height={60} />
-        <p className="text-2xl">Piwio</p>
+        <p className="text-2xl ml-2">Piwio</p>
       </div>
 
       <div className="flex overflow-x-auto whitespace-no-wrap mt-4" /* animate-infinite-left-to-right */>
