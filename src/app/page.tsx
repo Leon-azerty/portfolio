@@ -1,5 +1,6 @@
 import Banner from './banner';
 import Header from './header';
+import Line from './line';
 import Stack from './stack';
 
 export default function Home() {
@@ -8,14 +9,7 @@ export default function Home() {
       <Header />
       <Banner />
       <Stack />
-      <div className="h-screen">
-        <p>Icon de sidebar</p>
-        <p>Le reste de votre contenu</p>
-      </div>
-      <div className="h-screen">
-        <p>Icon de sidebar</p>
-        <p>Le reste de votre contenu</p>
-      </div>
+      <Line />
     </main>
   );
 }
