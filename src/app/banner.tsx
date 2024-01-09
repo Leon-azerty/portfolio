@@ -18,8 +18,12 @@ export default function Banner() {
           <h1>Maxime NOEL</h1>
           <h2>Web Developper </h2>
           <div className="flex items-center">
-            <GitHubLogoIcon className="h-4 w-4 mr-2" />
-            <LinkedInLogoIcon className="h-4 w-4 m-2" />
+            <a href="https://github.com/leon3108" target="_blank">
+              <GitHubLogoIcon className="h-4 w-4 mr-2" />
+            </a>
+            <a href="https://www.linkedin.com/in/maxime-noel-lyon/" target="_blank">
+              <LinkedInLogoIcon className="h-4 w-4 m-2" />
+            </a>
             <Button variant="link">mon adresse mail</Button>
           </div>
         </div>

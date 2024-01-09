@@ -13,7 +13,7 @@ export default function Footer() {
         <Link href="#experiences">Experiences</Link>
         <Link href="#contact">Contact</Link>
       </div>
-      <p className="text-center text-[#B4B4B4]">
+      <p className="text-center text-[#B4B4B4] pt-3">
         Made By Me with NextJs and Tailwind
         <br />
         See the repository on{' '}
