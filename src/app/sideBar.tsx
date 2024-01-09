@@ -14,7 +14,7 @@ function SideBarElement({ href, text }: { href: string; text: string }) {
       onClick={() => {
         setIsOpen(false);
       }}
-      className="max-w-min mt-2"
+      className="max-w-min mt-2 hover:underline"
     >
       {text}
     </Link>
@@ -24,7 +24,7 @@ function SideBarElement({ href, text }: { href: string; text: string }) {
 export default function SideBar() {
   let { isOpen, setIsOpen } = useContext(SidebarContext);
   return (
-    <div className="fixed top-0 left-0 w-52 h-screen shadow-2xl bg-white dark:bg-black pt-6 p-4 z-50">
+    <div className="fixed top-0 left-0 w-52 h-full shadow-2xl bg-white dark:bg-black p-4 pt-6  z-50">
       <div className="flex items-center justify-between mb-10">
         <p className="text-lg">Maxime NOËL</p>
         <Button
