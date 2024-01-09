@@ -1,25 +1,37 @@
+'use client';
+
 import Banner from './banner';
 import Contact from './contact';
+import { SidebarContext } from './contexts/sideBarContext';
 import Experiences from './experiences';
 import Footer from './footer';
 import Header from './header';
 import Internships from './internships';
 import Line from './line';
 import Projects from './projects';
+import SideBar from './sideBar';
 import Stack from './stack';
+import { useState } from 'react';
 
 export default function Home() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <main className="px-4">
-      <Header />
-      <Banner />
-      <Stack />
-      <Line />
-      <Projects />
-      <Internships />
-      <Experiences />
-      <Contact />
-      <Footer />
-    </main>
+    <div className="relative">
+      <SidebarContext.Provider value={{ isOpen, setIsOpen }}>
+        <main className="px-4">
+          <Header />
+          <Banner />
+          <Stack />
+          <Line />
+          <Projects />
+          <Internships />
+          <Experiences />
+          <Contact />
+          <Footer />
+        </main>
+        {isOpen && <SideBar />}
+      </SidebarContext.Provider>
+    </div>
   );
 }

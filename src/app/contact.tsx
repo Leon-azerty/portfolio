@@ -39,7 +39,6 @@ export default function Contact() {
       });
 
       if (response.ok) {
-        console.log('Requête envoyée avec succès !');
         // Traitez la réponse ici si nécessaire
       } else {
         console.error("Erreur lors de l'envoi de la requête :", response.statusText);
