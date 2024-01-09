@@ -8,8 +8,8 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '
 import { Input } from '@/components/ui/input';
 
 const formSchema = z.object({
-  username: z.string().min(2).max(50),
-  sujet: z.string().min(2).max(50),
+  name: z.string().min(2).max(50),
+  subject: z.string().min(2).max(50),
   email: z.string().min(2).max(50),
   message: z.string().min(2).max(50),
 });
@@ -19,15 +19,39 @@ export default function Contact() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      username: '',
+      name: '',
+      subject: '',
+      email: '',
+      message: '',
     },
   });
 
   // 2. Define a submit handler.
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  async function onSubmit(values: z.infer<typeof formSchema>) {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
     console.log(values);
+
+    try {
+      const response = await fetch('/api/send', {
+        method: 'POST',
+        body: JSON.stringify({
+          name: values.name,
+          email: values.email,
+          subject: values.subject,
+          message: values.message,
+        }),
+      });
+
+      if (response.ok) {
+        console.log('Requête envoyée avec succès !');
+        // Traitez la réponse ici si nécessaire
+      } else {
+        console.error("Erreur lors de l'envoi de la requête :", response.statusText);
+      }
+    } catch (error) {
+      console.error("Erreur lors de l'envoi de la requête :", error);
+    }
   }
 
   return (
@@ -37,7 +61,7 @@ export default function Contact() {
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
           <FormField
             control={form.control}
-            name="username"
+            name="name"
             render={({ field }) => (
               <FormItem>
                 <FormLabel>Name</FormLabel>
@@ -51,7 +75,7 @@ export default function Contact() {
           />
           <FormField
             control={form.control}
-            name="sujet"
+            name="subject"
             render={({ field }) => (
               <FormItem>
                 <FormLabel>Sujet</FormLabel>
