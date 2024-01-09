@@ -17,7 +17,7 @@ export default function Footer() {
         Made By Me with NextJs and Tailwind
         <br />
         See the repository on{' '}
-        <a className="underline" href="" target="_blank">
+        <a className="underline" href="https://github.com/leon3108/portfolio" target="_blank">
           Github
         </a>
         <br />

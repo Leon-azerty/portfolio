@@ -14,17 +14,17 @@ export default function Banner() {
           height={210}
           alt="Beautiful picture of myself"
         />
-        <div className="right-element">
+        <div className="right-element ml-2">
           <h1>Maxime NOEL</h1>
           <h2>Web Developper </h2>
-          <div className="flex items-center">
+          <div className="flex items-center flex-wrap">
             <a href="https://github.com/leon3108" target="_blank">
-              <GitHubLogoIcon className="h-4 w-4 mr-2" />
+              <GitHubLogoIcon className="h-6 w-6 m-2 ml-0" />
             </a>
             <a href="https://www.linkedin.com/in/maxime-noel-lyon/" target="_blank">
-              <LinkedInLogoIcon className="h-4 w-4 m-2" />
+              <LinkedInLogoIcon className="h-6 w-6 m-2 ml-0" />
             </a>
-            <Button variant="link">mon adresse mail</Button>
+            <p className="pl-0">maxime.noel@epitech.eu</p>
           </div>
         </div>
       </div>
