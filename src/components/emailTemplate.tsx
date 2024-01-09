@@ -22,16 +22,14 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({ name, su
               <strong>{name}</strong> would like to contact you about something!
             </Heading>
 
-            <Text className="text-black text-[14px] leading-[24px]">Subject : {subject}</Text>
+            <Text className="text-black text-[14px] leading-[24px]">{email}</Text>
 
-            <Text className="text-black text-[14px] leading-[24px]">Here is the message:</Text>
+            <Text className="text-black text-[14px] leading-[24px]">{subject}</Text>
 
             <Text className="text-black text-[14px] leading-[24px]">{message}</Text>
 
             <Hr className="border border-solid border-[#eaeaea] my-[26px] mx-0 w-full" />
-            <Text className="text-[#666666] text-[12px] leading-[24px]">
-              This message was sent by : {name}. You can contact him through his email : {email}
-            </Text>
+            <Text className="text-[#666666] text-[12px] leading-[24px]">This message was sent by : {name}.</Text>
           </Container>
         </Body>
       </Tailwind>
