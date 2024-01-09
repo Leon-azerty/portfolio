@@ -11,7 +11,7 @@ const formSchema = z.object({
   name: z.string().min(2).max(50),
   subject: z.string().min(2).max(50),
   email: z.string().min(2).max(50),
-  message: z.string().min(2).max(50),
+  message: z.string().min(20).max(500),
 });
 
 export default function Contact() {
@@ -26,12 +26,7 @@ export default function Contact() {
     },
   });
 
-  // 2. Define a submit handler.
   async function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
-    console.log(values);
-
     try {
       const response = await fetch('/api/send', {
         method: 'POST',

@@ -9,7 +9,7 @@ interface EmailTemplateProps {
 }
 
 export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({ name, subject, email, message }) => {
-  const previewText = `${name} has a message`;
+  const previewText = `${subject}`;
 
   return (
     <Html>
@@ -21,6 +21,8 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({ name, su
             <Heading className="text-black text-[24px] font-normal text-center p-0 my-[30px] mx-0">
               <strong>{name}</strong> would like to contact you about something!
             </Heading>
+
+            <Text className="text-black text-[14px] leading-[24px]">Subject : {subject}</Text>
 
             <Text className="text-black text-[14px] leading-[24px]">Here is the message:</Text>
 

@@ -21,9 +21,9 @@ export async function POST(req: NextRequest) {
     const data = await resend.emails.send({
       from: 'Acme <onboarding@resend.dev>',
       to: ['maxime.noel@epitech.eu'],
-      subject: 'Hello world',
+      subject: 'Nouveau message de ' + name,
       react: EmailTemplate({ name, email, message, subject}),
-      text: 'Hello world text',
+      text: 'useless text ??',
     });
 
     return NextResponse.json({ data, error: null }, { status: 200 });
