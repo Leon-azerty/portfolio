@@ -1,15 +1,22 @@
+import Link from 'next/link';
 import { ModeToggle } from './ModeToggle';
 import SideBarButton from './sideBarButton';
 
 export default function Header() {
   return (
-    <header className="min-w-screen pt-4 flex justify-between items-center ">
-      <div className="left-element">
+    <div className="">
+      <header className="min-w-screen pt-4 flex justify-between items-center lg:hidden">
         <SideBarButton />
-      </div>
-      <div className="right-element">
         <ModeToggle />
-      </div>
-    </header>
+      </header>
+      <header className="hidden lg:flex justify-end items-center space-x-4 border-b-2 border-gray-400 p-4">
+        <Link href="#about">About</Link>
+        <Link href="#projects">Projects</Link>
+        <Link href="#internships">Internships</Link>
+        <Link href="#experiences">Experiences</Link>
+        <Link href="#contact">Contact</Link>
+        <ModeToggle />
+      </header>
+    </div>
   );
 }
