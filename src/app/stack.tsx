@@ -1,10 +1,10 @@
-import Image from 'next/image';
+import Image from "next/image";
 
 function Element({ href, alt, src }: { href: string; alt: string; src: string }) {
   return (
     <a href={href} target="_blank">
       <div className="relative w-[90px] h-[90px] sm:w-32 sm:h-32 md:w-40 md:h-40 md:mx-4 lg:w-48 lg:h-48 lg:mx-6">
-        <Image alt={alt} src={src} layout="fill" />
+        <Image alt={alt} src={src} fill sizes="100vw" />
       </div>
     </a>
   );

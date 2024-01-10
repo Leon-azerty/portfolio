@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/image";
 import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
 import { badgeVariants } from '@/components/ui/badge';
@@ -7,20 +7,44 @@ export default function Viapix() {
   return (
     <section className="mt-4">
       <div className="flex items-center">
-        <Image src="/logo_viapix.png" alt="logo of Viapix" width={90} height={60} />
+        <Image
+          src="/logo_viapix.png"
+          alt="logo of Viapix"
+          width={90}
+          height={60}
+          style={{
+            maxWidth: "100%",
+            height: "auto"
+          }} />
         <p className="text-2xl ml-2">Viapix</p>
       </div>
 
       <div className="flex overflow-x-auto whitespace-no-wrap mt-4" /* animate-infinite-left-to-right */>
         {/* Badge pytorch */}
         <Link href="" className={badgeVariants({ variant: 'pytorch' })}>
-          <Image src="/logo_pytorch.png" width={20} height={20} alt="logo of Pytorch" />
+          <Image
+            src="/logo_pytorch.png"
+            width={20}
+            height={20}
+            alt="logo of Pytorch"
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className="text-lg ml-2">Pytorch</p>
         </Link>
 
         {/* Badge delphi */}
         <Link href="" className={badgeVariants({ variant: 'delphi' })}>
-          <Image src="/logo_delphi.png" width={20} height={20} alt="logo of Delphi" />
+          <Image
+            src="/logo_delphi.png"
+            width={20}
+            height={20}
+            alt="logo of Delphi"
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className="text-lg ml-2">Delphi</p>
         </Link>
       </div>

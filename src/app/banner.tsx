@@ -1,5 +1,5 @@
 import { GitHubLogoIcon, LinkedInLogoIcon } from '@radix-ui/react-icons';
-import Image from 'next/image';
+import Image from "next/image";
 import Ellipse from './ellipse';
 
 export default function Banner() {
@@ -12,9 +12,12 @@ export default function Banner() {
             src="/M.N.2.png"
             width={100}
             height={100}
-            layout="responsive"
             alt="Beautiful picture of myself"
-          />
+            sizes="100vw"
+            style={{
+              width: "100%",
+              height: "auto"
+            }} />
         </div>
         <div className="right-element ml-2">
           <p className="md:text-xl xl:text-3xl">Maxime NOEL</p>

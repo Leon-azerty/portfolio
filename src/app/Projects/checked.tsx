@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/image";
 import { Card, CardContent } from '@/components/ui/card';
 import { ExternalLinkIcon } from '@radix-ui/react-icons';
 import Link from 'next/link';
@@ -19,33 +19,68 @@ export default function Checked() {
           src="/checked.png"
           width={100}
           height={100}
-          layout="responsive"
           className="max-w-xl "
-        />
+          sizes="100vw"
+          style={{
+            width: "100%",
+            height: "auto"
+          }} />
       </div>
 
       <div className="flex overflow-x-auto whitespace-no-wrap mt-4" /* animate-infinite-left-to-right */>
         {/* Badge React */}
         <Link href="" className={badgeVariants({ variant: 'react' })}>
-          <Image src="/logo_react.png" width={20} height={20} alt="logo of React" />
+          <Image
+            src="/logo_react.png"
+            width={20}
+            height={20}
+            alt="logo of React"
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className="text-lg ml-2">React</p>
         </Link>
 
         {/* Badge Nextjs */}
         <Link href="" className={badgeVariants({ variant: 'nextjs' })}>
-          <Image src="/logo_nextjs.png" width={20} height={20} alt="logo of NextJS" />
+          <Image
+            src="/logo_nextjs.png"
+            width={20}
+            height={20}
+            alt="logo of NextJS"
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className="text-lg ml-2">NextJS</p>
         </Link>
 
         {/* Badge Supabase */}
         <Link href="" className={badgeVariants({ variant: 'supabase' })}>
-          <Image src="/logo_supabase.png" width={20} height={20} alt="logo of Supabase" />
+          <Image
+            src="/logo_supabase.png"
+            width={20}
+            height={20}
+            alt="logo of Supabase"
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className="text-lg ml-2">Supabase</p>
         </Link>
 
         {/* Badge Tailwind */}
         <Link href="" className={badgeVariants({ variant: 'tailwind' })}>
-          <Image src="/logo_tailwind.png" width={20} height={20} alt="logo of Tailwind" />
+          <Image
+            src="/logo_tailwind.png"
+            width={20}
+            height={20}
+            alt="logo of Tailwind"
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
           <p className="text-lg ml-2">Tailwind</p>
         </Link>
       </div>
