@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <div className="relative">
       <SidebarContext.Provider value={{ isOpen, setIsOpen }}>
-        <main className="px-4">
+        <main className="px-4 md:px-20 lg:px-28 xl:px-32">
           <Header />
           <Banner />
           <Stack />

@@ -14,7 +14,7 @@ export default function Viapix() {
       <div className="flex overflow-x-auto whitespace-no-wrap mt-4" /* animate-infinite-left-to-right */>
         {/* Badge pytorch */}
         <Link href="" className={badgeVariants({ variant: 'pytorch' })}>
-          <Image src="/logo_pytorch.png" width={20} height={20} alt="logo of Pytorch" layout="responsive" />
+          <Image src="/logo_pytorch.png" width={20} height={20} alt="logo of Pytorch" />
           <p className="text-lg ml-2">Pytorch</p>
         </Link>
 

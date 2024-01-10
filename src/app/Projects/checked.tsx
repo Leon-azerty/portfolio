@@ -13,7 +13,16 @@ export default function Checked() {
           <ExternalLinkIcon className="h-4 w-4 ml-2" />
         </a>
       </div>
-      <Image alt="screenshot of Checked" src="/checked.png" width={90} height={90} layout="responsive" />
+      <div className="flex justify-center">
+        <Image
+          alt="screenshot of Checked"
+          src="/checked.png"
+          width={100}
+          height={100}
+          layout="responsive"
+          className="max-w-xl "
+        />
+      </div>
 
       <div className="flex overflow-x-auto whitespace-no-wrap mt-4" /* animate-infinite-left-to-right */>
         {/* Badge React */}

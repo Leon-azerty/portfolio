@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="flex justify-center">
         <div className="border-[#A4A4A4] border-t w-[80%]">&nbsp;</div>
       </div>
-      <div className="flex justify-around">
+      <div className="flex justify-around flex-wrap">
         <Link href="#about">About</Link>
         <Link href="#projects">Projects</Link>
         <Link href="#internships">Internships</Link>
