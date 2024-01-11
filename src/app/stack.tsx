@@ -1,10 +1,10 @@
 import Image, { StaticImageData } from 'next/image';
-import reactLogo from '../../public/logo_react.png';
-import nextjsLogo from '../../public/logo_nextjs.png';
-import typescriptLogo from '../../public/logo_typescript.png';
-import tailwindLogo from '../../public/logo_tailwind.png';
-import supabaseLogo from '../../public/logo_supabase.png';
-import postgresLogo from '../../public/logo_postgresql.png';
+import reactLogo from '@/public/logo_react.png';
+import nextjsLogo from '@/public/logo_nextjs.png';
+import typescriptLogo from '@/public/logo_typescript.png';
+import tailwindLogo from '@/public/logo_tailwind.png';
+import supabaseLogo from '@/public/logo_supabase.png';
+import postgresLogo from '@/public/logo_postgresql.png';
 
 function Element({ href, alt, src }: { href: string; alt: string; src: StaticImageData }) {
   return (

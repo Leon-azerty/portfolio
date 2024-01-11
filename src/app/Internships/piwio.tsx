@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
 import supabaseLogo from '@/public/logo_supabase.png';
 import flutterLogo from '@/public/logo_flutter.png';
+import piwioLogo from '@/public/logo_piwio.png';
 import Badge from '@/badge';
 
 export default function Piwio() {
@@ -9,12 +10,10 @@ export default function Piwio() {
     <section className="mt-4">
       <div className="flex items-center">
         <Image
-          src="/logo_piwio.png"
+          src={piwioLogo}
           alt="logo of Piwio"
-          width={90}
-          height={60}
           style={{
-            maxWidth: '100%',
+            width: '90px',
             height: 'auto',
           }}
         />

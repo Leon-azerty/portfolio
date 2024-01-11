@@ -3,18 +3,17 @@ import { Card, CardContent } from '@/components/ui/card';
 import reactLogo from '@/public/logo_react.png';
 import tailwindLogo from '@/public/logo_tailwind.png';
 import Badge from '@/badge';
+import gnLogo from '@/public/photo_gn.png';
 
 export default function GnConsulting() {
   return (
     <section className="mt-4">
       <div className="flex items-center">
         <Image
-          src="/photo_gn.png"
+          src={gnLogo}
           alt="logo of Viapix"
-          width={90}
-          height={60}
           style={{
-            maxWidth: '100%',
+            width: '90px',
             height: 'auto',
           }}
         />

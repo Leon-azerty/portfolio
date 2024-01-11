@@ -3,18 +3,17 @@ import { Card, CardContent } from '@/components/ui/card';
 import pytorchLogo from '@/public/logo_pytorch.png';
 import delphiLogo from '@/public/logo_delphi.png';
 import Badge from '@/badge';
+import viapixLogo from '@/public/logo_viapix.png';
 
 export default function Viapix() {
   return (
     <section className="mt-4">
       <div className="flex items-center">
         <Image
-          src="/logo_viapix.png"
+          src={viapixLogo}
           alt="logo of Viapix"
-          width={90}
-          height={60}
           style={{
-            maxWidth: '100%',
+            width: '90px',
             height: 'auto',
           }}
         />
