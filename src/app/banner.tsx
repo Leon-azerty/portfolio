@@ -18,7 +18,7 @@ function CatchLine({ className }: { className: string }) {
 export default function Banner() {
   return (
     <section id="about">
-      <div className="min-w-screen p-4 flex justify-around lg:justify-start items-center xl:my-4 xl:px-14">
+      <div className="min-w-screen p-4 flex justify-around items-center lg:justify-start xl:px-14 lg:mt-10">
         <div className="w-24 h-52 sm:w-32 sm:h-56 md:w-40 md:h-60 xl:w-48 flex items-center">
           <Image
             className="left-element rounded-full"
