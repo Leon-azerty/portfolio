@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { Card, CardContent } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import supabaseLogo from '@/public/logo_supabase.png';
 import flutterLogo from '@/public/logo_flutter.png';
 import piwioLogo from '@/public/logo_piwio.png';
@@ -8,7 +8,7 @@ import Badge from '@/badge';
 export default function Piwio() {
   return (
     <section className="mt-4">
-      <div className="flex items-center">
+      <div className="flex items-center lg:hidden">
         <Image
           src={piwioLogo}
           alt="logo of Piwio"
@@ -20,12 +20,31 @@ export default function Piwio() {
         <p className="text-2xl ml-2">Piwio</p>
       </div>
 
-      <div className="flex overflow-x-auto whitespace-no-wrap mt-4" /* animate-infinite-left-to-right */>
+      <div className="flex overflow-x-auto whitespace-no-wrap mt-4 lg:hidden" /* animate-infinite-left-to-right */>
         <Badge href="" alt="logo of Flutter" src={flutterLogo} text="Flutter" className="bg-flutter" />
         <Badge href="" alt="logo of Supabase" src={supabaseLogo} text="Supabase" className="bg-supabase" />
       </div>
 
       <Card className="mt-4">
+        <CardHeader className="hidden lg:block">
+          <div className="flex">
+            <Image
+              src={piwioLogo}
+              alt="logo of Piwio"
+              style={{
+                width: '90px',
+                height: 'auto',
+              }}
+            />
+            <div>
+              <CardTitle className="hidden: lg:block">Piwio</CardTitle>
+              <div className="flex overflow-x-auto whitespace-no-wrap mt-4" /* animate-infinite-left-to-right */>
+                <Badge href="" alt="logo of Flutter" src={flutterLogo} text="Flutter" className="bg-flutter" />
+                <Badge href="" alt="logo of Supabase" src={supabaseLogo} text="Supabase" className="bg-supabase" />
+              </div>
+            </div>
+          </div>
+        </CardHeader>
         <CardContent>
           I joined Piwio as a Flutter developper, at this period i wasn’t sure that react will be the techno that i want
           to learn and master.

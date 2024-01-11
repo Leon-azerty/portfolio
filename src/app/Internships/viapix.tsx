@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { Card, CardContent } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import pytorchLogo from '@/public/logo_pytorch.png';
 import delphiLogo from '@/public/logo_delphi.png';
 import Badge from '@/badge';
@@ -8,7 +8,7 @@ import viapixLogo from '@/public/logo_viapix.png';
 export default function Viapix() {
   return (
     <section className="mt-4">
-      <div className="flex items-center">
+      <div className="flex items-center lg:hidden">
         <Image
           src={viapixLogo}
           alt="logo of Viapix"
@@ -20,12 +20,31 @@ export default function Viapix() {
         <p className="text-2xl ml-2">Viapix</p>
       </div>
 
-      <div className="flex overflow-x-auto whitespace-no-wrap mt-4" /* animate-infinite-left-to-right */>
+      <div className="flex overflow-x-auto whitespace-no-wrap mt-4 lg:hidden" /* animate-infinite-left-to-right */>
         <Badge href="" alt="logo of Pytorch" src={pytorchLogo} text="Pytorch" className="bg-pytorch" />
         <Badge href="" alt="logo of Delphi" src={delphiLogo} text="Delphi" className="bg-delphi" />
       </div>
 
       <Card className="mt-4">
+        <CardHeader className="hidden lg:block">
+          <div className="flex">
+            <Image
+              src={viapixLogo}
+              alt="logo of Viapix"
+              style={{
+                width: '90px',
+                height: 'auto',
+              }}
+            />
+            <div>
+              <CardTitle className="hidden: lg:block">Viapix</CardTitle>
+              <div className="flex overflow-x-auto whitespace-no-wrap mt-4" /* animate-infinite-left-to-right */>
+                <Badge href="" alt="logo of Pytorch" src={pytorchLogo} text="Pytorch" className="bg-pytorch" />
+                <Badge href="" alt="logo of Delphi" src={delphiLogo} text="Delphi" className="bg-delphi" />
+              </div>
+            </div>
+          </div>
+        </CardHeader>
         <CardContent>
           I joined Viapix during my 2nd year in Epitech as data scientist.
           <br />I could train a Deep Learning model to recognize the road on image with Pytorch, in addition to that I
