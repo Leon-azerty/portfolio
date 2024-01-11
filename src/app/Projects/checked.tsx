@@ -1,22 +1,35 @@
 import Image from 'next/image';
-import { Card, CardContent } from '@/components/ui/card';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { ExternalLinkIcon } from '@radix-ui/react-icons';
 import reactLogo from '@/public/logo_react.png';
 import supabaseLogo from '@/public/logo_supabase.png';
 import nextjsLogo from '@/public/logo_nextjs.png';
 import tailwindLogo from '@/public/logo_tailwind.png';
+// import githubLogo from '@/public/logo_github.png';
 import Badge from '@/badge';
+
+function BadgeLine({ className }: { className: string }) {
+  return (
+    <div className={`flex overflow-x-auto whitespace-no-wrap mt-4 ${className}`} /* animate-infinite-left-to-right */>
+      <Badge href="" alt="logo of React" src={reactLogo} text="React" className="bg-react" />
+      <Badge href="" alt="logo of Nextjs" src={nextjsLogo} text="Nextjs" className="bg-nextjs" />
+      <Badge href="" alt="logo of Supabase" src={supabaseLogo} text="Supabase" className="bg-supabase" />
+      <Badge href="" alt="logo of Tailwind" src={tailwindLogo} text="Tailwind" className="bg-tailwind" />
+    </div>
+  );
+}
 
 export default function Checked() {
   return (
     <section className="mt-4">
-      <div className="flex items-center">
+      <div className="flex items-center lg:hidden">
         <p className="text-2xl">Checked, Todo app</p>
         <a href="https://checkd.online/login" target="_blank">
           <ExternalLinkIcon className="h-4 w-4 ml-2" />
         </a>
       </div>
-      <div className="flex justify-center">
+
+      <div className="flex flex-col lg:flex-row items-start">
         <Image
           alt="screenshot of Checked"
           src="/checked.png"
@@ -29,27 +42,35 @@ export default function Checked() {
             height: 'auto',
           }}
         />
-      </div>
 
-      <div className="flex overflow-x-auto whitespace-no-wrap mt-4" /* animate-infinite-left-to-right */>
-        <Badge href="" alt="logo of React" src={reactLogo} text="React" className="bg-react" />
-        <Badge href="" alt="logo of Nextjs" src={nextjsLogo} text="Nextjs" className="bg-nextjs" />
-        <Badge href="" alt="logo of Supabase" src={supabaseLogo} text="Supabase" className="bg-supabase" />
-        <Badge href="" alt="logo of Tailwind" src={tailwindLogo} text="Tailwind" className="bg-tailwind" />
+        <div className="flex flex-col lg:flex-col-reverse">
+          <BadgeLine className="" />
+          <Card className="mt-4">
+            <CardHeader className="hidden lg:block">
+              <CardTitle>Checked, Todo app</CardTitle>
+              <CardDescription className="flex justify-between">
+                <a href="https://checkd.online/login" target="_blank">
+                  Checkd.online
+                </a>
+                {/* A voir si je passe le repo en public */}
+                {/* <a href="" target="_blank">
+                  <Image alt="Github logo" src={githubLogo} width={24} height={24} />
+                </a> */}
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              As a customer of apps like Notion, obsidian etc. I naturally wanted to create a project resembling what I
+              love.
+              <br />
+              The main feature is a system of tag, which allows user to create a todo with tags and sort todos by tags.
+              <br />
+              <br />
+              During the developpment I could learn the server components with NextJs, how to host a project with vercel
+              and modify the domain name.
+            </CardContent>
+          </Card>
+        </div>
       </div>
-
-      <Card className="mt-4">
-        <CardContent>
-          As a customer of apps like Notion, obsidian etc. I naturally wanted to create a project resembling what I
-          love.
-          <br />
-          The main feature is a system of tag, which allows user to create a todo with tags and sort todos by tags.
-          <br />
-          <br />
-          During the developpment I could learn the server components with NextJs, how to host a project with vercel and
-          modify the domain name.
-        </CardContent>
-      </Card>
     </section>
   );
 }
