@@ -42,10 +42,10 @@ export default function Checked() {
             height: 'auto',
           }}
         />
-        <div className="flex flex-col lg:flex-col-reverse ">
+        <div className="flex flex-col lg:flex-col-reverse lg:ml-4">
           <BadgeLine />
 
-          <Card className="mt-4">
+          <Card className="mt-4 ">
             <CardHeader className="hidden lg:block">
               <CardTitle>Checked, Todo app</CardTitle>
               <CardDescription className="flex justify-between">
