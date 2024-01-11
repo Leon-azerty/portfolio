@@ -8,7 +8,7 @@ import tailwindLogo from '@/public/logo_tailwind.png';
 // import githubLogo from '@/public/logo_github.png';
 import Badge from '@/badge';
 
-function BadgeLine({ className }: { className: string }) {
+function BadgeLine({ className }: { className?: string }) {
   return (
     <div className={`flex overflow-x-auto whitespace-no-wrap mt-4 ${className}`} /* animate-infinite-left-to-right */>
       <Badge href="" alt="logo of React" src={reactLogo} text="React" className="bg-react" />
@@ -21,7 +21,7 @@ function BadgeLine({ className }: { className: string }) {
 
 export default function Checked() {
   return (
-    <section className="mt-4">
+    <section className="mt-4 ">
       <div className="flex items-center lg:hidden">
         <p className="text-2xl">Checked, Todo app</p>
         <a href="https://checkd.online/login" target="_blank">
@@ -29,7 +29,7 @@ export default function Checked() {
         </a>
       </div>
 
-      <div className="flex flex-col lg:flex-row items-start">
+      <div className="flex flex-col lg:flex-row lg:items-start">
         <Image
           alt="screenshot of Checked"
           src="/checked.png"
@@ -42,9 +42,9 @@ export default function Checked() {
             height: 'auto',
           }}
         />
+        <div className="flex flex-col lg:flex-col-reverse ">
+          <BadgeLine />
 
-        <div className="flex flex-col lg:flex-col-reverse">
-          <BadgeLine className="" />
           <Card className="mt-4">
             <CardHeader className="hidden lg:block">
               <CardTitle>Checked, Todo app</CardTitle>
@@ -52,10 +52,6 @@ export default function Checked() {
                 <a href="https://checkd.online/login" target="_blank">
                   Checkd.online
                 </a>
-                {/* A voir si je passe le repo en public */}
-                {/* <a href="" target="_blank">
-                  <Image alt="Github logo" src={githubLogo} width={24} height={24} />
-                </a> */}
               </CardDescription>
             </CardHeader>
             <CardContent>
