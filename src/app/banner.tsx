@@ -8,9 +8,9 @@ function CatchLine({ className }: { className: string }) {
     <div
       className={`text-center p-4 md:px-14 lg:px-0 lg:w-[550px] lg:text-justify xl:w-[600px] 2xl:w-[800px] ${className}`}
     >
-      I'm a dedicated software developer who thrives on transforming intricate problems into streamlined solutions. With
-      a keen eye for detail and a passion for creativity, I craft clean and efficient code that drives progress. Let's
-      embark on a journey of innovation and collaborate to build a better, brighter future.
+      I&apos;m a dedicated software developer who thrives on transforming intricate problems into streamlined solutions.
+      With a keen eye for detail and a passion for creativity, I craft clean and efficient code that drives progress.
+      Let&apos;s embark on a journey of innovation and collaborate to build a better, brighter future.
     </div>
   );
 }
