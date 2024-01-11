@@ -4,7 +4,7 @@ import SideBarButton from './sideBarButton';
 
 export default function Header() {
   return (
-    <div className="">
+    <div>
       <header className="min-w-screen pt-4 flex justify-between items-center lg:hidden">
         <SideBarButton />
         <ModeToggle />

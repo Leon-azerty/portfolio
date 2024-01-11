@@ -1,6 +1,7 @@
 'use client';
 
 import Banner from './banner';
+import Chevron from './chevron';
 import Contact from './contact';
 import { SidebarContext } from './contexts/sideBarContext';
 import Experiences from './experiences';
@@ -22,6 +23,7 @@ export default function Home() {
         <main className="px-4 md:px-20 lg:px-28 xl:px-32">
           <Header />
           <Banner />
+          <Chevron />
           <Stack />
           <Line />
           <Projects />
