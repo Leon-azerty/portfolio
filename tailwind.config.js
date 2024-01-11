@@ -35,6 +35,17 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      colors: {
+        react: '#437AA1',
+        nextjs: '#BCBCBC',
+        supabase: '#37B06F',
+        tailwind: '#37A2B0',
+        typescript: '#2D6B8E',
+        flutter: '#437AA1',
+        pytorch: '#7D3430',
+        delphi: '#B04D37',
+
+      }
     },
   },
   plugins: [require("tailwindcss-animate")],

@@ -1,7 +1,8 @@
-import Image from "next/image";
+import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
-import Link from 'next/link';
-import { badgeVariants } from '@/components/ui/badge';
+import pytorchLogo from '@/public/logo_pytorch.png';
+import delphiLogo from '@/public/logo_delphi.png';
+import Badge from '@/badge';
 
 export default function Viapix() {
   return (
@@ -13,40 +14,16 @@ export default function Viapix() {
           width={90}
           height={60}
           style={{
-            maxWidth: "100%",
-            height: "auto"
-          }} />
+            maxWidth: '100%',
+            height: 'auto',
+          }}
+        />
         <p className="text-2xl ml-2">Viapix</p>
       </div>
 
       <div className="flex overflow-x-auto whitespace-no-wrap mt-4" /* animate-infinite-left-to-right */>
-        {/* Badge pytorch */}
-        <Link href="" className={badgeVariants({ variant: 'pytorch' })}>
-          <Image
-            src="/logo_pytorch.png"
-            width={20}
-            height={20}
-            alt="logo of Pytorch"
-            style={{
-              maxWidth: "100%",
-              height: "auto"
-            }} />
-          <p className="text-lg ml-2">Pytorch</p>
-        </Link>
-
-        {/* Badge delphi */}
-        <Link href="" className={badgeVariants({ variant: 'delphi' })}>
-          <Image
-            src="/logo_delphi.png"
-            width={20}
-            height={20}
-            alt="logo of Delphi"
-            style={{
-              maxWidth: "100%",
-              height: "auto"
-            }} />
-          <p className="text-lg ml-2">Delphi</p>
-        </Link>
+        <Badge href="" alt="logo of Pytorch" src={pytorchLogo} text="Pytorch" className="bg-pytorch" />
+        <Badge href="" alt="logo of Delphi" src={delphiLogo} text="Delphi" className="bg-delphi" />
       </div>
 
       <Card className="mt-4">

@@ -1,7 +1,9 @@
-import Image from "next/image";
 import { Card, CardContent } from '@/components/ui/card';
-import Link from 'next/link';
-import { badgeVariants } from '@/components/ui/badge';
+import reactLogo from '@/public/logo_react.png';
+import nextjsLogo from '@/public/logo_nextjs.png';
+import tailwindLogo from '@/public/logo_tailwind.png';
+import typescriptLogo from '@/public/logo_typescript.png';
+import Badge from '@/badge';
 
 export default function Portfolio() {
   return (
@@ -11,61 +13,10 @@ export default function Portfolio() {
       </div>
 
       <div className="flex overflow-x-auto whitespace-no-wrap mt-4" /* animate-infinite-left-to-right */>
-        {/* Badge React */}
-        <Link href="" className={badgeVariants({ variant: 'react' })}>
-          <Image
-            src="/logo_react.png"
-            width={20}
-            height={20}
-            alt="logo of React"
-            style={{
-              maxWidth: "100%",
-              height: "auto"
-            }} />
-          <p className="text-lg ml-2">React</p>
-        </Link>
-
-        {/* Badge Nextjs */}
-        <Link href="" className={badgeVariants({ variant: 'nextjs' })}>
-          <Image
-            src="/logo_nextjs.png"
-            width={20}
-            height={20}
-            alt="logo of NextJS"
-            style={{
-              maxWidth: "100%",
-              height: "auto"
-            }} />
-          <p className="text-lg ml-2">NextJS</p>
-        </Link>
-
-        {/* Badge Tailwind */}
-        <Link href="" className={badgeVariants({ variant: 'tailwind' })}>
-          <Image
-            src="/logo_tailwind.png"
-            width={20}
-            height={20}
-            alt="logo of Tailwind"
-            style={{
-              maxWidth: "100%",
-              height: "auto"
-            }} />
-          <p className="text-lg ml-2">Tailwind</p>
-        </Link>
-
-        {/* Badge Typescript */}
-        <Link href="" className={badgeVariants({ variant: 'typescript' })}>
-          <Image
-            src="/logo_typescript.png"
-            width={20}
-            height={20}
-            alt="logo of Typescript"
-            style={{
-              maxWidth: "100%",
-              height: "auto"
-            }} />
-          <p className="text-lg ml-2">Typescript</p>
-        </Link>
+        <Badge href="" alt="logo of React" src={reactLogo} text="React" className="bg-react" />
+        <Badge href="" alt="logo of NextJS" src={nextjsLogo} text="NextJs" className="bg-nextjs" />
+        <Badge href="" alt="logo of Tailwind" src={tailwindLogo} text="Tailwind" className="bg-tailwind" />
+        <Badge href="" alt="logo of Typescript" src={typescriptLogo} text="Typescript" className="bg-typescript" />
       </div>
 
       <Card className="mt-4">

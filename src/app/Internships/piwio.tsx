@@ -1,7 +1,8 @@
-import Image from "next/image";
+import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
-import Link from 'next/link';
-import { badgeVariants } from '@/components/ui/badge';
+import supabaseLogo from '@/public/logo_supabase.png';
+import flutterLogo from '@/public/logo_flutter.png';
+import Badge from '@/badge';
 
 export default function Piwio() {
   return (
@@ -13,40 +14,16 @@ export default function Piwio() {
           width={90}
           height={60}
           style={{
-            maxWidth: "100%",
-            height: "auto"
-          }} />
+            maxWidth: '100%',
+            height: 'auto',
+          }}
+        />
         <p className="text-2xl ml-2">Piwio</p>
       </div>
 
       <div className="flex overflow-x-auto whitespace-no-wrap mt-4" /* animate-infinite-left-to-right */>
-        {/* Badge flutter */}
-        <Link href="" className={badgeVariants({ variant: 'flutter' })}>
-          <Image
-            src="/logo_flutter.png"
-            width={20}
-            height={20}
-            alt="logo of Flutter"
-            style={{
-              maxWidth: "100%",
-              height: "auto"
-            }} />
-          <p className="text-lg ml-2">Flutter</p>
-        </Link>
-
-        {/* Badge supabase */}
-        <Link href="" className={badgeVariants({ variant: 'supabase' })}>
-          <Image
-            src="/logo_supabase.png"
-            width={20}
-            height={20}
-            alt="logo of Supabase"
-            style={{
-              maxWidth: "100%",
-              height: "auto"
-            }} />
-          <p className="text-lg ml-2">Supabase</p>
-        </Link>
+        <Badge href="" alt="logo of Flutter" src={flutterLogo} text="Flutter" className="bg-flutter" />
+        <Badge href="" alt="logo of Supabase" src={supabaseLogo} text="Supabase" className="bg-supabase" />
       </div>
 
       <Card className="mt-4">

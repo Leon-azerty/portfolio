@@ -1,7 +1,8 @@
-import Image from "next/image";
+import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
-import Link from 'next/link';
-import { badgeVariants } from '@/components/ui/badge';
+import reactLogo from '@/public/logo_react.png';
+import tailwindLogo from '@/public/logo_tailwind.png';
+import Badge from '@/badge';
 
 export default function GnConsulting() {
   return (
@@ -13,40 +14,16 @@ export default function GnConsulting() {
           width={90}
           height={60}
           style={{
-            maxWidth: "100%",
-            height: "auto"
-          }} />
+            maxWidth: '100%',
+            height: 'auto',
+          }}
+        />
         <p className="text-2xl ml-2">GN consulting</p>
       </div>
 
       <div className="flex overflow-x-auto whitespace-no-wrap mt-4" /* animate-infinite-left-to-right */>
-        {/* Badge react */}
-        <Link href="" className={badgeVariants({ variant: 'react' })}>
-          <Image
-            src="/logo_react.png"
-            width={20}
-            height={20}
-            alt="logo of React"
-            style={{
-              maxWidth: "100%",
-              height: "auto"
-            }} />
-          <p className="text-lg ml-2">React</p>
-        </Link>
-
-        {/* Badge tailwind */}
-        <Link href="" className={badgeVariants({ variant: 'tailwind' })}>
-          <Image
-            src="/logo_tailwind.png"
-            width={20}
-            height={20}
-            alt="logo of Tailwind"
-            style={{
-              maxWidth: "100%",
-              height: "auto"
-            }} />
-          <p className="text-lg ml-2">Tailwind</p>
-        </Link>
+        <Badge href="" alt="logo of React" src={reactLogo} text="React" className="bg-react" />
+        <Badge href="" alt="logo of Tailwind" src={tailwindLogo} text="Tailwind" className="bg-tailwind" />
       </div>
 
       <Card className="mt-4">
