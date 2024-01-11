@@ -8,7 +8,7 @@ import postgresLogo from '@/public/logo_postgresql.png';
 
 function Element({ href, alt, src }: { href: string; alt: string; src: StaticImageData }) {
   return (
-    <a href={href} target="_blank">
+    <a href={href} target="_blank" className="z-30">
       {/* <div className="relative w-[90px] h-[90px] sm:w-32 sm:h-32 md:w-4 md:h-40 md:mx-4 lg:w-4 lg:h-48 lg:mx-6"> */}
       <Image alt={alt} src={src} />
       {/* </div> */}
