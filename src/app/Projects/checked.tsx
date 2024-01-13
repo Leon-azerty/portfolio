@@ -11,10 +11,22 @@ import Badge from '@/badge';
 function BadgeLine({ className }: { className?: string }) {
   return (
     <div className={`flex overflow-x-auto whitespace-no-wrap mt-4 ${className}`} /* animate-infinite-left-to-right */>
-      <Badge href="" alt="logo of React" src={reactLogo} text="React" className="bg-react" />
-      <Badge href="" alt="logo of Nextjs" src={nextjsLogo} text="Nextjs" className="bg-nextjs" />
-      <Badge href="" alt="logo of Supabase" src={supabaseLogo} text="Supabase" className="bg-supabase" />
-      <Badge href="" alt="logo of Tailwind" src={tailwindLogo} text="Tailwind" className="bg-tailwind" />
+      <Badge href="https://react.dev/" alt="logo of React" src={reactLogo} text="React" className="bg-react" />
+      <Badge href="https://nextjs.org/" alt="logo of Nextjs" src={nextjsLogo} text="Nextjs" className="bg-nextjs" />
+      <Badge
+        href="https://supabase.com/"
+        alt="logo of Supabase"
+        src={supabaseLogo}
+        text="Supabase"
+        className="bg-supabase"
+      />
+      <Badge
+        href="https://tailwindcss.com/"
+        alt="logo of Tailwind"
+        src={tailwindLogo}
+        text="Tailwind"
+        className="bg-tailwind"
+      />
     </div>
   );
 }

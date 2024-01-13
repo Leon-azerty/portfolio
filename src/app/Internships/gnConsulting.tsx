@@ -21,8 +21,14 @@ export default function GnConsulting() {
       </div>
 
       <div className="flex overflow-x-auto whitespace-no-wrap mt-4 lg:hidden" /* animate-infinite-left-to-right */>
-        <Badge href="" alt="logo of React" src={reactLogo} text="React" className="bg-react" />
-        <Badge href="" alt="logo of Tailwind" src={tailwindLogo} text="Tailwind" className="bg-tailwind" />
+        <Badge href="https://react.dev/" alt="logo of React" src={reactLogo} text="React" className="bg-react" />
+        <Badge
+          href="https://tailwindcss.com/"
+          alt="logo of Tailwind"
+          src={tailwindLogo}
+          text="Tailwind"
+          className="bg-tailwind"
+        />
       </div>
 
       <Card className="mt-4">

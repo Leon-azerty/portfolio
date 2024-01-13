@@ -10,10 +10,22 @@ import Image from 'next/image';
 function BadgeLine() {
   return (
     <div className="flex overflow-x-auto whitespace-no-wrap mt-4" /* animate-infinite-left-to-right */>
-      <Badge href="" alt="logo of React" src={reactLogo} text="React" className="bg-react" />
-      <Badge href="" alt="logo of NextJS" src={nextjsLogo} text="NextJs" className="bg-nextjs" />
-      <Badge href="" alt="logo of Tailwind" src={tailwindLogo} text="Tailwind" className="bg-tailwind" />
-      <Badge href="" alt="logo of Typescript" src={typescriptLogo} text="Typescript" className="bg-typescript" />
+      <Badge href="https://react.dev/" alt="logo of React" src={reactLogo} text="React" className="bg-react" />
+      <Badge href="https://nextjs.org/" alt="logo of NextJS" src={nextjsLogo} text="NextJs" className="bg-nextjs" />
+      <Badge
+        href="https://tailwindcss.com/"
+        alt="logo of Tailwind"
+        src={tailwindLogo}
+        text="Tailwind"
+        className="bg-tailwind"
+      />
+      <Badge
+        href="https://www.typescriptlang.org/"
+        alt="logo of Typescript"
+        src={typescriptLogo}
+        text="Typescript"
+        className="bg-typescript"
+      />
     </div>
   );
 }

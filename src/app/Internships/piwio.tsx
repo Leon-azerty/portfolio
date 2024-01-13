@@ -39,8 +39,20 @@ export default function Piwio() {
             <div>
               <CardTitle className="hidden: lg:block">Piwio</CardTitle>
               <div className="flex overflow-x-auto whitespace-no-wrap mt-4" /* animate-infinite-left-to-right */>
-                <Badge href="" alt="logo of Flutter" src={flutterLogo} text="Flutter" className="bg-flutter" />
-                <Badge href="" alt="logo of Supabase" src={supabaseLogo} text="Supabase" className="bg-supabase" />
+                <Badge
+                  href="https://flutter.dev/"
+                  alt="logo of Flutter"
+                  src={flutterLogo}
+                  text="Flutter"
+                  className="bg-flutter"
+                />
+                <Badge
+                  href="https://supabase.com/"
+                  alt="logo of Supabase"
+                  src={supabaseLogo}
+                  text="Supabase"
+                  className="bg-supabase"
+                />
               </div>
             </div>
           </div>

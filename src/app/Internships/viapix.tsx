@@ -21,8 +21,20 @@ export default function Viapix() {
       </div>
 
       <div className="flex overflow-x-auto whitespace-no-wrap mt-4 lg:hidden" /* animate-infinite-left-to-right */>
-        <Badge href="" alt="logo of Pytorch" src={pytorchLogo} text="Pytorch" className="bg-pytorch" />
-        <Badge href="" alt="logo of Delphi" src={delphiLogo} text="Delphi" className="bg-delphi" />
+        <Badge
+          href="https://pytorch.org/"
+          alt="logo of Pytorch"
+          src={pytorchLogo}
+          text="Pytorch"
+          className="bg-pytorch"
+        />
+        <Badge
+          href="https://www.embarcadero.com/products/delphi"
+          alt="logo of Delphi"
+          src={delphiLogo}
+          text="Delphi"
+          className="bg-delphi"
+        />
       </div>
 
       <Card className="mt-4">
