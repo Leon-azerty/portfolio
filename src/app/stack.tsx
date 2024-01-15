@@ -34,9 +34,9 @@ function Element({
   name: string;
 }) {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center lg:items-start">
       <p className="text-xl flex items-center">{name}</p>
-      <a href={href} target="_blank" className="z-30 flex flex-col items-center 2xl:flex-row 2xl:mb-4">
+      <a href={href} target="_blank" className="z-30 flex flex-col items-start lg:items-center 2xl:flex-row 2xl:mb-4">
         <Image alt={alt} src={src} className="w-24 md:w-32 2xl:w-28" />
         <p className="hidden lg:block text-justify mt-4 2xl:ml-2 2xl:mt-0 2xl:text-center">{description}</p>
       </a>
@@ -49,7 +49,7 @@ export default function Stack() {
     <section className="mt-32">
       <p className="text-4xl">Stack</p>
       <div className="flex justify-center">
-        <div className="grid grid-cols-3 grid-rows-2 gap-8 p-4">
+        <div className="grid grid-cols-3 grid-rows-2 gap-12 p-4">
           <Element
             name="React"
             href="https://react.dev/"

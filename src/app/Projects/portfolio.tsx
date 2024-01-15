@@ -25,12 +25,12 @@ export default function Portfolio() {
         <p className="text-2xl">Portfolio</p>
       </div>
 
-      <div className="lg:flex">
-        <div className="flex flex-col lg:flex-col-reverse">
+      <div className="xl:flex">
+        <div className="flex flex-col xl:flex-col-reverse">
           <BadgeLine />
 
           <Card className="mt-4">
-            <CardHeader className="hidden lg:block">
+            <CardHeader className="hidden xl:block">
               <CardTitle>Portfolio</CardTitle>
             </CardHeader>
             <CardContent>
@@ -49,7 +49,7 @@ export default function Portfolio() {
         <Image
           alt="Illustration"
           src={illustration}
-          className="hidden lg:flex 2xl:ml-16"
+          className="hidden xl:flex 2xl:ml-16"
           sizes="100vw"
           style={{
             maxWidth: 'min-content',

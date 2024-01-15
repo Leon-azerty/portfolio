@@ -29,23 +29,21 @@ export default function Checked() {
         </a>
       </div>
 
-      <div className="flex flex-col lg:flex-row lg:items-start">
-        <Image
-          alt="screenshot of Checked"
-          src="/checked.png"
-          width={100}
-          height={100}
-          className="max-w-xl "
-          sizes="100vw"
-          style={{
-            width: '100%',
-            height: 'auto',
-          }}
-        />
-        <div className="flex flex-col lg:flex-col-reverse lg:ml-4">
+      <div className="flex flex-col xl:flex-row xl:items-start">
+        <div className="flex justify-center">
+          <Image
+            alt="screenshot of Checked"
+            src="/checked.png"
+            width={100}
+            height={100}
+            className="w-80 sm:w-[500px] md:w-[550px] lg:w-[650px] xl:w-[700px] 2xl:w-[800px]"
+            sizes="100vw"
+          />
+        </div>
+        <div className="flex flex-col xl:flex-col-reverse xl:ml-4">
           <BadgeLine />
 
-          <Card className="mt-4 ">
+          <Card className="mt-4 xl:mt-0">
             <CardHeader className="hidden lg:block">
               <CardTitle>Checked, Todo app</CardTitle>
               <CardDescription className="flex justify-between">
