@@ -7,7 +7,7 @@ import viapixLogo from '@/public/logo_viapix.png';
 
 export default function Viapix() {
   return (
-    <section className="mt-4">
+    <section className="mt-4 h-full">
       <div className="flex items-center lg:hidden">
         <Image
           src={viapixLogo}
@@ -25,7 +25,7 @@ export default function Viapix() {
         <Badge alt="logo of Delphi" src={delphiLogo} text="Delphi" className="bg-delphi" />
       </div>
 
-      <Card className="mt-4">
+      <Card className="mt-4 h-full">
         <CardHeader className="hidden lg:block">
           <div className="flex">
             <Image

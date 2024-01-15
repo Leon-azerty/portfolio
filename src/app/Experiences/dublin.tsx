@@ -1,5 +1,5 @@
 import { Card, CardContent, CardTitle } from '@/components/ui/card';
-import Image from "next/image";
+import Image from 'next/image';
 
 export default function Dublin() {
   return (
@@ -12,12 +12,13 @@ export default function Dublin() {
             height="30"
             alt="Ireland's flag"
             style={{
-              maxWidth: "100%",
-              height: "auto"
-            }} />
+              maxWidth: '100%',
+              height: 'auto',
+            }}
+          />
           <p className="ml-2">Currently in Dublin</p>
         </CardTitle>
-        <CardContent className="p-0 pt-4">
+        <CardContent className="p-0 pt-4 lg:h-24">
           Currently in my fourth year in Epitech, I study at the Technological University of Dublin in program “Data
           analysis”
         </CardContent>

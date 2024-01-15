@@ -37,7 +37,7 @@ function Element({
     <div className="flex flex-col items-center lg:items-start">
       <p className="text-xl flex items-center">{name}</p>
       <a href={href} target="_blank" className="z-30 flex flex-col items-start lg:items-center 2xl:flex-row 2xl:mb-4">
-        <Image alt={alt} src={src} className="w-24 md:w-32 2xl:w-28" />
+        <Image alt={alt} src={src} className="w-24 md:w-32 lg:h-32 2xl:w-28" />
         <p className="hidden lg:block text-justify mt-4 2xl:ml-2 2xl:mt-0 2xl:text-center">{description}</p>
       </a>
     </div>

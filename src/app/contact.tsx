@@ -73,7 +73,7 @@ export default function Contact() {
             name="subject"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Sujet</FormLabel>
+                <FormLabel>Subject</FormLabel>
                 <FormControl>
                   <Input placeholder="placeholder" {...field} />
                 </FormControl>

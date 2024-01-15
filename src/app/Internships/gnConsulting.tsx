@@ -7,7 +7,7 @@ import gnLogo from '@/public/photo_gn.png';
 
 export default function GnConsulting() {
   return (
-    <section className="mt-4">
+    <section className="mt-4 h-full">
       <div className="flex items-center lg:hidden">
         <Image
           src={gnLogo}
@@ -25,7 +25,7 @@ export default function GnConsulting() {
         <Badge alt="logo of Tailwind" src={tailwindLogo} text="Tailwind" className="bg-tailwind" />
       </div>
 
-      <Card className="mt-4">
+      <Card className="mt-4 h-full">
         <CardHeader className="hidden lg:block">
           <div className="flex">
             <Image

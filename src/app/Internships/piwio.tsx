@@ -4,10 +4,11 @@ import supabaseLogo from '@/public/logo_supabase.png';
 import flutterLogo from '@/public/logo_flutter.png';
 import piwioLogo from '@/public/logo_piwio.png';
 import Badge from '@/badge';
+import { ExternalLinkIcon } from '@radix-ui/react-icons';
 
 export default function Piwio() {
   return (
-    <section className="mt-4">
+    <section className="mt-4 h-full">
       <div className="flex items-center lg:hidden">
         <Image
           src={piwioLogo}
@@ -25,7 +26,7 @@ export default function Piwio() {
         <Badge alt="logo of Supabase" src={supabaseLogo} text="Supabase" className="bg-supabase" />
       </div>
 
-      <Card className="mt-4">
+      <Card className="mt-4 h-full">
         <CardHeader className="hidden lg:block">
           <div className="flex">
             <Image
@@ -37,7 +38,12 @@ export default function Piwio() {
               }}
             />
             <div>
-              <CardTitle className="hidden: lg:block">Piwio</CardTitle>
+              <div className="flex items-center">
+                <CardTitle className="hidden: lg:block">Piwio</CardTitle>
+                <a href="https://checkd.online/login" target="_blank">
+                  <ExternalLinkIcon className="h-4 w-4 ml-2" />
+                </a>
+              </div>
               <div className="flex overflow-x-auto whitespace-no-wrap mt-4" /* animate-infinite-left-to-right */>
                 <Badge alt="logo of Flutter" src={flutterLogo} text="Flutter" className="bg-flutter" />
                 <Badge alt="logo of Supabase" src={supabaseLogo} text="Supabase" className="bg-supabase" />

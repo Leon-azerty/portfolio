@@ -1,5 +1,5 @@
 import { Card, CardContent, CardTitle } from '@/components/ui/card';
-import Image from "next/image";
+import Image from 'next/image';
 
 export default function Berlin() {
   return (
@@ -12,12 +12,13 @@ export default function Berlin() {
             height="30"
             alt="German's flag"
             style={{
-              maxWidth: "100%",
-              height: "auto"
-            }} />
+              maxWidth: '100%',
+              height: 'auto',
+            }}
+          />
           <p className="ml-2">8 month Berlin</p>
         </CardTitle>
-        <CardContent className="p-0 pt-4">
+        <CardContent className="p-0 pt-4 lg:h-24">
           During my second year in Epitech I had the oppurtinity to study in Berlin
         </CardContent>
       </Card>
