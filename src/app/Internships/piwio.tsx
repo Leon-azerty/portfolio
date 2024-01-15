@@ -18,7 +18,12 @@ export default function Piwio() {
             height: 'auto',
           }}
         />
-        <p className="text-2xl ml-2">Piwio</p>
+        <div className="flex items-center">
+          <p className="text-2xl ml-2">Piwio</p>
+          <a href="https://www.piwio.fr/" target="_blank">
+            <ExternalLinkIcon className="h-4 w-4 ml-2" />
+          </a>
+        </div>
       </div>
 
       <div className="flex overflow-x-auto whitespace-no-wrap mt-4 lg:hidden" /* animate-infinite-left-to-right */>
@@ -41,7 +46,7 @@ export default function Piwio() {
               <div className="ml-2">
                 <div className="flex items-center">
                   <CardTitle className="hidden: lg:block">Piwio</CardTitle>
-                  <a href="https://checkd.online/login" target="_blank">
+                  <a href="https://www.piwio.fr/" target="_blank">
                     <ExternalLinkIcon className="h-4 w-4 ml-2" />
                   </a>
                 </div>

@@ -4,6 +4,7 @@ import pytorchLogo from '@/public/logo_pytorch.png';
 import delphiLogo from '@/public/logo_delphi.png';
 import Badge from '@/badge';
 import viapixLogo from '@/public/logo_viapix.png';
+import { ExternalLinkIcon } from '@radix-ui/react-icons';
 
 export default function Viapix() {
   return (
@@ -17,7 +18,12 @@ export default function Viapix() {
             height: 'auto',
           }}
         />
-        <p className="text-2xl ml-2">Viapix</p>
+        <div className="flex items-center">
+          <p className="text-2xl ml-2">Viapix</p>
+          <a href="https://viapix.fr/en/home/" target="_blank">
+            <ExternalLinkIcon className="h-4 w-4 ml-2" />
+          </a>
+        </div>
       </div>
 
       <div className="flex overflow-x-auto whitespace-no-wrap mt-4 lg:hidden" /* animate-infinite-left-to-right */>
@@ -38,7 +44,12 @@ export default function Viapix() {
                 }}
               />
               <div className="ml-2">
-                <CardTitle className="hidden: lg:block">Viapix</CardTitle>
+                <div className="flex items-center">
+                  <CardTitle className="hidden: lg:block">Viapix</CardTitle>
+                  <a href="https://viapix.fr/en/home/" target="_blank">
+                    <ExternalLinkIcon className="h-4 w-4 ml-2" />
+                  </a>
+                </div>
                 <div className="flex overflow-x-auto whitespace-no-wrap mt-4" /* animate-infinite-left-to-right */>
                   <Badge alt="logo of Pytorch" src={pytorchLogo} text="Pytorch" className="bg-pytorch" />
                   <Badge alt="logo of Delphi" src={delphiLogo} text="Delphi" className="bg-delphi" />
