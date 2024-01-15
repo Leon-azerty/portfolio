@@ -27,23 +27,25 @@ export default function Viapix() {
 
       <Card className="mt-4 h-full">
         <CardHeader className="hidden lg:block">
-          <div className="flex">
-            <Image
-              src={viapixLogo}
-              alt="logo of Viapix"
-              style={{
-                width: '90px',
-                height: 'auto',
-              }}
-            />
-            <div>
-              <CardTitle className="hidden: lg:block">Viapix</CardTitle>
-              <div className="flex overflow-x-auto whitespace-no-wrap mt-4" /* animate-infinite-left-to-right */>
-                <Badge alt="logo of Pytorch" src={pytorchLogo} text="Pytorch" className="bg-pytorch" />
-                <Badge alt="logo of Delphi" src={delphiLogo} text="Delphi" className="bg-delphi" />
+          <CardTitle className="flex items-center">
+            <div className="flex">
+              <Image
+                src={viapixLogo}
+                alt="logo of Viapix"
+                style={{
+                  width: '90px',
+                  height: 'auto',
+                }}
+              />
+              <div className="ml-2">
+                <CardTitle className="hidden: lg:block">Viapix</CardTitle>
+                <div className="flex overflow-x-auto whitespace-no-wrap mt-4" /* animate-infinite-left-to-right */>
+                  <Badge alt="logo of Pytorch" src={pytorchLogo} text="Pytorch" className="bg-pytorch" />
+                  <Badge alt="logo of Delphi" src={delphiLogo} text="Delphi" className="bg-delphi" />
+                </div>
               </div>
             </div>
-          </div>
+          </CardTitle>
         </CardHeader>
         <CardContent>
           I joined Viapix during my 2nd year in Epitech as data scientist.

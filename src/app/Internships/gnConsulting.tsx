@@ -27,23 +27,25 @@ export default function GnConsulting() {
 
       <Card className="mt-4 h-full">
         <CardHeader className="hidden lg:block">
-          <div className="flex">
-            <Image
-              src={gnLogo}
-              alt="Photo of GN"
-              style={{
-                width: '90px',
-                height: 'auto',
-              }}
-            />
-            <div>
-              <CardTitle className="hidden: lg:block">GN Consulting</CardTitle>
-              <div className="flex overflow-x-auto whitespace-no-wrap mt-4" /* animate-infinite-left-to-right */>
-                <Badge alt="logo of React" src={reactLogo} text="React" className="bg-react" />
-                <Badge alt="logo of Tailwind" src={tailwindLogo} text="Tailwind" className="bg-tailwind" />
+          <CardTitle className="flex items-center">
+            <div className="flex">
+              <Image
+                src={gnLogo}
+                alt="Photo of GN"
+                style={{
+                  width: '90px',
+                  height: 'auto',
+                }}
+              />
+              <div className="ml-2">
+                <CardTitle className="hidden: lg:block">GN Consulting</CardTitle>
+                <div className="flex overflow-x-auto whitespace-no-wrap mt-4" /* animate-infinite-left-to-right */>
+                  <Badge alt="logo of React" src={reactLogo} text="React" className="bg-react" />
+                  <Badge alt="logo of Tailwind" src={tailwindLogo} text="Tailwind" className="bg-tailwind" />
+                </div>
               </div>
             </div>
-          </div>
+          </CardTitle>
         </CardHeader>
 
         <CardContent>
