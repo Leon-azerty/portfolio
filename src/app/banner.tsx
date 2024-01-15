@@ -1,6 +1,7 @@
 import { GitHubLogoIcon, LinkedInLogoIcon } from '@radix-ui/react-icons';
 import Image from 'next/image';
 import Ellipse from './ellipse';
+import Link from 'next/link';
 
 function CatchLine({ className }: { className: string }) {
   // lg:px-12 xl:px-22 2xl:px-40 lg:text-xl
@@ -17,7 +18,7 @@ function CatchLine({ className }: { className: string }) {
 
 export default function Banner() {
   return (
-    <section id="about">
+    <section id="about" className="2xl:mt-60">
       <div className="min-w-screen p-4 flex justify-around items-center lg:justify-start xl:px-14 lg:mt-10 2xl:mt-20">
         <div className="w-24 h-52 sm:w-32 sm:h-56 md:w-40 md:h-60 xl:w-48 2xl:mr-8 flex items-center">
           <Image
@@ -44,7 +45,9 @@ export default function Banner() {
             <a href="https://www.linkedin.com/in/maxime-noel-lyon/" target="_blank">
               <LinkedInLogoIcon className="h-6 w-6 m-2 ml-0" />
             </a>
-            <p className="pl-0">maxime.noel@epitech.eu</p>
+            <Link href="#contact" className="pl-0">
+              mail
+            </Link>
           </div>
           <CatchLine className="hidden lg:block" />
         </div>

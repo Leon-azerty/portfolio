@@ -10,11 +10,21 @@ export default function Header() {
         <ModeToggle />
       </header>
       <header className="hidden lg:flex justify-end items-center space-x-4 border-b-2 border-gray-400 p-4">
-        <Link href="#about">About</Link>
-        <Link href="#projects">Projects</Link>
-        <Link href="#internships">Internships</Link>
-        <Link href="#experiences">Experiences</Link>
-        <Link href="#contact">Contact</Link>
+        <Link className="hover:underline" href="#about">
+          About
+        </Link>
+        <Link className="hover:underline" href="#projects">
+          Projects
+        </Link>
+        <Link className="hover:underline" href="#internships">
+          Internships
+        </Link>
+        <Link className="hover:underline" href="#experiences">
+          Experiences
+        </Link>
+        <Link className="hover:underline" href="#contact">
+          Contact
+        </Link>
         <ModeToggle />
       </header>
     </div>

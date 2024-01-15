@@ -1,4 +1,4 @@
-import { Card, CardContent } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import reactLogo from '@/public/logo_react.png';
 import nextjsLogo from '@/public/logo_nextjs.png';
 import tailwindLogo from '@/public/logo_tailwind.png';
@@ -10,22 +10,10 @@ import Image from 'next/image';
 function BadgeLine() {
   return (
     <div className="flex overflow-x-auto whitespace-no-wrap mt-4" /* animate-infinite-left-to-right */>
-      <Badge href="https://react.dev/" alt="logo of React" src={reactLogo} text="React" className="bg-react" />
-      <Badge href="https://nextjs.org/" alt="logo of NextJS" src={nextjsLogo} text="NextJs" className="bg-nextjs" />
-      <Badge
-        href="https://tailwindcss.com/"
-        alt="logo of Tailwind"
-        src={tailwindLogo}
-        text="Tailwind"
-        className="bg-tailwind"
-      />
-      <Badge
-        href="https://www.typescriptlang.org/"
-        alt="logo of Typescript"
-        src={typescriptLogo}
-        text="Typescript"
-        className="bg-typescript"
-      />
+      <Badge alt="logo of React" src={reactLogo} text="React" className="bg-react" />
+      <Badge alt="logo of NextJS" src={nextjsLogo} text="NextJs" className="bg-nextjs" />
+      <Badge alt="logo of Tailwind" src={tailwindLogo} text="Tailwind" className="bg-tailwind" />
+      <Badge alt="logo of Typescript" src={typescriptLogo} text="Typescript" className="bg-typescript" />
     </div>
   );
 }
@@ -37,11 +25,14 @@ export default function Portfolio() {
         <p className="text-2xl">Portfolio</p>
       </div>
 
-      <div className="flex items-end">
+      <div className="lg:flex">
         <div className="flex flex-col lg:flex-col-reverse">
           <BadgeLine />
 
           <Card className="mt-4">
+            <CardHeader className="hidden lg:block">
+              <CardTitle>Portfolio</CardTitle>
+            </CardHeader>
             <CardContent>
               The application that you currently seeing.
               <br />

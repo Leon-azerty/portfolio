@@ -5,7 +5,7 @@ import Dublin from './Experiences/dublin';
 
 export default function Experiences() {
   return (
-    <section className="mt-10" id="experiences">
+    <section className="mt-32" id="experiences">
       <p className="text-4xl">Experiences</p>
       <div className="lg:grid lg:grid-cols-2 lg:gap-4">
         <Starton2022 />

@@ -24,11 +24,11 @@ export default function Home() {
           <Header />
           <Banner />
           <Chevron />
-          <Stack />
+          <Internships />
           <Line />
           <Projects />
-          <Internships />
           <Experiences />
+          <Stack />
           <Contact />
           <Footer />
         </main>
