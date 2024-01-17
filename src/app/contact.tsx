@@ -7,16 +7,20 @@ import { Button } from '@/components/ui/button';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { Textarea } from '@/components/ui/textarea';
 import { Input } from '@/components/ui/input';
+import { AiOutlineLoading3Quarters } from 'react-icons/ai';
+import { IconContext } from 'react-icons';
+import { useState } from 'react';
 
 const formSchema = z.object({
   name: z.string().min(2).max(50),
   subject: z.string().min(2).max(50),
   email: z.string().min(2).max(50),
-  message: z.string().min(20).max(500),
+  message: z.string().min(20).max(2000),
 });
 
 export default function Contact() {
-  // 1. Define your form.
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -29,6 +33,7 @@ export default function Contact() {
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
+      setIsSubmitting(true);
       const response = await fetch('/api/send', {
         method: 'POST',
         body: JSON.stringify({
@@ -40,7 +45,7 @@ export default function Contact() {
       });
 
       if (response.ok) {
-        // Traitez la réponse ici si nécessaire
+        setIsSubmitting(false);
       } else {
         console.error("Erreur lors de l'envoi de la requête :", response.statusText);
       }
@@ -63,7 +68,6 @@ export default function Contact() {
                 <FormControl>
                   <Input placeholder="John Doe" {...field} />
                 </FormControl>
-                {/* <FormDescription>This is your entreprise name.</FormDescription> */}
                 <FormMessage />
               </FormItem>
             )}
@@ -77,7 +81,6 @@ export default function Contact() {
                 <FormControl>
                   <Input placeholder="placeholder" {...field} />
                 </FormControl>
-                {/* <FormDescription>This is your public display name.</FormDescription> */}
                 <FormMessage />
               </FormItem>
             )}
@@ -91,7 +94,6 @@ export default function Contact() {
                 <FormControl>
                   <Input placeholder="example@gmail.com" {...field} />
                 </FormControl>
-                {/* <FormDescription>This is your public display name.</FormDescription> */}
                 <FormMessage />
               </FormItem>
             )}
@@ -105,13 +107,19 @@ export default function Contact() {
                 <FormControl>
                   <Textarea placeholder="Type your message here." {...field} />
                 </FormControl>
-                {/* <FormDescription>This is your public display name.</FormDescription> */}
                 <FormMessage />
               </FormItem>
             )}
           />
           <div className="flex flex-row-reverse">
-            <Button type="submit">Submit</Button>
+            <Button type="submit">
+              {isSubmitting ? (
+                <IconContext.Provider value={{ className: 'animate-spin mr-2' }}>
+                  <AiOutlineLoading3Quarters />
+                </IconContext.Provider>
+              ) : null}
+              Submit
+            </Button>
           </div>
         </form>
       </Form>
