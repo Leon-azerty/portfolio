@@ -46,7 +46,7 @@ function Element({
 
 export default function Stack() {
   return (
-    <section className="mt-32">
+    <section className="mt-32" id="stack">
       <p className="text-4xl">Stack</p>
       <div className="flex justify-center">
         <div className="grid grid-cols-3 grid-rows-2 gap-12 p-4">

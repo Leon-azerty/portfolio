@@ -42,9 +42,10 @@ export default function SideBar() {
       </div>
       <div className="flex flex-col">
         <SideBarElement href="#about" text="About" />
-        <SideBarElement href="#projects" text="Projects" />
         <SideBarElement href="#internships" text="Internships" />
+        <SideBarElement href="#projects" text="Projects" />
         <SideBarElement href="#experiences" text="Experiences" />
+        <SideBarElement href="#stack" text="Stack" />
         <SideBarElement href="#contact" text="Contact" />
       </div>
     </div>

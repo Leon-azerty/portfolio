@@ -13,14 +13,17 @@ export default function Header() {
         <Link className="hover:underline" href="#about">
           About
         </Link>
-        <Link className="hover:underline" href="#projects">
-          Projects
-        </Link>
         <Link className="hover:underline" href="#internships">
           Internships
         </Link>
+        <Link className="hover:underline" href="#projects">
+          Projects
+        </Link>
         <Link className="hover:underline" href="#experiences">
           Experiences
+        </Link>
+        <Link className="hover:underline" href="#stack">
+          Stack
         </Link>
         <Link className="hover:underline" href="#contact">
           Contact
