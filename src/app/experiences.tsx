@@ -12,9 +12,9 @@ export default function Experiences() {
         <div className="my-5 lg:hidden">&nbsp;</div>
         <Starton2021 />
         <div className="my-5 lg:hidden">&nbsp;</div>
-        <Berlin />
-        <div className="my-5 lg:hidden">&nbsp;</div>
         <Dublin />
+        <div className="my-5 lg:hidden">&nbsp;</div>
+        <Berlin />
       </div>
     </section>
   );
