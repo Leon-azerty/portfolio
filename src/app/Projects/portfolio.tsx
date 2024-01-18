@@ -37,11 +37,11 @@ export default function Portfolio() {
               The application that you currently seeing.
               <br />
               <br />
-              The difference with checked is that portofolio is almost 100% static and doesn’t require a backend or a
-              database.
+              The difference with checked is that portofolio is almost 100% static and doesn&rsquo;t require a backend
+              or a database.
               <br />
               <br />
-              For this project I used NextJs, tailwind and Typescript .
+              For this project I used NextJs, tailwind and Typescript.
             </CardContent>
           </Card>
         </div>
