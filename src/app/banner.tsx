@@ -48,6 +48,9 @@ export default function Banner() {
             <Link href="#contact" className="pl-0">
               mail
             </Link>
+            <a href="public/Resume 2024 English.pdf" download="Resume2024.pdf" className="ml-2 underline">
+              Resume
+            </a>
           </div>
           <CatchLine className="hidden lg:block" />
         </div>
