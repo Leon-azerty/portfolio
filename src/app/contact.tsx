@@ -11,11 +11,17 @@ import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 import { IconContext } from 'react-icons';
 import { useState } from 'react';
 
+const fileSchema = z.object({
+  name: z.string(),
+  content: z.instanceof(ArrayBuffer),
+});
+
 const formSchema = z.object({
   name: z.string().min(2).max(50),
   subject: z.string().min(2).max(50),
-  email: z.string().min(2).max(50),
+  email: z.string().email().min(2).max(50),
   message: z.string().min(20).max(2000),
+  attachments: z.array(fileSchema),
 });
 
 export default function Contact() {
@@ -28,6 +34,7 @@ export default function Contact() {
       subject: '',
       email: '',
       message: '',
+      attachments: [],
     },
   });
 
@@ -41,11 +48,15 @@ export default function Contact() {
           email: values.email,
           subject: values.subject,
           message: values.message,
+          attachments: values.attachments,
         }),
       });
 
       if (response.ok) {
         setIsSubmitting(false);
+        response.json().then((data) => {
+          console.log('data :', data);
+        });
       } else {
         console.error("Erreur lors de l'envoi de la requête :", response.statusText);
       }
@@ -93,6 +104,34 @@ export default function Contact() {
                 <FormLabel>email</FormLabel>
                 <FormControl>
                   <Input placeholder="example@gmail.com" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="attachments"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Attachments</FormLabel>
+                <FormControl>
+                  <Input
+                    type="file"
+                    multiple
+                    onChange={(e) => {
+                      const files = e.target.files;
+                      console.log('files :', files);
+                      if (files) {
+                        Promise.all(
+                          Array.from(files).map(async (file) => ({
+                            name: file.name,
+                            content: await file.arrayBuffer(),
+                          }))
+                        ).then((filesArray) => field.onChange(filesArray));
+                      }
+                    }}
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
