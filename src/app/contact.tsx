@@ -12,8 +12,8 @@ import { IconContext } from 'react-icons';
 import { useState } from 'react';
 
 const fileSchema = z.object({
-  name: z.string(),
-  content: z.instanceof(ArrayBuffer),
+  filename: z.string(),
+  content: z.any(),
 });
 
 const formSchema = z.object({
@@ -125,10 +125,22 @@ export default function Contact() {
                       if (files) {
                         Promise.all(
                           Array.from(files).map(async (file) => ({
-                            name: file.name,
-                            content: await file.arrayBuffer(),
+                            filename: file.name,
+                            content: Buffer.from(await file.arrayBuffer()).toString('base64'),
                           }))
-                        ).then((filesArray) => field.onChange(filesArray));
+                        ).then((filesArray) => {
+                          console.log('filesArray :', filesArray);
+                          field.onChange(filesArray);
+                        });
+                        // Promise.all(
+                        //   Array.from(files).map(async (file) => ({
+                        //     filename: file.name,
+                        //     content: await file.arrayBuffer(),
+                        //   }))
+                        // ).then((filesArray) => {
+                        //   console.log('filesArray :', filesArray);
+                        //   field.onChange(filesArray);
+                        // });
                       }
                     }}
                   />

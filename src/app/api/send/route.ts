@@ -6,7 +6,7 @@ import * as z from "zod";
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 const fileSchema = z.object({
-  name: z.string(),
+  filename: z.string(),
   content: z.instanceof(ArrayBuffer),
 });
 
@@ -34,10 +34,17 @@ export async function POST(req: NextRequest) {
     
     const { name, email, message, subject, attachments } = await json; 
 
+    for (const attachment of attachments) {
+      console.log(attachment);
+    }
+    
     const attachment = {
-      filename: 'example.txt',
-      content: Buffer.from('This is an example attachment.'),
+      filename: attachments[0].filename,
+      content: attachments[0].content,
     };
+    console.log("typeof(attachments[0].content) : ", typeof(attachments[0].content));
+    console.log("attachments[0].content : ", attachments[0].content);
+    console.log("attachment.content : ", attachment.content);
 
     const data = await resend.emails.send({
       from: 'Acme <onboarding@resend.dev>',
@@ -45,17 +52,16 @@ export async function POST(req: NextRequest) {
       subject: 'Nouveau message de ' + name,
       react: EmailTemplate({ name, email, message, subject}),
       text: 'useless text ??',
-      attachments: [attachment], 
-      // attachments.map(({ name, content }: {name: string, content: Buffer}) => ({
-      //   name,
-      //   content: Buffer.from(content),
-      // })),
+      attachments: [attachment],
     });
 
-    console.log("data");
-    console.log(data);
-    
-    return NextResponse.json({ data, error: null }, { status: 200 });
+    if (data.error) {
+      console.error("data.error :");
+      console.error(data.error);
+      return NextResponse.json({ data, error: data.error }, { status: 500 });
+    } else {
+      return NextResponse.json({ data, error: null }, { status: 200 });
+    }
   } catch (error) {
     return NextResponse.json({error});
 
