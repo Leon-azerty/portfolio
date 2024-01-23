@@ -21,12 +21,7 @@ const sendRouteSchema = z.object({
 export async function POST(req: NextRequest) {
   try {
     const json = req.json();
-    const { name, email, message, subject, attachments } = await json; 
-
-    const attachment = {
-      filename: attachments[0].filename,
-      content: attachments[0].content,
-    };
+    const { name, email, message, subject, attachments } = await json;
 
     const data = await resend.emails.send({
       from: 'Acme <onboarding@resend.dev>',
@@ -34,7 +29,10 @@ export async function POST(req: NextRequest) {
       subject: 'Nouveau message de ' + name,
       react: EmailTemplate({ name, email, message, subject}),
       text: 'useless text ??',
-      attachments: [attachment],
+      attachments: attachments.map((file : any) => ({
+        filename: file.filename,
+        content: file.content,
+      })),
     });
 
     if (data.error) {
