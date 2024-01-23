@@ -5,8 +5,11 @@ import reactLogo from '@/public/logo_react.png';
 import supabaseLogo from '@/public/logo_supabase.png';
 import nextjsLogo from '@/public/logo_nextjs.png';
 import tailwindLogo from '@/public/logo_tailwind.png';
-// import githubLogo from '@/public/logo_github.png';
 import Badge from '@/badge';
+import { useRef } from 'react';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 function BadgeLine({ className }: { className?: string }) {
   return (
@@ -20,8 +23,34 @@ function BadgeLine({ className }: { className?: string }) {
 }
 
 export default function Checked() {
+  const container = useRef<HTMLElement>(null);
+
+  useGSAP(
+    () => {
+      gsap.registerPlugin(ScrollTrigger);
+
+      const anim = gsap.to(container.current, {
+        opacity: 1,
+        paused: true,
+      });
+
+      ScrollTrigger.create({
+        trigger: container.current,
+        start: 'center 70%',
+        onEnter: () => anim.play(),
+      });
+
+      ScrollTrigger.create({
+        trigger: container.current,
+        start: 'top bottom',
+        onLeaveBack: () => anim.pause(0),
+      });
+    },
+    { scope: container }
+  );
+
   return (
-    <section className="mt-4 ">
+    <section className="mt-4 opacity-20" ref={container}>
       <div className="flex items-center lg:hidden">
         <p className="text-2xl">Checked, Todo app</p>
         <a href="https://checkd.online/login" target="_blank">
