@@ -54,9 +54,6 @@ export default function Contact() {
 
       if (response.ok) {
         setIsSubmitting(false);
-        response.json().then((data) => {
-          console.log('data :', data);
-        });
       } else {
         console.error("Erreur lors de l'envoi de la requête :", response.statusText);
       }
@@ -121,7 +118,6 @@ export default function Contact() {
                     multiple
                     onChange={(e) => {
                       const files = e.target.files;
-                      console.log('files :', files);
                       if (files) {
                         Promise.all(
                           Array.from(files).map(async (file) => ({
@@ -129,18 +125,8 @@ export default function Contact() {
                             content: Buffer.from(await file.arrayBuffer()).toString('base64'),
                           }))
                         ).then((filesArray) => {
-                          console.log('filesArray :', filesArray);
                           field.onChange(filesArray);
                         });
-                        // Promise.all(
-                        //   Array.from(files).map(async (file) => ({
-                        //     filename: file.name,
-                        //     content: await file.arrayBuffer(),
-                        //   }))
-                        // ).then((filesArray) => {
-                        //   console.log('filesArray :', filesArray);
-                        //   field.onChange(filesArray);
-                        // });
                       }
                     }}
                   />

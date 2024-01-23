@@ -21,30 +21,12 @@ const sendRouteSchema = z.object({
 export async function POST(req: NextRequest) {
   try {
     const json = req.json();
-    
-    json.then((body) => {
-      console.log("body");
-      console.log(body);
-    });
-
-
-    // const { name, email, message, subject, attachments } = await json.then((body) => 
-    // sendRouteSchema.parse(body));
-    
-    
     const { name, email, message, subject, attachments } = await json; 
 
-    for (const attachment of attachments) {
-      console.log(attachment);
-    }
-    
     const attachment = {
       filename: attachments[0].filename,
       content: attachments[0].content,
     };
-    console.log("typeof(attachments[0].content) : ", typeof(attachments[0].content));
-    console.log("attachments[0].content : ", attachments[0].content);
-    console.log("attachment.content : ", attachment.content);
 
     const data = await resend.emails.send({
       from: 'Acme <onboarding@resend.dev>',
