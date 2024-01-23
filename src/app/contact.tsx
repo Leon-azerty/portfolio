@@ -10,6 +10,7 @@ import { Input } from '@/components/ui/input';
 import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 import { IconContext } from 'react-icons';
 import { useState } from 'react';
+import Image from 'next/image';
 
 const fileSchema = z.object({
   filename: z.string(),
@@ -67,74 +68,86 @@ export default function Contact() {
       <p className="text-3xl">Contact Me</p>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-          <FormField
-            control={form.control}
-            name="name"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Name</FormLabel>
-                <FormControl>
-                  <Input placeholder="John Doe" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <FormField
-            control={form.control}
-            name="subject"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Subject</FormLabel>
-                <FormControl>
-                  <Input placeholder="placeholder" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <FormField
-            control={form.control}
-            name="email"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>email</FormLabel>
-                <FormControl>
-                  <Input placeholder="example@gmail.com" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <FormField
-            control={form.control}
-            name="attachments"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Attachments</FormLabel>
-                <FormControl>
-                  <Input
-                    type="file"
-                    multiple
-                    onChange={(e) => {
-                      const files = e.target.files;
-                      if (files) {
-                        Promise.all(
-                          Array.from(files).map(async (file) => ({
-                            filename: file.name,
-                            content: Buffer.from(await file.arrayBuffer()).toString('base64'),
-                          }))
-                        ).then((filesArray) => {
-                          field.onChange(filesArray);
-                        });
-                      }
-                    }}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
+          <div className="flex justify-between">
+            <div className="flex flex-col w-full">
+              <FormField
+                control={form.control}
+                name="name"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Name</FormLabel>
+                    <FormControl>
+                      <Input placeholder="John Doe" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="subject"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Subject</FormLabel>
+                    <FormControl>
+                      <Input placeholder="placeholder" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="email"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>email</FormLabel>
+                    <FormControl>
+                      <Input placeholder="example@gmail.com" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="attachments"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Attachments</FormLabel>
+                    <FormControl>
+                      <Input
+                        type="file"
+                        multiple
+                        onChange={(e) => {
+                          const files = e.target.files;
+                          if (files) {
+                            Promise.all(
+                              Array.from(files).map(async (file) => ({
+                                filename: file.name,
+                                content: Buffer.from(await file.arrayBuffer()).toString('base64'),
+                              }))
+                            ).then((filesArray) => {
+                              field.onChange(filesArray);
+                            });
+                          }
+                        }}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </div>
+            <Image
+              src="/high_five.png"
+              alt="Illustration image"
+              width={400}
+              height={200}
+              className="hidden lg:block w-[700px] h-[350px]"
+            />
+          </div>
+
           <FormField
             control={form.control}
             name="message"
