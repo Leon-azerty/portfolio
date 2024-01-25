@@ -29,19 +29,11 @@ export default function Checked() {
     () => {
       gsap.registerPlugin(ScrollTrigger);
 
-      // const anim = gsap.to(
-      //   container.current,
-      //   {
-      //     opacity: 1,
-      //     paused: true,
-      //   }
-      // );
       const anim = gsap.fromTo(
         container.current,
         {
           opacity: 0,
           x: -100,
-          // paused: true,
         },
         {
           opacity: 1,
@@ -53,13 +45,25 @@ export default function Checked() {
       ScrollTrigger.create({
         trigger: container.current,
         start: 'center 90%',
-        onEnter: () => anim.play(0),
+        onEnter: () => anim.play(),
+      });
+
+      ScrollTrigger.create({
+        trigger: container.current,
+        start: 'center 90%',
+        onEnterBack: () => anim.play(),
       });
 
       ScrollTrigger.create({
         trigger: container.current,
         start: 'top bottom',
         onLeaveBack: () => anim.pause(0),
+      });
+
+      ScrollTrigger.create({
+        trigger: container.current,
+        start: 'top bottom',
+        onLeave: () => anim.pause(0),
       });
     },
     { scope: container }
