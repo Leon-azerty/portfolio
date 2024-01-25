@@ -1,14 +1,64 @@
 import Image from 'next/image';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import supabaseLogo from '@/public/logo_supabase.png';
 import flutterLogo from '@/public/logo_flutter.png';
 import piwioLogo from '@/public/logo_piwio.png';
 import Badge from '@/badge';
 import { ExternalLinkIcon } from '@radix-ui/react-icons';
+import { useRef } from 'react';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 export default function Piwio() {
+  const container = useRef<HTMLElement>(null);
+
+  useGSAP(
+    () => {
+      gsap.registerPlugin(ScrollTrigger);
+
+      const anim = gsap.fromTo(
+        container.current,
+        {
+          opacity: 0,
+          y: -100,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          paused: true,
+        }
+      );
+
+      ScrollTrigger.create({
+        trigger: container.current,
+        start: 'center 90%',
+        onEnter: () => anim.play(),
+      });
+
+      ScrollTrigger.create({
+        trigger: container.current,
+        start: 'center 90%',
+        onEnterBack: () => anim.play(),
+      });
+
+      ScrollTrigger.create({
+        trigger: container.current,
+        start: 'top bottom',
+        onLeaveBack: () => anim.pause(0),
+      });
+
+      ScrollTrigger.create({
+        trigger: container.current,
+        start: 'top bottom',
+        onLeave: () => anim.pause(0),
+      });
+    },
+    { scope: container }
+  );
+
   return (
-    <section className="mt-4 h-full">
+    <section className="mt-4 h-full" ref={container}>
       <div className="flex items-center lg:hidden">
         <Image
           src={piwioLogo}

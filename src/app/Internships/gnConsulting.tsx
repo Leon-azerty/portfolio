@@ -4,10 +4,60 @@ import reactLogo from '@/public/logo_react.png';
 import tailwindLogo from '@/public/logo_tailwind.png';
 import Badge from '@/badge';
 import gnLogo from '@/public/photo_gn.png';
+import { useRef } from 'react';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 export default function GnConsulting() {
+  const container = useRef<HTMLElement>(null);
+
+  useGSAP(
+    () => {
+      gsap.registerPlugin(ScrollTrigger);
+
+      const anim = gsap.fromTo(
+        container.current,
+        {
+          opacity: 0,
+          y: +100,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          paused: true,
+        }
+      );
+
+      ScrollTrigger.create({
+        trigger: container.current,
+        start: 'center 90%',
+        onEnter: () => anim.play(),
+      });
+
+      ScrollTrigger.create({
+        trigger: container.current,
+        start: 'center 90%',
+        onEnterBack: () => anim.play(),
+      });
+
+      ScrollTrigger.create({
+        trigger: container.current,
+        start: 'top bottom',
+        onLeaveBack: () => anim.pause(0),
+      });
+
+      ScrollTrigger.create({
+        trigger: container.current,
+        start: 'top bottom',
+        onLeave: () => anim.pause(0),
+      });
+    },
+    { scope: container }
+  );
+
   return (
-    <section className="mt-4 h-full">
+    <section className="mt-4 h-full" ref={container}>
       <div className="flex items-center lg:hidden">
         <Image
           src={gnLogo}
