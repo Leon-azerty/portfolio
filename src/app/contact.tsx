@@ -11,6 +11,7 @@ import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 import { IconContext } from 'react-icons';
 import { useState } from 'react';
 import Image from 'next/image';
+import { toast } from 'sonner';
 
 const fileSchema = z.object({
   filename: z.string(),
@@ -55,11 +56,13 @@ export default function Contact() {
 
       if (response.ok) {
         setIsSubmitting(false);
+        toast.success('Request send. See you soon ;)');
       } else {
-        console.error("Erreur lors de l'envoi de la requête :", response.statusText);
+        throw new Error(response.statusText);
       }
     } catch (error) {
-      console.error("Erreur lors de l'envoi de la requête :", error);
+      toast.error('Error sending the request.');
+      console.error('error :', error);
     }
   }
 
