@@ -23,21 +23,37 @@ function BadgeLine({ className }: { className?: string }) {
 }
 
 export default function Checked() {
-  const container = useRef<HTMLElement>(null);
+  const container = useRef<HTMLDivElement>(null);
 
   useGSAP(
     () => {
       gsap.registerPlugin(ScrollTrigger);
 
-      const anim = gsap.to(container.current, {
-        opacity: 1,
-        paused: true,
-      });
+      // const anim = gsap.to(
+      //   container.current,
+      //   {
+      //     opacity: 1,
+      //     paused: true,
+      //   }
+      // );
+      const anim = gsap.fromTo(
+        container.current,
+        {
+          opacity: 0,
+          x: -100,
+          // paused: true,
+        },
+        {
+          opacity: 1,
+          x: 0,
+          paused: true,
+        }
+      );
 
       ScrollTrigger.create({
         trigger: container.current,
-        start: 'center 70%',
-        onEnter: () => anim.play(),
+        start: 'center 90%',
+        onEnter: () => anim.play(0),
       });
 
       ScrollTrigger.create({
@@ -50,7 +66,7 @@ export default function Checked() {
   );
 
   return (
-    <section className="mt-4 opacity-20" ref={container}>
+    <section className="mt-4 opacity-0" ref={container}>
       <div className="flex items-center lg:hidden">
         <p className="text-2xl">Checked, Todo app</p>
         <a href="https://checkd.online/login" target="_blank">
