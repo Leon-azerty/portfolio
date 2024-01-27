@@ -25,39 +25,36 @@ function BadgeLine() {
 export default function Portfolio() {
   const container = useRef<HTMLElement>(null);
 
-  useGSAP(
-    () => {
-      gsap.registerPlugin(ScrollTrigger);
+  useGSAP(() => {
+    gsap.registerPlugin(ScrollTrigger);
 
-      const anim = gsap.fromTo(
-        container.current,
-        {
-          opacity: 0,
-          x: +100,
-        },
-        {
-          opacity: 1,
-          x: 0,
-          paused: true,
-        }
-      );
+    const anim = gsap.fromTo(
+      container.current,
+      {
+        opacity: 0,
+        x: +100,
+      },
+      {
+        opacity: 1,
+        x: 0,
+        paused: true,
+      }
+    );
 
-      ScrollTrigger.create({
-        trigger: container.current,
-        start: 'center 90%',
-        onEnter: () => anim.play(),
-        onEnterBack: () => anim.play(),
-      });
+    ScrollTrigger.create({
+      trigger: container.current,
+      start: 'center 90%',
+      onEnter: () => anim.play(),
+      onEnterBack: () => anim.play(),
+    });
 
-      ScrollTrigger.create({
-        trigger: container.current,
-        start: 'top bottom',
-        onLeaveBack: () => anim.pause(0),
-        onLeave: () => anim.pause(0),
-      });
-    },
-    { scope: container }
-  );
+    ScrollTrigger.create({
+      trigger: container.current,
+      start: 'top bottom',
+      onLeaveBack: () => anim.pause(0),
+      onLeave: () => anim.pause(0),
+    });
+  });
 
   return (
     <section className="mt-4" ref={container}>
