@@ -85,7 +85,7 @@ export default function Portfolio() {
             </CardHeader>
             <CardContent>
               The application you are currently viewing distinguishes itself from a typical portfolio as it is nearly
-              100% static and doesn't necessitate a backend or a database.
+              100% static and doesn&apos;t necessitate a backend or a database.
               <br />
               In crafting this project, I opted for Next. js, tailwind, and Typescript to ensure a seamless and
               efficient development process.

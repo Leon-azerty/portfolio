@@ -109,7 +109,7 @@ export default function Checked() {
               <br /> Throughout the development process, I immersed myself in learning server components with Next. js.
               <br /> I gained valuable experience in hosting projects using Vercel, including domain name modification.
               <br /> Moreover, I incorporated Supabase and PostgreSQL to efficiently store and manage both the to-dos
-              and their associated tags, enhancing the project's functionality and data management capabilities.
+              and their associated tags, enhancing the project&apos;s functionality and data management capabilities.
             </CardContent>
           </Card>
         </div>
