@@ -48,7 +48,7 @@ export default function Banner() {
             <Link href="#contact" className="pl-0">
               mail
             </Link>
-            <a href="public/MaximeNOEL_eng.pdf" download="Resume2024.pdf" className="ml-2 underline">
+            <a href="/MaximeNOEL_eng.pdf" download="MaximeNOEL_eng.pdf" className="ml-2 underline">
               Resume
             </a>
           </div>
