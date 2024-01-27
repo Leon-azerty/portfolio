@@ -46,11 +46,6 @@ export default function Portfolio() {
         trigger: container.current,
         start: 'center 90%',
         onEnter: () => anim.play(),
-      });
-
-      ScrollTrigger.create({
-        trigger: container.current,
-        start: 'center 90%',
         onEnterBack: () => anim.play(),
       });
 
@@ -58,11 +53,6 @@ export default function Portfolio() {
         trigger: container.current,
         start: 'top bottom',
         onLeaveBack: () => anim.pause(0),
-      });
-
-      ScrollTrigger.create({
-        trigger: container.current,
-        start: 'top bottom',
         onLeave: () => anim.pause(0),
       });
     },
