@@ -102,14 +102,14 @@ export default function Checked() {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              As a customer of apps like Notion, obsidian etc. I naturally wanted to create a project resembling what I
-              love.
-              <br />
-              The main feature is a system of tag, which allows user to create a todo with tags and sort todos by tags.
-              <br />
-              <br />
-              During the developpment I could learn the server components with NextJs, how to host a project with vercel
-              and modify the domain name.
+              As an avid user of apps like Notion and Obsidian, I naturally aspired to create a project inspired by what
+              I love.
+              <br /> The primary feature includes a robust tagging system, enabling users to create to-dos with tags and
+              easily sort tasks based on these tags.
+              <br /> Throughout the development process, I immersed myself in learning server components with Next. js.
+              <br /> I gained valuable experience in hosting projects using Vercel, including domain name modification.
+              <br /> Moreover, I incorporated Supabase and PostgreSQL to efficiently store and manage both the to-dos
+              and their associated tags, enhancing the project's functionality and data management capabilities.
             </CardContent>
           </Card>
         </div>

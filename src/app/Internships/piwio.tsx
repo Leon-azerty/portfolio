@@ -109,12 +109,11 @@ export default function Piwio() {
           </CardTitle>
         </CardHeader>
         <CardContent>
-          I joined Piwio as a Flutter developper, at this period i wasn’t sure that react will be the techno that i want
-          to learn and master.
-          <br />
-          At Piwio I developped many softwares for different devices (Windows, android). I could learn the parallel
-          computing in flutter, how to use DLL for sync data with IoT. I could discover Supabase to save the results of
-          the embedded system on database.
+          As a Flutter developer at Piwio, I initially explored React, unsure if it was my preferred technology. During
+          my time there, I created software for various devices, including Windows and Android. I delved into parallel
+          computing in Flutter, utilized DLLs for IoT data synchronization, and discovered Supabase for efficient
+          embedded system data storage. This experience not only enhanced my technical proficiency but also broadened my
+          perspective on cutting-edge technologies in software development.
         </CardContent>
       </Card>
     </section>

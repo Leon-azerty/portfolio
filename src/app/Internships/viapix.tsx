@@ -109,11 +109,11 @@ export default function Viapix() {
           </CardTitle>
         </CardHeader>
         <CardContent>
-          I joined Viapix during my 2nd year in Epitech as data scientist.
-          <br />I could train a Deep Learning model to recognize the road on image with Pytorch, in addition to that I
-          labelized image used for the training. It was a semantic segmentation so the training was really long, during
-          this time I was also able to develop a map like Google map thanks to the Open Street Map tiles, this map was
-          used to display the road precisely (thanks to the DL model).
+          During my second year at Epitech, I joined Viapix as a data scientist. I successfully trained a Deep Learning
+          model using PyTorch to identify roads in images, incorporating image labeling for training purposes. The
+          nature of semantic segmentation made the training process time-intensive. Concurrently, I developed a map
+          reminiscent of Google Maps using OpenStreetMap tiles. This map played a crucial role in precisely displaying
+          roads, leveraging the capabilities of the trained Deep Learning model.
         </CardContent>
       </Card>
     </section>

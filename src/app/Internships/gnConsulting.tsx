@@ -99,8 +99,10 @@ export default function GnConsulting() {
         </CardHeader>
 
         <CardContent>
-          I joined GN consulting during a part-time where I could learn the basics of front-end web development with aim
-          to create a portfolio. I could also work on two different web-app with performances issues.
+          During a part-time role at GN Consulting, I immersed myself in the basics of front-end web development with
+          the aim of building a comprehensive portfolio. In the process, I had the opportunity to address performance
+          issues in two diverse web applications. Moreover, I expanded my skill set by exploring Node.js and Vercel,
+          gaining insights into efficient project deployment practices.
         </CardContent>
       </Card>
     </section>

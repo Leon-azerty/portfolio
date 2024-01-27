@@ -84,14 +84,14 @@ export default function Portfolio() {
               <CardTitle>Portfolio</CardTitle>
             </CardHeader>
             <CardContent>
-              The application that you currently seeing.
+              The application you are currently viewing distinguishes itself from a typical portfolio as it is nearly
+              100% static and doesn't necessitate a backend or a database.
               <br />
+              In crafting this project, I opted for Next. js, tailwind, and Typescript to ensure a seamless and
+              efficient development process.
+              <br /> Additionally, I incorporated GSAP for dynamic animations, enhancing the overall user experience
+              with visually appealing and interactive elements.
               <br />
-              The difference with checked is that portofolio is almost 100% static and doesn&rsquo;t require a backend
-              or a database.
-              <br />
-              <br />
-              For this project I used NextJs, tailwind and Typescript.
             </CardContent>
           </Card>
         </div>
