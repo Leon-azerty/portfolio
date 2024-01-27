@@ -21,11 +21,11 @@ export default function Piwio() {
         container.current,
         {
           opacity: 0,
-          y: -100,
+          x: -100,
         },
         {
           opacity: 1,
-          y: 0,
+          x: 0,
           paused: true,
         }
       );
