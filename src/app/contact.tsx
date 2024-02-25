@@ -1,17 +1,17 @@
 'use client';
 
-import { zodResolver } from '@hookform/resolvers/zod';
-import { useForm } from 'react-hook-form';
-import * as z from 'zod';
 import { Button } from '@/components/ui/button';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
-import { Textarea } from '@/components/ui/textarea';
 import { Input } from '@/components/ui/input';
-import { AiOutlineLoading3Quarters } from 'react-icons/ai';
-import { IconContext } from 'react-icons';
-import { useState } from 'react';
+import { Textarea } from '@/components/ui/textarea';
+import { zodResolver } from '@hookform/resolvers/zod';
 import Image from 'next/image';
+import { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { IconContext } from 'react-icons';
+import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 import { toast } from 'sonner';
+import * as z from 'zod';
 
 const fileSchema = z.object({
   filename: z.string(),
@@ -71,8 +71,8 @@ export default function Contact() {
       <p className="text-3xl">Contact Me</p>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-          <div className="flex justify-between">
-            <div className="flex flex-col w-full">
+          <div className="flex justify-between 2xl:justify-around">
+            <div className="flex flex-col w-full xl:w-[500px] 2xl:w-[600px]">
               <FormField
                 control={form.control}
                 name="name"
@@ -147,7 +147,7 @@ export default function Contact() {
               alt="Illustration image"
               width={400}
               height={200}
-              className="hidden lg:block w-[700px] h-[350px]"
+              className="hidden lg:block w-[500px] h-[350px] 2xl:w-[600px] 2xl:h-[450px]"
             />
           </div>
 
