@@ -63,6 +63,7 @@ export default function Contact() {
     } catch (error) {
       toast.error('Error sending the request.');
       console.error('error :', error);
+      setIsSubmitting(false);
     }
   }
 
