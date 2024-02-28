@@ -12,7 +12,7 @@ export async function POST(req: NextRequest) {
     const toMail : string = process.env.EMAIL!
 
     const data = await resend.emails.send({
-      from: 'Acme <maxime-leon.online>',
+      from: 'maxime-leon.online <onboarding@resend.dev>',
       to: [toMail],
       subject: 'Nouveau message de ' + name,
       react: EmailTemplate({ name, email, message, subject}),
