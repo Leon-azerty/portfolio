@@ -3,7 +3,7 @@ import Portfolio from './Projects/portfolio';
 
 export default function Projects() {
   return (
-    <section id="projects">
+    <section id="projects" className="overflow-hidden">
       <p className="text-4xl">Projects</p>
       <Checked />
       <div className="my-10">&nbsp;</div>
