@@ -1,7 +1,9 @@
 import { GitHubLogoIcon, LinkedInLogoIcon } from '@radix-ui/react-icons';
 import Image from 'next/image';
-import Ellipse from './ellipse';
 import Link from 'next/link';
+import Ellipse from './ellipse';
+
+const linkedinURL = 'https://www.linkedin.com/in/leon-maxime-noel/';
 
 function CatchLine({ className }: { className: string }) {
   // lg:px-12 xl:px-22 2xl:px-40 lg:text-xl
@@ -42,7 +44,7 @@ export default function Banner() {
             <a href="https://github.com/leon3108" target="_blank">
               <GitHubLogoIcon className="h-6 w-6 m-2 ml-0" />
             </a>
-            <a href="https://www.linkedin.com/in/maxime-noel-lyon/" target="_blank">
+            <a href={linkedinURL} target="_blank">
               <LinkedInLogoIcon className="h-6 w-6 m-2 ml-0" />
             </a>
             <Link href="#contact" className="pl-0">
