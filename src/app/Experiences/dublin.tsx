@@ -1,9 +1,9 @@
 import { Card, CardContent, CardTitle } from '@/components/ui/card';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Image from 'next/image';
 import { useRef } from 'react';
-import gsap from 'gsap';
-import { useGSAP } from '@gsap/react';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 export default function Dublin() {
   const container = useRef<HTMLElement>(null);
@@ -53,11 +53,11 @@ export default function Dublin() {
               height: 'auto',
             }}
           />
-          <p className="ml-2">Currently in Dublin</p>
+          <p className="ml-2">8 months in Dublin</p>
         </CardTitle>
         <CardContent className="p-0 pt-4 lg:h-24">
-          Currently in my fourth year in Epitech, I study at the Technological University of Dublin in program “Data
-          analysis”
+          During my fourth year in Epitech, I studied at the Technological University of Dublin, where I obtained a
+          continuing professional development diploma in data analytics
         </CardContent>
       </Card>
     </section>

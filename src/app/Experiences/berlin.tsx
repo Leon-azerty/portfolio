@@ -1,9 +1,9 @@
 import { Card, CardContent, CardTitle } from '@/components/ui/card';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Image from 'next/image';
 import { useRef } from 'react';
-import gsap from 'gsap';
-import { useGSAP } from '@gsap/react';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 export default function Berlin() {
   const container = useRef<HTMLElement>(null);
@@ -53,7 +53,7 @@ export default function Berlin() {
               height: 'auto',
             }}
           />
-          <p className="ml-2">8 month Berlin</p>
+          <p className="ml-2">8 months Berlin</p>
         </CardTitle>
         <CardContent className="p-0 pt-4 lg:h-24">
           During my second year in Epitech I had the oppurtinity to study in Berlin
