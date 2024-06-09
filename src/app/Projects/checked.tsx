@@ -1,5 +1,6 @@
 import Badge from '@/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import checked from '@/public/checked.png';
 import nextjsLogo from '@/public/logo_nextjs.png';
 import reactLogo from '@/public/logo_react.png';
 import supabaseLogo from '@/public/logo_supabase.png';
@@ -10,7 +11,6 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Image from 'next/image';
 import { useRef } from 'react';
-import checked from '../../../public/checked.png';
 
 function BadgeLine({ className }: { className?: string }) {
   return (

@@ -1,5 +1,5 @@
+import chevron from '@/public/chevron.png';
 import Image from 'next/image';
-import chevron from '../../public/chevron.png';
 
 export default function Chevron() {
   return (

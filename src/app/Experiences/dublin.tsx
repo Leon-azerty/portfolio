@@ -1,10 +1,10 @@
 import { Card, CardContent, CardTitle } from '@/components/ui/card';
+import flagIreland from '@/public/flag_ireland.png';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Image from 'next/image';
 import { useRef } from 'react';
-import flagIreland from '../../../public/flag_ireland.png';
 
 export default function Dublin() {
   const container = useRef<HTMLElement>(null);

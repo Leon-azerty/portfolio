@@ -1,5 +1,5 @@
+import line from '@/public/line.png';
 import Image from 'next/image';
-import line from '../../public/line.png';
 
 export default function Line() {
   return (

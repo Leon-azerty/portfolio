@@ -1,7 +1,7 @@
+import HeaderImage from '@/public/M.N.2.png';
 import { GitHubLogoIcon, LinkedInLogoIcon } from '@radix-ui/react-icons';
 import Image from 'next/image';
 import Link from 'next/link';
-import HeaderImage from '../../public/M.N.2.png';
 import Ellipse from './ellipse';
 
 const linkedinURL = 'https://www.linkedin.com/in/leon-maxime-noel/';

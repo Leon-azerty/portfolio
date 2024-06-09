@@ -1,10 +1,10 @@
 import { Card, CardContent, CardTitle } from '@/components/ui/card';
+import flagGermany from '@/public/flag_germany.png';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Image from 'next/image';
 import { useRef } from 'react';
-import flagGermany from '../../../public/flag_germany.png';
 
 export default function Berlin() {
   const container = useRef<HTMLElement>(null);
