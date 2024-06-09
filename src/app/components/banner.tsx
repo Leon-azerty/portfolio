@@ -1,4 +1,5 @@
 import HeaderImage from '@/public/M.N.2.png';
+import { Button } from '@/ui/button';
 import { GitHubLogoIcon, LinkedInLogoIcon } from '@radix-ui/react-icons';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -43,6 +44,9 @@ export default function Banner() {
             </a>
           </div>
           <CatchLine className="hidden lg:block" />
+          <Button variant={'cta'}>
+            <Link href="#contact">Let's Build Together</Link>
+          </Button>
         </div>
       </div>
       <CatchLine className="lg:hidden" />
