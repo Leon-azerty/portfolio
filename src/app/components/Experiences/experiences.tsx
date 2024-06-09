@@ -1,7 +1,7 @@
-import Berlin from './Experiences/berlin';
-import Dublin from './Experiences/dublin';
-import Starton2021 from './Experiences/starton2021';
-import Starton2022 from './Experiences/starton2022';
+import Berlin from './berlin';
+import Dublin from './dublin';
+import Starton2021 from './starton2021';
+import Starton2022 from './starton2022';
 
 export default function Experiences() {
   return (

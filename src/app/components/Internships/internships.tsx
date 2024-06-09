@@ -1,6 +1,6 @@
-import GnConsulting from './Internships/gnConsulting';
-import Piwio from './Internships/piwio';
-import Viapix from './Internships/viapix';
+import GnConsulting from './gnConsulting';
+import Piwio from './piwio';
+import Viapix from './viapix';
 
 export default function Internships() {
   return (

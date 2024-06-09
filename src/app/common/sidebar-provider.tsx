@@ -2,7 +2,7 @@
 
 import { type ThemeProviderProps } from 'next-themes/dist/types';
 import { useState } from 'react';
-import { SidebarContext } from '../app/contexts/sideBarContext';
+import { SidebarContext } from '../contexts/sideBarContext';
 
 export function SideBarProvider({ children, ...props }: ThemeProviderProps) {
   const [isOpen, setIsOpen] = useState(false);

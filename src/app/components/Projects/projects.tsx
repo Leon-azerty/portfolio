@@ -1,5 +1,5 @@
-import Checked from './Projects/checked';
-import Portfolio from './Projects/portfolio';
+import Checked from './checked';
+import Portfolio from './portfolio';
 
 export default function Projects() {
   return (

@@ -7,7 +7,6 @@ import Ellipse from './ellipse';
 const linkedinURL = 'https://www.linkedin.com/in/leon-maxime-noel/';
 
 function CatchLine({ className }: { className: string }) {
-  // lg:px-12 xl:px-22 2xl:px-40 lg:text-xl
   return (
     <div
       className={`text-center p-4 md:px-14 lg:px-0 lg:w-[550px] lg:text-justify xl:w-[600px] 2xl:w-[800px] ${className}`}

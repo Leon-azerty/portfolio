@@ -1,14 +1,14 @@
-import Banner from './banner';
-import Chevron from './chevron';
-import Contact from './contact';
-import Experiences from './experiences';
-import Footer from './footer';
-import Header from './header';
-import Internships from './internships';
-import Line from './line';
-import Projects from './projects';
-import SideBar from './sideBar';
-import Stack from './stack';
+import Experiences from './components/Experiences/experiences';
+import Internships from './components/Internships/internships';
+import Projects from './components/Projects/projects';
+import Banner from './components/banner';
+import Chevron from './components/chevron';
+import Contact from './components/contact';
+import Footer from './components/footer';
+import Header from './components/header';
+import Line from './components/line';
+import SideBar from './components/sideBar';
+import Stack from './components/stack';
 
 export default function Home() {
   return (

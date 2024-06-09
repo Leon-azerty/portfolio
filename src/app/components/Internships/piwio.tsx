@@ -1,18 +1,18 @@
 'use client';
 
-import Badge from '@/badge';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import delphiLogo from '@/public/logo_delphi.png';
-import pytorchLogo from '@/public/logo_pytorch.png';
-import viapixLogo from '@/public/logo_viapix.png';
+import flutterLogo from '@/public/logo_flutter.png';
+import piwioLogo from '@/public/logo_piwio.png';
+import supabaseLogo from '@/public/logo_supabase.png';
+import { Card, CardContent, CardHeader, CardTitle } from '@/ui/card';
 import { useGSAP } from '@gsap/react';
 import { ExternalLinkIcon } from '@radix-ui/react-icons';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Image from 'next/image';
 import { useRef } from 'react';
+import Badge from '../badge';
 
-export default function Viapix() {
+export default function Piwio() {
   const container = useRef<HTMLElement>(null);
 
   useGSAP(() => {
@@ -22,7 +22,7 @@ export default function Viapix() {
       container.current,
       {
         opacity: 0,
-        x: +100,
+        x: -100,
       },
       {
         opacity: 1,
@@ -50,24 +50,24 @@ export default function Viapix() {
     <section className="mt-4 h-full" ref={container}>
       <div className="flex items-center lg:hidden">
         <Image
-          src={viapixLogo}
-          alt="logo of Viapix"
+          src={piwioLogo}
+          alt="logo of Piwio"
           style={{
             width: '90px',
             height: 'auto',
           }}
         />
         <div className="flex items-center">
-          <p className="text-2xl ml-2">Viapix</p>
-          <a href="https://viapix.fr/en/home/" target="_blank">
+          <p className="text-2xl ml-2">Piwio</p>
+          <a href="https://www.piwio.fr/" target="_blank">
             <ExternalLinkIcon className="h-4 w-4 ml-2" />
           </a>
         </div>
       </div>
 
       <div className="flex overflow-x-auto whitespace-no-wrap mt-4 lg:hidden" /* animate-infinite-left-to-right */>
-        <Badge alt="logo of Pytorch" src={pytorchLogo} text="Pytorch" className="bg-pytorch" />
-        <Badge alt="logo of Delphi" src={delphiLogo} text="Delphi" className="bg-delphi" />
+        <Badge alt="logo of Flutter" src={flutterLogo} text="Flutter" className="bg-flutter" />
+        <Badge alt="logo of Supabase" src={supabaseLogo} text="Supabase" className="bg-supabase" />
       </div>
 
       <Card className="mt-4 h-full">
@@ -75,8 +75,8 @@ export default function Viapix() {
           <CardTitle className="flex items-center">
             <div className="flex">
               <Image
-                src={viapixLogo}
-                alt="logo of Viapix"
+                src={piwioLogo}
+                alt="logo of Piwio"
                 style={{
                   width: '90px',
                   height: 'auto',
@@ -84,25 +84,25 @@ export default function Viapix() {
               />
               <div className="ml-2">
                 <div className="flex items-center">
-                  <CardTitle className="hidden: lg:block">Viapix</CardTitle>
-                  <a href="https://viapix.fr/en/home/" target="_blank">
+                  <CardTitle className="hidden: lg:block">Piwio</CardTitle>
+                  <a href="https://www.piwio.fr/" target="_blank">
                     <ExternalLinkIcon className="h-4 w-4 ml-2" />
                   </a>
                 </div>
-                <div className="flex overflow-x-auto whitespace-no-wrap mt-4" /* animate-infinite-left-to-right */>
-                  <Badge alt="logo of Pytorch" src={pytorchLogo} text="Pytorch" className="bg-pytorch" />
-                  <Badge alt="logo of Delphi" src={delphiLogo} text="Delphi" className="bg-delphi" />
+                <div className="flex overflow-x-auto whitespace-no-wrap mt-4" /* animate-infinite-left-to-right*/>
+                  <Badge alt="logo of Flutter" src={flutterLogo} text="Flutter" className="bg-flutter" />
+                  <Badge alt="logo of Supabase" src={supabaseLogo} text="Supabase" className="bg-supabase" />
                 </div>
               </div>
             </div>
           </CardTitle>
         </CardHeader>
         <CardContent>
-          During my second year at Epitech, I joined Viapix as a data scientist. I successfully trained a Deep Learning
-          model using PyTorch to identify roads in images, incorporating image labeling for training purposes. The
-          nature of semantic segmentation made the training process time-intensive. Concurrently, I developed a map
-          reminiscent of Google Maps using OpenStreetMap tiles. This map played a crucial role in precisely displaying
-          roads, leveraging the capabilities of the trained Deep Learning model.
+          As a Flutter developer at Piwio, I initially explored React, unsure if it was my preferred technology. During
+          my time there, I created software for various devices, including Windows and Android. I delved into parallel
+          computing in Flutter, utilized DLLs for IoT data synchronization, and discovered Supabase for efficient
+          embedded system data storage. This experience not only enhanced my technical proficiency but also broadened my
+          perspective on cutting-edge technologies in software development.
         </CardContent>
       </Card>
     </section>

@@ -1,15 +1,15 @@
 'use client';
 
-import Badge from '@/badge';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import reactLogo from '@/public/logo_react.png';
 import tailwindLogo from '@/public/logo_tailwind.png';
 import gnLogo from '@/public/photo_gn.png';
+import { Card, CardContent, CardHeader, CardTitle } from '@/ui/card';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Image from 'next/image';
 import { useRef } from 'react';
+import Badge from '../badge';
 
 export default function GnConsulting() {
   const container = useRef<HTMLElement>(null);

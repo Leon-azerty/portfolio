@@ -1,11 +1,11 @@
 'use client';
 
-import { Button } from '@/components/ui/button';
+import { Button } from '@/ui/button';
 import { HamburgerMenuIcon } from '@radix-ui/react-icons';
 import Link from 'next/link';
 import { useContext } from 'react';
+import { SidebarContext } from '../contexts/sideBarContext';
 import { ModeToggle } from './ModeToggle';
-import { SidebarContext } from './contexts/sideBarContext';
 
 export default function Header() {
   let { isOpen, setIsOpen } = useContext(SidebarContext);
