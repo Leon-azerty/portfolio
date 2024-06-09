@@ -1,10 +1,10 @@
 'use client';
 
+import { SidebarContext } from '@/contexts/sideBarContext';
 import { Button } from '@/ui/button';
 import { Cross1Icon } from '@radix-ui/react-icons';
 import Link from 'next/link';
 import { useContext } from 'react';
-import { SidebarContext } from '../contexts/sideBarContext';
 
 const ElementList = [
   { href: '#about', text: 'About' },

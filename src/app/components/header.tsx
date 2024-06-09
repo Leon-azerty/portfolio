@@ -1,10 +1,10 @@
 'use client';
 
+import { SidebarContext } from '@/contexts/sideBarContext';
 import { Button } from '@/ui/button';
 import { HamburgerMenuIcon } from '@radix-ui/react-icons';
 import Link from 'next/link';
 import { useContext } from 'react';
-import { SidebarContext } from '../contexts/sideBarContext';
 import { ModeToggle } from './ModeToggle';
 
 export default function Header() {
