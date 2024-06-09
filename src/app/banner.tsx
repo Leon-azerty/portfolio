@@ -1,6 +1,7 @@
 import { GitHubLogoIcon, LinkedInLogoIcon } from '@radix-ui/react-icons';
 import Image from 'next/image';
 import Link from 'next/link';
+import HeaderImage from '../../public/M.N.2.png';
 import Ellipse from './ellipse';
 
 const linkedinURL = 'https://www.linkedin.com/in/leon-maxime-noel/';
@@ -23,19 +24,7 @@ export default function Banner() {
     <section id="about" className="2xl:mt-60">
       <div className="min-w-screen p-4 flex justify-around items-center lg:justify-start xl:px-14 lg:mt-10 2xl:mt-20">
         <div className="w-24 h-52 sm:w-32 sm:h-56 md:w-40 md:h-60 xl:w-48 2xl:mr-8 flex items-center">
-          <Image
-            className="left-element rounded-full"
-            src="/M.N.2.png"
-            width={100}
-            height={100}
-            alt="Beautiful picture of myself"
-            sizes="100vw"
-            style={{
-              width: '100%',
-              height: 'auto',
-            }}
-            priority
-          />
+          <Image className="rounded-full" src={HeaderImage} alt="Beautiful picture of myself" priority />
         </div>
         <div className="right-element ml-2">
           <p className="md:text-xl lg:min-w-max xl:text-3xl">Maxime NOEL</p>

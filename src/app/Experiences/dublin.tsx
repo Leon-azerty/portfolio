@@ -4,6 +4,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Image from 'next/image';
 import { useRef } from 'react';
+import flagIreland from '../../../public/flag_ireland.png';
 
 export default function Dublin() {
   const container = useRef<HTMLElement>(null);
@@ -44,7 +45,7 @@ export default function Dublin() {
       <Card className="p-4">
         <CardTitle className="flex items-center">
           <Image
-            src="/flag_ireland.png"
+            src={flagIreland}
             width="30"
             height="30"
             alt="Ireland's flag"

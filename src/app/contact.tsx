@@ -12,6 +12,7 @@ import { IconContext } from 'react-icons';
 import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 import { toast } from 'sonner';
 import * as z from 'zod';
+import highFive from '../../public/high_five.png';
 
 const fileSchema = z.object({
   filename: z.string(),
@@ -144,10 +145,8 @@ export default function Contact() {
               />
             </div>
             <Image
-              src="/high_five.png"
+              src={highFive}
               alt="Illustration image"
-              width={400}
-              height={200}
               className="hidden lg:block w-[500px] h-[350px] 2xl:w-[600px] 2xl:h-[450px]"
             />
           </div>

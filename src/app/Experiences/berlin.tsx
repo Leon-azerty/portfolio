@@ -4,6 +4,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Image from 'next/image';
 import { useRef } from 'react';
+import flagGermany from '../../../public/flag_germany.png';
 
 export default function Berlin() {
   const container = useRef<HTMLElement>(null);
@@ -43,16 +44,7 @@ export default function Berlin() {
     <section className="mt-4" ref={container}>
       <Card className="p-4">
         <CardTitle className="flex items-center">
-          <Image
-            src="/flag_germany.png"
-            width="30"
-            height="30"
-            alt="German's flag"
-            style={{
-              maxWidth: '100%',
-              height: 'auto',
-            }}
-          />
+          <Image src={flagGermany} width="30" alt="German's flag" />
           <p className="ml-2">8 months Berlin</p>
         </CardTitle>
         <CardContent className="p-0 pt-4 lg:h-24">

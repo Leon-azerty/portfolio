@@ -1,15 +1,16 @@
-import Image from 'next/image';
+import Badge from '@/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { ExternalLinkIcon } from '@radix-ui/react-icons';
+import nextjsLogo from '@/public/logo_nextjs.png';
 import reactLogo from '@/public/logo_react.png';
 import supabaseLogo from '@/public/logo_supabase.png';
-import nextjsLogo from '@/public/logo_nextjs.png';
 import tailwindLogo from '@/public/logo_tailwind.png';
-import Badge from '@/badge';
-import { useRef } from 'react';
-import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
+import { ExternalLinkIcon } from '@radix-ui/react-icons';
+import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import Image from 'next/image';
+import { useRef } from 'react';
+import checked from '../../../public/checked.png';
 
 function BadgeLine({ className }: { className?: string }) {
   return (
@@ -69,7 +70,7 @@ export default function Checked() {
         <div className="flex justify-center">
           <Image
             alt="screenshot of Checked"
-            src="/checked.png"
+            src={checked}
             width={100}
             height={100}
             className="w-80 sm:w-[500px] md:w-[550px] lg:w-[650px] xl:w-[700px] 2xl:w-[800px]"
