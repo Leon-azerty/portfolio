@@ -1,3 +1,5 @@
+'use client';
+
 import { Card, CardContent, CardTitle } from '@/components/ui/card';
 import flagGermany from '@/public/flag_germany.png';
 import { useGSAP } from '@gsap/react';

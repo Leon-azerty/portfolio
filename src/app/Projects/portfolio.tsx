@@ -1,15 +1,17 @@
+'use client';
+
+import Badge from '@/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import reactLogo from '@/public/logo_react.png';
 import nextjsLogo from '@/public/logo_nextjs.png';
+import reactLogo from '@/public/logo_react.png';
 import tailwindLogo from '@/public/logo_tailwind.png';
 import typescriptLogo from '@/public/logo_typescript.png';
 import illustration from '@/public/portfolio_illustration.png';
-import Badge from '@/badge';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Image from 'next/image';
 import { useRef } from 'react';
-import gsap from 'gsap';
-import { useGSAP } from '@gsap/react';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 function BadgeLine() {
   return (

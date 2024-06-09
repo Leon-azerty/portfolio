@@ -1,9 +1,11 @@
+'use client';
+
 import { Card, CardContent, CardTitle } from '@/components/ui/card';
-import { TfiCup } from 'react-icons/tfi';
-import { useRef } from 'react';
-import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { useRef } from 'react';
+import { TfiCup } from 'react-icons/tfi';
 
 export default function Starton2021() {
   const container = useRef<HTMLElement>(null);

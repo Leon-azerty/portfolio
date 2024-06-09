@@ -1,3 +1,5 @@
+'use client';
+
 import Badge from '@/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import checked from '@/public/checked.png';

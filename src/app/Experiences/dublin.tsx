@@ -1,3 +1,5 @@
+'use client';
+
 import { Card, CardContent, CardTitle } from '@/components/ui/card';
 import flagIreland from '@/public/flag_ireland.png';
 import { useGSAP } from '@gsap/react';

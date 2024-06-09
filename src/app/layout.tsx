@@ -1,3 +1,4 @@
+import { SideBarProvider } from '@/components/sidebar-provider';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Toaster } from '@/components/ui/sonner';
 import type { Metadata } from 'next';
@@ -20,7 +21,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-          {children}
+          <SideBarProvider>{children}</SideBarProvider>
           <Toaster />
         </ThemeProvider>
       </body>

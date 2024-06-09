@@ -1,14 +1,16 @@
-import Image from 'next/image';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import pytorchLogo from '@/public/logo_pytorch.png';
-import delphiLogo from '@/public/logo_delphi.png';
+'use client';
+
 import Badge from '@/badge';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import delphiLogo from '@/public/logo_delphi.png';
+import pytorchLogo from '@/public/logo_pytorch.png';
 import viapixLogo from '@/public/logo_viapix.png';
-import { ExternalLinkIcon } from '@radix-ui/react-icons';
-import { useRef } from 'react';
-import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
+import { ExternalLinkIcon } from '@radix-ui/react-icons';
+import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import Image from 'next/image';
+import { useRef } from 'react';
 
 export default function Viapix() {
   const container = useRef<HTMLElement>(null);

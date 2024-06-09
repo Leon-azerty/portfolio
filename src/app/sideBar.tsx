@@ -17,6 +17,7 @@ const ElementList = [
 
 export default function SideBar() {
   let { isOpen, setIsOpen } = useContext(SidebarContext);
+  if (!isOpen) return null;
   return (
     <div className="fixed top-0 left-0 w-52 h-full shadow-2xl bg-white dark:bg-[#121212] border-r-2 border-gray-300 p-4 pt-6 z-50">
       <div className="flex items-center justify-between mb-10">

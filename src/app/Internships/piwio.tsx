@@ -1,14 +1,16 @@
-import Image from 'next/image';
+'use client';
+
+import Badge from '@/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import supabaseLogo from '@/public/logo_supabase.png';
 import flutterLogo from '@/public/logo_flutter.png';
 import piwioLogo from '@/public/logo_piwio.png';
-import Badge from '@/badge';
-import { ExternalLinkIcon } from '@radix-ui/react-icons';
-import { useRef } from 'react';
-import gsap from 'gsap';
+import supabaseLogo from '@/public/logo_supabase.png';
 import { useGSAP } from '@gsap/react';
+import { ExternalLinkIcon } from '@radix-ui/react-icons';
+import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import Image from 'next/image';
+import { useRef } from 'react';
 
 export default function Piwio() {
   const container = useRef<HTMLElement>(null);
