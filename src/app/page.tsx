@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import Banner from './banner';
 import Chevron from './chevron';
 import Contact from './contact';
@@ -12,7 +13,6 @@ import Line from './line';
 import Projects from './projects';
 import SideBar from './sideBar';
 import Stack from './stack';
-import { useState } from 'react';
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
