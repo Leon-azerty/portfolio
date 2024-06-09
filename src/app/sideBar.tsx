@@ -1,25 +1,19 @@
 'use client';
 
-import { useContext } from 'react';
-import { SidebarContext } from './contexts/sideBarContext';
 import { Button } from '@/components/ui/button';
 import { Cross1Icon } from '@radix-ui/react-icons';
 import Link from 'next/link';
+import { useContext } from 'react';
+import { SidebarContext } from './contexts/sideBarContext';
 
-function SideBarElement({ href, text }: { href: string; text: string }) {
-  let { isOpen, setIsOpen } = useContext(SidebarContext);
-  return (
-    <Link
-      href={href}
-      onClick={() => {
-        setIsOpen(false);
-      }}
-      className="max-w-min mt-2 hover:underline"
-    >
-      {text}
-    </Link>
-  );
-}
+const ElementList = [
+  { href: '#about', text: 'About' },
+  { href: '#internships', text: 'Internships' },
+  { href: '#projects', text: 'Projects' },
+  { href: '#experiences', text: 'Experiences' },
+  { href: '#stack', text: 'Stack' },
+  { href: '#contact', text: 'Contact' },
+];
 
 export default function SideBar() {
   let { isOpen, setIsOpen } = useContext(SidebarContext);
@@ -41,12 +35,17 @@ export default function SideBar() {
         </Button>
       </div>
       <div className="flex flex-col">
-        <SideBarElement href="#about" text="About" />
-        <SideBarElement href="#internships" text="Internships" />
-        <SideBarElement href="#projects" text="Projects" />
-        <SideBarElement href="#experiences" text="Experiences" />
-        <SideBarElement href="#stack" text="Stack" />
-        <SideBarElement href="#contact" text="Contact" />
+        {ElementList.map((element) => (
+          <Link
+            href={element.href}
+            onClick={() => {
+              setIsOpen(false);
+            }}
+            className="max-w-min mt-2 hover:underline"
+          >
+            {element.text}
+          </Link>
+        ))}
       </div>
     </div>
   );
