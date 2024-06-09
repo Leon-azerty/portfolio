@@ -71,111 +71,113 @@ export default function Contact() {
   return (
     <section className="mt-20" id="contact">
       <p className="text-3xl">Contact Me</p>
-      <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-          <div className="flex justify-between 2xl:justify-around">
-            <div className="flex flex-col w-full xl:w-[500px] 2xl:w-[600px]">
-              <FormField
-                control={form.control}
-                name="name"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Name</FormLabel>
-                    <FormControl>
-                      <Input placeholder="John Doe" {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="subject"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Subject</FormLabel>
-                    <FormControl>
-                      <Input placeholder="placeholder" {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="email"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>email</FormLabel>
-                    <FormControl>
-                      <Input placeholder="example@gmail.com" {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="attachments"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Attachments</FormLabel>
-                    <FormControl>
-                      <Input
-                        type="file"
-                        multiple
-                        onChange={(e) => {
-                          const files = e.target.files;
-                          if (files) {
-                            Promise.all(
-                              Array.from(files).map(async (file) => ({
-                                filename: file.name,
-                                content: Buffer.from(await file.arrayBuffer()).toString('base64'),
-                              }))
-                            ).then((filesArray) => {
-                              field.onChange(filesArray);
-                            });
-                          }
-                        }}
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
+      <div className="w-full flex justify-center">
+        <Form {...form}>
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 max-w-4xl">
+            <div className="flex justify-between 2xl:justify-around">
+              <div className="flex flex-col w-full xl:w-[500px] 2xl:w-[600px]">
+                <FormField
+                  control={form.control}
+                  name="name"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Name</FormLabel>
+                      <FormControl>
+                        <Input placeholder="John Doe" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="subject"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Subject</FormLabel>
+                      <FormControl>
+                        <Input placeholder="placeholder" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="email"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>email</FormLabel>
+                      <FormControl>
+                        <Input placeholder="example@gmail.com" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="attachments"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Attachments</FormLabel>
+                      <FormControl>
+                        <Input
+                          type="file"
+                          multiple
+                          onChange={(e) => {
+                            const files = e.target.files;
+                            if (files) {
+                              Promise.all(
+                                Array.from(files).map(async (file) => ({
+                                  filename: file.name,
+                                  content: Buffer.from(await file.arrayBuffer()).toString('base64'),
+                                }))
+                              ).then((filesArray) => {
+                                field.onChange(filesArray);
+                              });
+                            }
+                          }}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </div>
+              <Image
+                src={highFive}
+                alt="Illustration image"
+                className="hidden lg:block w-[500px] h-[350px] 2xl:w-[600px] 2xl:h-[450px]"
               />
             </div>
-            <Image
-              src={highFive}
-              alt="Illustration image"
-              className="hidden lg:block w-[500px] h-[350px] 2xl:w-[600px] 2xl:h-[450px]"
-            />
-          </div>
 
-          <FormField
-            control={form.control}
-            name="message"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Message</FormLabel>
-                <FormControl>
-                  <Textarea placeholder="Type your message here." {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <div className="flex flex-row-reverse">
-            <Button type="submit" disabled={isSubmitting}>
-              {isSubmitting ? (
-                <IconContext.Provider value={{ className: 'animate-spin mr-2' }}>
-                  <AiOutlineLoading3Quarters />
-                </IconContext.Provider>
-              ) : null}
-              Submit
-            </Button>
-          </div>
-        </form>
-      </Form>
+            <FormField
+              control={form.control}
+              name="message"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Message</FormLabel>
+                  <FormControl>
+                    <Textarea placeholder="Type your message here." {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <div className="flex flex-row-reverse">
+              <Button type="submit" disabled={isSubmitting}>
+                {isSubmitting ? (
+                  <IconContext.Provider value={{ className: 'animate-spin mr-2' }}>
+                    <AiOutlineLoading3Quarters />
+                  </IconContext.Provider>
+                ) : null}
+                Submit
+              </Button>
+            </div>
+          </form>
+        </Form>
+      </div>
     </section>
   );
 }
