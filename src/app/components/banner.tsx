@@ -1,9 +1,13 @@
+'use client';
+
 import HeaderImage from '@/public/M.N.2.png';
 import { Button } from '@/ui/button';
 import { GitHubLogoIcon, LinkedInLogoIcon } from '@radix-ui/react-icons';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState } from 'react';
 import Ellipse from './ellipse';
+import Skeleton from './skeleton';
 
 const linkedinURL = 'https://www.linkedin.com/in/leon-maxime-noel/';
 
@@ -20,11 +24,19 @@ function CatchLine({ className }: { className: string }) {
 }
 
 export default function Banner() {
+  const [loaded, setLoaded] = useState(false);
   return (
     <section id="about" className="2xl:mt-60">
       <div className="min-w-screen p-4 flex justify-around items-center lg:justify-start xl:px-14 lg:mt-10 2xl:mt-20">
         <div className="w-24 h-52 sm:w-32 sm:h-56 md:w-40 md:h-60 xl:w-48 2xl:mr-8 flex items-center">
-          <Image className="rounded-full" src={HeaderImage} alt="Beautiful picture of myself" priority />
+          {!loaded && <Skeleton />}
+          <Image
+            className={`rounded-full ${!loaded && 'hidden'}`}
+            src={HeaderImage}
+            alt="Beautiful picture of myself"
+            priority
+            onLoadingComplete={() => setLoaded(true)}
+          />
         </div>
         <div className="right-element ml-2">
           <p className="md:text-xl lg:min-w-max xl:text-3xl">Maxime NOEL</p>
