@@ -70,11 +70,11 @@ export default function Contact() {
   return (
     <section className="mt-20" id="contact">
       <p className="text-3xl">Contact Me</p>
-      <div className="w-full flex justify-center">
+      <div className="flex w-full justify-center">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-            <div className="flex justify-between 2xl:justify-around space-x-4">
-              <div className="flex flex-col w-full xl:w-[500px] 2xl:w-[600px]">
+            <div className="flex justify-between space-x-4 2xl:justify-around">
+              <div className="flex w-full flex-col xl:w-[500px] 2xl:w-[600px]">
                 <FormField
                   control={form.control}
                   name="name"
@@ -144,7 +144,7 @@ export default function Contact() {
                   )}
                 />
               </div>
-              <div className="rounded-xl hidden lg:block w-[500px] h-[350px] 2xl:w-[800px] 2xl:h-[450px]">
+              <div className="hidden h-[350px] w-[500px] rounded-xl lg:block 2xl:h-[450px] 2xl:w-[800px]">
                 <Spline className="rounded-xl" scene="https://prod.spline.design/coIGKTmEjqMmuZHW/scene.splinecode" />
               </div>
             </div>
@@ -162,7 +162,7 @@ export default function Contact() {
                 </FormItem>
               )}
             />
-            <div className="flex flex-row-reverse">
+            <div className="flex flex-row-reverse ">
               <Button type="submit" disabled={isSubmitting}>
                 {isSubmitting ? (
                   <IconContext.Provider value={{ className: 'animate-spin mr-2' }}>
