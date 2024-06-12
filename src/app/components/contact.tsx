@@ -1,12 +1,11 @@
 'use client';
 
-import highFive from '@/public/high_five.png';
 import { Button } from '@/ui/button';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/ui/form';
 import { Input } from '@/ui/input';
 import { Textarea } from '@/ui/textarea';
 import { zodResolver } from '@hookform/resolvers/zod';
-import Image from 'next/image';
+import Spline from '@splinetool/react-spline/next';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { IconContext } from 'react-icons';
@@ -73,8 +72,8 @@ export default function Contact() {
       <p className="text-3xl">Contact Me</p>
       <div className="w-full flex justify-center">
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 max-w-4xl">
-            <div className="flex justify-between 2xl:justify-around">
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 w-full">
+            <div className="flex justify-between 2xl:justify-around w-full">
               <div className="flex flex-col w-full xl:w-[500px] 2xl:w-[600px]">
                 <FormField
                   control={form.control}
@@ -145,10 +144,9 @@ export default function Contact() {
                   )}
                 />
               </div>
-              <Image
-                src={highFive}
-                alt="Illustration image"
-                className="hidden lg:block w-[500px] h-[350px] 2xl:w-[600px] 2xl:h-[450px]"
+              <Spline
+                // className="hidden lg:block w-[500px] h-[350px] 2xl:w-[600px] 2xl:h-[450px]"
+                scene="https://prod.spline.design/Np9x2XYJmxxEWr9Q/scene.splinecode"
               />
             </div>
 
