@@ -20,13 +20,17 @@ function CatchLine({ className }: { className: string }) {
 
 export default function Banner() {
   return (
-    <section id="about" className="2xl:mt-60">
+    <section id="about" className="2xl:mt-60 ">
       <div className="min-w-screen p-4 flex justify-around items-center lg:justify-start xl:px-14 lg:mt-10 2xl:mt-20">
         <BannerImage />
         <div className="right-element ml-2">
-          <p className="md:text-xl lg:min-w-max xl:text-3xl">Maxime NOEL</p>
-          <p className="md:text-xl lg:min-w-max xl:text-3xl">Web Developper </p>
-          <div className="flex items-center flex-wrap">
+          <p className="md:text-xl lg:min-w-max xl:text-3xl opacity-0 animate-slidein [--slidein-delay:300ms]">
+            Maxime NOEL
+          </p>
+          <p className="md:text-xl lg:min-w-max xl:text-3xl opacity-0 animate-slidein [--slidein-delay:300ms]">
+            Web Developper{' '}
+          </p>
+          <div className="flex items-center flex-wrap opacity-0 animate-slidein [--slidein-delay:500ms]">
             <a href="https://github.com/leon3108" target="_blank">
               <GitHubLogoIcon className="h-6 w-6 m-2 ml-0" />
             </a>
@@ -40,8 +44,8 @@ export default function Banner() {
               Resume
             </a>
           </div>
-          <CatchLine className="hidden lg:block" />
-          <Button variant={'cta'}>
+          <CatchLine className="hidden lg:block opacity-0 animate-slidein [--slidein-delay:700ms]" />
+          <Button variant={'cta'} className="opacity-0 animate-slidein [--slidein-delay:700ms]">
             <Link href="#contact">Let's Build Together</Link>
           </Button>
         </div>
