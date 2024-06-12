@@ -72,8 +72,8 @@ export default function Contact() {
       <p className="text-3xl">Contact Me</p>
       <div className="w-full flex justify-center">
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 w-full">
-            <div className="flex justify-between 2xl:justify-around w-full">
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+            <div className="flex justify-between 2xl:justify-around space-x-4">
               <div className="flex flex-col w-full xl:w-[500px] 2xl:w-[600px]">
                 <FormField
                   control={form.control}
@@ -144,10 +144,9 @@ export default function Contact() {
                   )}
                 />
               </div>
-              <Spline
-                // className="hidden lg:block w-[500px] h-[350px] 2xl:w-[600px] 2xl:h-[450px]"
-                scene="https://prod.spline.design/Np9x2XYJmxxEWr9Q/scene.splinecode"
-              />
+              <div className="rounded-xl hidden lg:block w-[500px] h-[350px] 2xl:w-[800px] 2xl:h-[450px]">
+                <Spline className="rounded-xl" scene="https://prod.spline.design/coIGKTmEjqMmuZHW/scene.splinecode" />
+              </div>
             </div>
 
             <FormField
