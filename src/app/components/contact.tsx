@@ -5,8 +5,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '
 import { Input } from '@/ui/input';
 import { Textarea } from '@/ui/textarea';
 import { zodResolver } from '@hookform/resolvers/zod';
-import Spline from '@splinetool/react-spline/next';
-import { useState } from 'react';
+import { ReactNode, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { IconContext } from 'react-icons';
 import { AiOutlineLoading3Quarters } from 'react-icons/ai';
@@ -26,7 +25,7 @@ const formSchema = z.object({
   attachments: z.array(fileSchema),
 });
 
-export default function Contact() {
+export default function Contact({ children }: { children: ReactNode }) {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -144,9 +143,7 @@ export default function Contact() {
                   )}
                 />
               </div>
-              <div className="hidden h-[350px] w-[500px] rounded-xl lg:block 2xl:h-[450px] 2xl:w-[800px]">
-                <Spline className="rounded-xl" scene="https://prod.spline.design/coIGKTmEjqMmuZHW/scene.splinecode" />
-              </div>
+              {children}
             </div>
 
             <FormField

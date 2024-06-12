@@ -9,6 +9,7 @@ import Header from '@/components/header';
 import Line from '@/components/line';
 import SideBar from '@/components/sideBar';
 import Stack from '@/components/stack';
+import Boxes from './components/boxes';
 
 export default function Home() {
   return (
@@ -22,7 +23,9 @@ export default function Home() {
         <Projects />
         <Experiences />
         <Stack />
-        <Contact />
+        <Contact>
+          <Boxes />
+        </Contact>
         <Footer />
       </main>
       <SideBar />
