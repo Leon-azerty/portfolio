@@ -16,7 +16,7 @@ export default function BannerImage() {
         src={HeaderImage}
         alt="Beautiful picture of myself"
         priority
-        onLoadingComplete={() => setLoaded(true)}
+        onLoad={() => setLoaded(true)}
       />
     </div>
   );
