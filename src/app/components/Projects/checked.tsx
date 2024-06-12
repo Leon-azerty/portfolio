@@ -75,7 +75,7 @@ export default function Checked() {
             src={checked}
             width={100}
             height={100}
-            className="w-80 sm:w-[500px] md:w-[550px] lg:w-[650px] xl:w-[700px] 2xl:w-[800px]"
+            className="rounded-2xl w-80 sm:w-[500px] md:w-[550px] lg:w-[650px] xl:w-[700px] 2xl:w-[800px]"
             sizes="100vw"
           />
         </div>
