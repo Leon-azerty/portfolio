@@ -1,8 +1,8 @@
 import { Button } from '@/ui/button';
 import { GitHubLogoIcon, LinkedInLogoIcon } from '@radix-ui/react-icons';
 import Link from 'next/link';
-import BannerImage from './bannerImage';
-import Ellipse from './ellipse';
+import Ellipse from '../ellipse';
+import HeroImage from './heroImage';
 
 const linkedinURL = 'https://www.linkedin.com/in/leon-maxime-noel/';
 
@@ -18,11 +18,11 @@ function CatchLine({ className }: { className: string }) {
   );
 }
 
-export default function Banner() {
+export default function Hero() {
   return (
     <section id="about" className="2xl:mt-60 ">
       <div className="min-w-screen flex items-center justify-around p-4 lg:mt-10 lg:justify-start xl:px-14 2xl:mt-20">
-        <BannerImage />
+        <HeroImage />
         <div className="right-element ml-2">
           <p className="animate-slidein opacity-0 [--slidein-delay:300ms] md:text-xl lg:min-w-max xl:text-3xl">
             Maxime NOEL

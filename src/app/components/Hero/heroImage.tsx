@@ -3,9 +3,9 @@
 import HeaderImage from '@/public/M.N.2.png';
 import Image from 'next/image';
 import { useState } from 'react';
-import Skeleton from './skeleton';
+import Skeleton from '../skeleton';
 
-export default function BannerImage() {
+export default function HeroImage() {
   const [loaded, setLoaded] = useState(false);
 
   return (
