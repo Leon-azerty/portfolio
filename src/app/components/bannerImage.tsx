@@ -9,13 +9,15 @@ export default function BannerImage() {
   const [loaded, setLoaded] = useState(false);
 
   return (
-    <div className="w-24 h-52 sm:w-32 sm:h-56 md:w-40 md:h-60 xl:w-48 2xl:mr-8 flex items-center">
+    <div className="flex h-52 w-24 items-center sm:h-56 sm:w-32 md:h-60 md:w-40 xl:w-48 2xl:mr-8">
       {!loaded && <Skeleton />}
       <Image
         className={`rounded-full ${!loaded && 'hidden'}`}
         src={HeaderImage}
         alt="Beautiful picture of myself"
         priority
+        width={200}
+        height={200}
         onLoad={() => setLoaded(true)}
       />
     </div>
