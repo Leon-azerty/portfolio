@@ -19,8 +19,8 @@ export default function SideBar() {
   let { isOpen, setIsOpen } = useContext(SidebarContext);
   if (!isOpen) return null;
   return (
-    <div className="fixed top-0 left-0 w-52 h-full shadow-2xl bg-white dark:bg-[#121212] border-r-2 border-gray-300 p-4 pt-6 z-50">
-      <div className="flex items-center justify-between mb-10">
+    <div className="fixed left-0 top-0 z-50 h-full w-52 border-r-2 border-gray-300 bg-white p-4 pt-6 shadow-2xl dark:bg-[#121212]">
+      <div className="mb-10 flex items-center justify-between">
         <div>
           <p className="text-lg">Maxime NOËL</p>
           <p className="italic text-gray-500">Web Developper</p>
@@ -38,11 +38,12 @@ export default function SideBar() {
       <div className="flex flex-col">
         {ElementList.map((element) => (
           <Link
+            key={element.text}
             href={element.href}
             onClick={() => {
               setIsOpen(false);
             }}
-            className="max-w-min mt-2 hover:underline"
+            className="mt-2 max-w-min hover:underline"
           >
             {element.text}
           </Link>

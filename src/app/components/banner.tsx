@@ -9,7 +9,7 @@ const linkedinURL = 'https://www.linkedin.com/in/leon-maxime-noel/';
 function CatchLine({ className }: { className: string }) {
   return (
     <div
-      className={`text-center p-4 md:px-14 lg:px-0 lg:w-[550px] lg:text-justify xl:w-[600px] 2xl:w-[800px] ${className}`}
+      className={`p-4 text-center md:px-14 lg:w-[550px] lg:px-0 lg:text-justify xl:w-[600px] 2xl:w-[800px] ${className}`}
     >
       I&apos;m a dedicated software developer who thrives on transforming intricate problems into streamlined solutions.
       With a keen eye for detail and a passion for creativity, I craft clean and efficient code that drives progress.
@@ -21,21 +21,21 @@ function CatchLine({ className }: { className: string }) {
 export default function Banner() {
   return (
     <section id="about" className="2xl:mt-60 ">
-      <div className="min-w-screen p-4 flex justify-around items-center lg:justify-start xl:px-14 lg:mt-10 2xl:mt-20">
+      <div className="min-w-screen flex items-center justify-around p-4 lg:mt-10 lg:justify-start xl:px-14 2xl:mt-20">
         <BannerImage />
         <div className="right-element ml-2">
-          <p className="md:text-xl lg:min-w-max xl:text-3xl opacity-0 animate-slidein [--slidein-delay:300ms]">
+          <p className="animate-slidein opacity-0 [--slidein-delay:300ms] md:text-xl lg:min-w-max xl:text-3xl">
             Maxime NOEL
           </p>
-          <p className="md:text-xl lg:min-w-max xl:text-3xl opacity-0 animate-slidein [--slidein-delay:300ms]">
+          <p className="animate-slidein opacity-0 [--slidein-delay:300ms] md:text-xl lg:min-w-max xl:text-3xl">
             Web Developper{' '}
           </p>
-          <div className="flex items-center flex-wrap opacity-0 animate-slidein [--slidein-delay:500ms]">
+          <div className="flex animate-slidein flex-wrap items-center opacity-0 [--slidein-delay:500ms]">
             <a href="https://github.com/leon3108" target="_blank">
-              <GitHubLogoIcon className="h-6 w-6 m-2 ml-0" />
+              <GitHubLogoIcon className="m-2 ml-0 h-6 w-6" />
             </a>
             <a href={linkedinURL} target="_blank">
-              <LinkedInLogoIcon className="h-6 w-6 m-2 ml-0" />
+              <LinkedInLogoIcon className="m-2 ml-0 h-6 w-6" />
             </a>
             <Link href="#contact" className="pl-0">
               mail
@@ -44,9 +44,9 @@ export default function Banner() {
               Resume
             </a>
           </div>
-          <CatchLine className="hidden lg:block opacity-0 animate-slidein [--slidein-delay:700ms]" />
-          <Button variant={'cta'} className="opacity-0 animate-slidein [--slidein-delay:700ms]">
-            <Link href="#contact">Let's Build Together</Link>
+          <CatchLine className="hidden animate-slidein opacity-0 [--slidein-delay:700ms] lg:block" />
+          <Button variant={'cta'} className="animate-slidein opacity-0 [--slidein-delay:700ms]">
+            <Link href="#contact">{"Let's Build Together"}</Link>
           </Button>
         </div>
       </div>
