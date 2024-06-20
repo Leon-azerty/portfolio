@@ -9,7 +9,10 @@ import Header from '@/components/header';
 import Line from '@/components/line';
 import SideBar from '@/components/sideBar';
 import Stack from '@/components/stack';
-import Boxes from './components/boxes';
+import dynamic from 'next/dynamic';
+const Boxes = dynamic(() => import('./components/boxes'), {
+  loading: () => <p>Loading...</p>,
+});
 
 export default function Home() {
   return (
