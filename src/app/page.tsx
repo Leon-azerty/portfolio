@@ -1,7 +1,7 @@
 import Experiences from '@/components/Experiences/experiences';
+import Hero from '@/components/Hero/hero';
 import Internships from '@/components/Internships/internships';
 import Projects from '@/components/Projects/projects';
-import Banner from '@/components/banner';
 import Chevron from '@/components/chevron';
 import Contact from '@/components/contact';
 import Footer from '@/components/footer';
@@ -19,7 +19,7 @@ export default function Home() {
     <div className="relative">
       <main className="px-4 md:px-20 lg:px-28 xl:px-32">
         <Header />
-        <Banner />
+        <Hero />
         <Chevron />
         <Internships />
         <Line />
