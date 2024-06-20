@@ -1,5 +1,5 @@
-import { SideBarProvider } from '@/app/common/sidebar-provider';
-import { ThemeProvider } from '@/app/common/theme-provider';
+import { SideBarProvider } from '@/common/sidebar-provider';
+import { ThemeProvider } from '@/common/theme-provider';
 import { Toaster } from '@/ui/sonner';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
