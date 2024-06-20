@@ -1,5 +1,5 @@
 export default function Ellipse() {
   return (
-    <div className="bg-[#265adf8e] blur-3xl rounded-full absolute top-8 lg:top-0 w-72 h-72 lg:w-[500px] lg:h-[500px] right-5 md:right-10"></div>
+    <div className="bg-blueEllipse absolute right-5 top-8 h-72 w-72 rounded-full blur-3xl md:right-10 lg:top-0 lg:h-[500px] lg:w-[500px]"></div>
   );
 }

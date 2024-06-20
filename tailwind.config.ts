@@ -74,7 +74,9 @@ const config: Config = {
         flutter: '#437AA1',
         pytorch: '#7D3430',
         delphi: '#B04D37',
-
+        yellow: "#F5AF00",
+        blueEllipse: "#265adf8e",
+        divider: '#A4A4A4',
       }
     },
   },
