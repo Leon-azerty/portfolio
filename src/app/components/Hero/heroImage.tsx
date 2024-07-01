@@ -1,6 +1,6 @@
 'use client';
 
-import HeaderImage from '@/public/M.N.2.png';
+import HeaderImage from '@/public/M.N.2.jpeg';
 import Image from 'next/image';
 import { useState } from 'react';
 import Skeleton from '../skeleton';
