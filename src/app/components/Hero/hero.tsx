@@ -31,7 +31,7 @@ export default function Hero() {
             Web Developper{' '}
           </p>
           <div className="flex animate-slidein flex-wrap items-center opacity-0 [--slidein-delay:500ms]">
-            <a href="https://github.com/leon3108" target="_blank">
+            <a href="https://github.com/Leon-azerty" target="_blank">
               <GitHubLogoIcon className="m-2 ml-0 h-6 w-6" />
             </a>
             <a href={linkedinURL} target="_blank">
