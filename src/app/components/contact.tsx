@@ -5,7 +5,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '
 import { Input } from '@/ui/input';
 import { Textarea } from '@/ui/textarea';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { ReactNode, useState } from 'react';
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { IconContext } from 'react-icons';
 import { AiOutlineLoading3Quarters } from 'react-icons/ai';
@@ -25,7 +25,7 @@ const formSchema = z.object({
   attachments: z.array(fileSchema),
 });
 
-export default function Contact({ children }: { children: ReactNode }) {
+export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -143,7 +143,6 @@ export default function Contact({ children }: { children: ReactNode }) {
                   )}
                 />
               </div>
-              {children}
             </div>
 
             <FormField
