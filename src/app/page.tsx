@@ -9,6 +9,7 @@ import Header from '@/components/header';
 import Line from '@/components/line';
 import SideBar from '@/components/sideBar';
 import Stack from '@/components/stack';
+import { ModeToggle } from './components/ModeToggle';
 
 export default function Home() {
   return (
@@ -22,9 +23,12 @@ export default function Home() {
         <Projects />
         <Experiences />
         <Stack />
-        <Contact/>
+        <Contact />
         <Footer />
       </main>
+      <div className="fixed bottom-0 right-0 p-4">
+        <ModeToggle />
+      </div>
       <SideBar />
     </div>
   );
