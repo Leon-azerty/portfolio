@@ -1,3 +1,4 @@
+import Header from '@/app/components/navbar';
 import Experiences from '@/components/Experiences/experiences';
 import Hero from '@/components/Hero/hero';
 import Internships from '@/components/Internships/internships';
@@ -5,7 +6,6 @@ import Projects from '@/components/Projects/projects';
 import Chevron from '@/components/chevron';
 import Contact from '@/components/contact';
 import Footer from '@/components/footer';
-import Header from '@/components/header';
 import Line from '@/components/line';
 import SideBar from '@/components/sideBar';
 import Stack from '@/components/stack';
