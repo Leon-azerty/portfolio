@@ -33,21 +33,23 @@ export default function Piwio() {
 
     ScrollTrigger.create({
       trigger: container.current,
-      start: 'center 90%',
+      start: 'center bottom',
+      end: 'top top',
       onEnter: () => anim.play(),
       onEnterBack: () => anim.play(),
     });
 
     ScrollTrigger.create({
       trigger: container.current,
-      start: 'top bottom',
+      start: 'center bottom',
+      end: 'bottom top',
       onLeave: () => anim.pause(0),
       onLeaveBack: () => anim.pause(0),
     });
   });
 
   return (
-    <section className="mt-4 h-full" ref={container}>
+    <section className="h-full" ref={container}>
       <div className="flex items-center lg:hidden">
         <Image
           src={piwioLogo}
@@ -58,19 +60,19 @@ export default function Piwio() {
           }}
         />
         <div className="flex items-center">
-          <p className="text-2xl ml-2">Piwio</p>
+          <p className="ml-2 text-2xl">Piwio</p>
           <a href="https://www.piwio.fr/" target="_blank">
-            <ExternalLinkIcon className="h-4 w-4 ml-2" />
+            <ExternalLinkIcon className="ml-2 h-4 w-4" />
           </a>
         </div>
       </div>
 
-      <div className="flex overflow-x-auto whitespace-no-wrap mt-4 lg:hidden" /* animate-infinite-left-to-right */>
+      <div className="whitespace-no-wrap flex overflow-x-auto lg:hidden" /* animate-infinite-left-to-right */>
         <Badge alt="logo of Flutter" src={flutterLogo} text="Flutter" className="bg-flutter" />
         <Badge alt="logo of Supabase" src={supabaseLogo} text="Supabase" className="bg-supabase" />
       </div>
 
-      <Card className="mt-4 h-full">
+      <Card className=" h-full">
         <CardHeader className="hidden lg:block">
           <CardTitle className="flex items-center">
             <div className="flex">
@@ -86,10 +88,10 @@ export default function Piwio() {
                 <div className="flex items-center">
                   <CardTitle className="hidden: lg:block">Piwio</CardTitle>
                   <a href="https://www.piwio.fr/" target="_blank">
-                    <ExternalLinkIcon className="h-4 w-4 ml-2" />
+                    <ExternalLinkIcon className="ml-2 h-4 w-4" />
                   </a>
                 </div>
-                <div className="flex overflow-x-auto whitespace-no-wrap mt-4" /* animate-infinite-left-to-right*/>
+                <div className="whitespace-no-wrap flex overflow-x-auto" /* animate-infinite-left-to-right*/>
                   <Badge alt="logo of Flutter" src={flutterLogo} text="Flutter" className="bg-flutter" />
                   <Badge alt="logo of Supabase" src={supabaseLogo} text="Supabase" className="bg-supabase" />
                 </div>
