@@ -3,7 +3,7 @@
 import { Button } from '@/ui/button';
 import Link from 'next/link';
 
-export default function Header() {
+export default function Navbar() {
   return (
     <nav className="bg-background fixed start-0 top-0 z-50 w-full border-b">
       <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4">
