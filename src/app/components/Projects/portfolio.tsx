@@ -15,7 +15,7 @@ import Badge from '../badge';
 
 function BadgeLine() {
   return (
-    <div className="flex overflow-x-auto whitespace-no-wrap mt-4" /* animate-infinite-left-to-right */>
+    <div className="whitespace-no-wrap mt-4 flex overflow-x-auto" /* animate-infinite-left-to-right */>
       <Badge alt="logo of React" src={reactLogo} text="React" className="bg-react" />
       <Badge alt="logo of NextJS" src={nextjsLogo} text="NextJs" className="bg-nextjs" />
       <Badge alt="logo of Tailwind" src={tailwindLogo} text="Tailwind" className="bg-tailwind" />
@@ -76,10 +76,11 @@ export default function Portfolio() {
               The application you are currently viewing distinguishes itself from a typical portfolio as it is nearly
               100% static and doesn&apos;t necessitate a backend or a database.
               <br />
-              In crafting this project, I opted for Next. js, tailwind, and Typescript to ensure a seamless and
-              efficient development process.
-              <br /> Additionally, I incorporated GSAP for dynamic animations, enhancing the overall user experience
-              with visually appealing and interactive elements.
+              In crafting this project, I opted for Next.js, Tailwind, and TypeScript to ensure a seamless and efficient
+              development process.
+              <br />
+              Additionally, I incorporated GSAP for dynamic animations, enhancing the overall user experience with
+              visually appealing and interactive elements.
               <br />
             </CardContent>
           </Card>
