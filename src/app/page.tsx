@@ -1,4 +1,4 @@
-import Header from '@/app/components/navbar';
+import NavBar from '@/app/components/navbar';
 import Experiences from '@/components/Experiences/experiences';
 import Hero from '@/components/Hero/hero';
 import Internships from '@/components/Internships/internships';
@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <div className="relative">
       <main className="px-4 md:px-20 lg:px-28 xl:px-32">
-        <Header />
+        <NavBar />
         <Hero />
         <Chevron />
         <Internships />
