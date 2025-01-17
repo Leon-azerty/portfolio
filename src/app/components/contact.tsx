@@ -68,80 +68,85 @@ export default function Contact() {
 
   return (
     <section className="mt-20" id="contact">
-      <p className="text-3xl">Contact Me</p>
       <div className="flex w-full justify-center">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
             <div className="flex justify-between space-x-4 2xl:justify-around">
-              <div className="flex w-full flex-col xl:w-[500px] 2xl:w-[600px]">
-                <FormField
-                  control={form.control}
-                  name="name"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Name</FormLabel>
-                      <FormControl>
-                        <Input placeholder="John Doe" {...field} />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <FormField
-                  control={form.control}
-                  name="subject"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Subject</FormLabel>
-                      <FormControl>
-                        <Input placeholder="placeholder" {...field} />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <FormField
-                  control={form.control}
-                  name="email"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>email</FormLabel>
-                      <FormControl>
-                        <Input placeholder="example@gmail.com" {...field} />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <FormField
-                  control={form.control}
-                  name="attachments"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Attachments</FormLabel>
-                      <FormControl>
-                        <Input
-                          type="file"
-                          multiple
-                          onChange={(e) => {
-                            const files = e.target.files;
-                            if (files) {
-                              Promise.all(
-                                Array.from(files).map(async (file) => ({
-                                  filename: file.name,
-                                  content: Buffer.from(await file.arrayBuffer()).toString('base64'),
-                                }))
-                              ).then((filesArray) => {
-                                field.onChange(filesArray);
-                              });
-                            }
-                          }}
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
+              <div className="flex w-full flex-col xl:w-[500px] 2xl:w-[700px]">
+                <h1 className="text-5xl">Love to hear from you,</h1>
+                <h1 className="text-5xl">Get in touch 👋</h1>
+                <div className="flex items-center justify-between">
+                  <FormField
+                    control={form.control}
+                    name="name"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Name</FormLabel>
+                        <FormControl>
+                          <Input placeholder="John Doe" {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={form.control}
+                    name="subject"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Subject</FormLabel>
+                        <FormControl>
+                          <Input placeholder="placeholder" {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                </div>
+                <div className="flex items-center justify-between">
+                  <FormField
+                    control={form.control}
+                    name="email"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>email</FormLabel>
+                        <FormControl>
+                          <Input placeholder="example@gmail.com" {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={form.control}
+                    name="attachments"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Attachments</FormLabel>
+                        <FormControl>
+                          <Input
+                            type="file"
+                            multiple
+                            onChange={(e) => {
+                              const files = e.target.files;
+                              if (files) {
+                                Promise.all(
+                                  Array.from(files).map(async (file) => ({
+                                    filename: file.name,
+                                    content: Buffer.from(await file.arrayBuffer()).toString('base64'),
+                                  }))
+                                ).then((filesArray) => {
+                                  field.onChange(filesArray);
+                                });
+                              }
+                            }}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                </div>
               </div>
             </div>
 

@@ -83,7 +83,7 @@ const STACK = [
 export default function Stack() {
   return (
     <section className="mt-32" id="stack">
-      <p className="text-4xl">Stack</p>
+      <h2 className="text-4xl">Stack</h2>
       <div className="flex justify-center">
         <div className="grid grid-cols-3 grid-rows-2 gap-12 p-4">
           {STACK.map((element) => (
