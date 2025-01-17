@@ -1,6 +1,6 @@
 'use client';
 
-import { Button } from '@/ui/button';
+import { ConfettiButton } from '@/ui/confetti';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/ui/form';
 import { Input } from '@/ui/input';
 import { Textarea } from '@/ui/textarea';
@@ -164,14 +164,14 @@ export default function Contact() {
               )}
             />
             <div className="flex flex-row-reverse ">
-              <Button type="submit" disabled={isSubmitting}>
+              <ConfettiButton type="submit" disabled={isSubmitting}>
                 {isSubmitting ? (
                   <IconContext.Provider value={{ className: 'animate-spin mr-2' }}>
                     <AiOutlineLoading3Quarters />
                   </IconContext.Provider>
                 ) : null}
                 Submit
-              </Button>
+              </ConfettiButton>
             </div>
           </form>
         </Form>
