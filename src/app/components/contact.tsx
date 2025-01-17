@@ -2,7 +2,9 @@
 
 import { ConfettiButton } from '@/ui/confetti';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/ui/form';
+import HyperText from '@/ui/hyper-text';
 import { Input } from '@/ui/input';
+import Ripple from '@/ui/ripple';
 import { Textarea } from '@/ui/textarea';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useState } from 'react';
@@ -68,7 +70,7 @@ export default function Contact() {
 
   return (
     <section className="mt-20" id="contact">
-      <div className="flex w-full justify-center">
+      <div className="flex w-full items-center justify-center space-x-4">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
             <div className="flex justify-between space-x-4 2xl:justify-around">
@@ -175,6 +177,14 @@ export default function Contact() {
             </div>
           </form>
         </Form>
+        <div className="relative flex h-[650px] w-[650px] flex-col items-center justify-center overflow-hidden rounded-lg bg-background">
+          <HyperText className="z-10 whitespace-pre-wrap text-center text-5xl font-medium tracking-tighter text-foreground">
+            {/* <p className="z-10 whitespace-pre-wrap text-center text-5xl font-medium tracking-tighter text-foreground"> */}
+            Contact
+            {/* </p> */}
+          </HyperText>
+          <Ripple />
+        </div>
       </div>
     </section>
   );

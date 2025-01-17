@@ -68,6 +68,14 @@ const config: Config = {
             transform: 'translateY(0)',
           },
         },
+        ripple: {
+          '0%, 100%': {
+            transform: 'translate(-50%, -50%) scale(1)',
+          },
+          '50%': {
+            transform: 'translate(-50%, -50%) scale(0.9)',
+          },
+        },
       },
       animation: {
         slidein: 'slidein 1s ease var(--slidein-delay, 0) forwards',
@@ -75,6 +83,7 @@ const config: Config = {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         bounce: 'bounce 3s infinite',
+        ripple: 'ripple var(--duration,2s) ease calc(var(--i, 0)*.2s) infinite',
       },
       colors: {
         react: '#437AA1',
