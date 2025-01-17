@@ -11,6 +11,11 @@ import { useRef } from 'react';
 export default function Epitech() {
   const container = useRef<HTMLElement>(null);
 
+  let offset = 100;
+  if (window.innerWidth < 1024) {
+    offset = 0;
+  }
+
   useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -18,7 +23,7 @@ export default function Epitech() {
       container.current,
       {
         opacity: 0,
-        x: +100,
+        x: offset,
       },
       {
         opacity: 1,

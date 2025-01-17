@@ -19,7 +19,7 @@ function CatchLine({ className }: { className: string }) {
 
 export default function Hero() {
   return (
-    <section id="about" className="2xl:mt-60 ">
+    <section id="about" className="mt-20 2xl:mt-60">
       <div className="min-w-screen flex items-center justify-around p-4 lg:mt-10 lg:justify-start xl:px-14 2xl:mt-20">
         <HeroImage />
         <div className="right-element ml-2">

@@ -14,7 +14,7 @@ import { ModeToggle } from './components/ModeToggle';
 export default function Home() {
   return (
     <div className="relative">
-      <main className="px-4 md:px-20 lg:px-28 xl:px-32">
+      <main className="w-screen px-4 md:px-20 lg:px-28 xl:px-32">
         <Header />
         <Hero />
         <Chevron />

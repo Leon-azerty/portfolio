@@ -16,7 +16,7 @@ import Badge from '../badge';
 
 function BadgeLine({ className }: { className?: string }) {
   return (
-    <div className={`flex overflow-x-auto whitespace-no-wrap mt-4 ${className}`} /* animate-infinite-left-to-right */>
+    <div className={`whitespace-no-wrap mt-4 flex overflow-x-auto ${className}`} /* animate-infinite-left-to-right */>
       <Badge alt="logo of React" src={reactLogo} text="React" className="bg-react" />
       <Badge alt="logo of Nextjs" src={nextjsLogo} text="Nextjs" className="bg-nextjs" />
       <Badge alt="logo of Supabase" src={supabaseLogo} text="Supabase" className="bg-supabase" />
@@ -28,6 +28,10 @@ function BadgeLine({ className }: { className?: string }) {
 export default function Checked() {
   const container = useRef<HTMLDivElement>(null);
 
+  let offset = -100;
+  if (window.innerWidth < 1024) {
+    offset = 0;
+  }
   useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -35,7 +39,7 @@ export default function Checked() {
       container.current,
       {
         opacity: 0,
-        x: -100,
+        x: offset,
       },
       {
         opacity: 1,
@@ -64,7 +68,7 @@ export default function Checked() {
       <div className="flex items-center lg:hidden">
         <p className="text-2xl">Checked, Todo app</p>
         <a href="https://checkd.online/login" target="_blank">
-          <ExternalLinkIcon className="h-4 w-4 ml-2" />
+          <ExternalLinkIcon className="ml-2 h-4 w-4" />
         </a>
       </div>
 
@@ -75,11 +79,11 @@ export default function Checked() {
             src={checked}
             width={100}
             height={100}
-            className="rounded-2xl w-80 sm:w-[500px] md:w-[550px] lg:w-[650px] xl:w-[700px] 2xl:w-[800px]"
+            className="w-80 rounded-2xl sm:w-[500px] md:w-[550px] lg:w-[650px] xl:w-[700px] 2xl:w-[800px]"
             sizes="100vw"
           />
         </div>
-        <div className="flex flex-col xl:flex-col-reverse xl:ml-4">
+        <div className="flex flex-col xl:ml-4 xl:flex-col-reverse">
           <BadgeLine />
 
           <Card className="mt-4 xl:mt-0">

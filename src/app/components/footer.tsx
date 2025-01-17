@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="m-4 rounded-lg bg-white shadow dark:bg-slate-950">
+    <footer className="m-4 rounded-lg ">
       <div className="mx-auto w-full max-w-screen-xl p-4 md:py-8">
         <div className="sm:flex sm:items-center sm:justify-between">
           <span className="self-center whitespace-nowrap text-2xl font-semibold dark:text-white">Maxime NOEL</span>

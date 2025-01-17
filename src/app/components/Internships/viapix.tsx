@@ -18,11 +18,15 @@ export default function Viapix() {
   useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger);
 
+    let offset = 100;
+    if (window.innerWidth < 1024) {
+      offset = 0;
+    }
     const anim = gsap.fromTo(
       container.current,
       {
         opacity: 0,
-        x: +100,
+        x: offset,
       },
       {
         opacity: 1,

@@ -7,7 +7,7 @@ export default function Experiences() {
   return (
     <section className="mt-32" id="experiences">
       <p className="text-4xl">Experiences</p>
-      <div className="lg:grid lg:grid-cols-2 lg:gap-4 overflow-hidden">
+      <div className="overflow-hidden lg:grid lg:grid-cols-2 lg:gap-4">
         <Starton2022 />
         <div className="my-5 lg:hidden">&nbsp;</div>
         <Starton2021 />

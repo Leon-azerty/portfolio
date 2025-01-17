@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export default function Navbar() {
   return (
-    <nav className="bg-background fixed start-0 top-0 z-50 w-full border-b">
+    <nav className="fixed start-0 top-0 z-50 w-full border-b bg-background">
       <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4">
         <span className="self-center whitespace-nowrap text-2xl font-semibold dark:text-white">Maxime NOEL</span>
         <div className="flex space-x-3 rtl:space-x-reverse md:order-2 md:space-x-0">

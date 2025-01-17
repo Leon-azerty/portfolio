@@ -177,11 +177,9 @@ export default function Contact() {
             </div>
           </form>
         </Form>
-        <div className="relative flex h-[650px] w-[650px] flex-col items-center justify-center overflow-hidden rounded-lg bg-background">
+        <div className="relative hidden h-[650px] w-[650px] flex-col items-center justify-center overflow-hidden rounded-lg bg-background md:flex">
           <HyperText className="z-10 whitespace-pre-wrap text-center text-5xl font-medium tracking-tighter text-foreground">
-            {/* <p className="z-10 whitespace-pre-wrap text-center text-5xl font-medium tracking-tighter text-foreground"> */}
             Contact
-            {/* </p> */}
           </HyperText>
           <Ripple />
         </div>

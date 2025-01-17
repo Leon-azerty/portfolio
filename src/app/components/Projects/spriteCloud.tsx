@@ -34,6 +34,11 @@ function BadgeLine({ className }: { className?: string }) {
 export default function SpriteCloud() {
   const container = useRef<HTMLDivElement>(null);
 
+  let offset = -100;
+  if (window.innerWidth < 1024) {
+    offset = 0;
+  }
+
   useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -41,7 +46,7 @@ export default function SpriteCloud() {
       container.current,
       {
         opacity: 0,
-        x: -100,
+        x: offset,
       },
       {
         opacity: 1,

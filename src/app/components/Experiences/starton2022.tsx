@@ -10,6 +10,11 @@ import { TfiMedall } from 'react-icons/tfi';
 export default function Starton2022() {
   const container = useRef<HTMLElement>(null);
 
+  let offset = -100;
+  if (window.innerWidth < 1024) {
+    offset = 0;
+  }
+
   useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -17,7 +22,7 @@ export default function Starton2022() {
       container.current,
       {
         opacity: 0,
-        x: -100,
+        x: offset,
       },
       {
         opacity: 1,
