@@ -1,5 +1,6 @@
 'use client';
 
+import useIsClient from '@/app/common/hooks/useIsClient';
 import { Card, CardContent, CardTitle } from '@/ui/card';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
@@ -9,9 +10,10 @@ import { TfiMedall } from 'react-icons/tfi';
 
 export default function Starton2022() {
   const container = useRef<HTMLElement>(null);
+  const isClient = useIsClient();
 
   let offset = -100;
-  if (window.innerWidth < 1024) {
+  if (isClient && window.innerWidth < 1024) {
     offset = 0;
   }
 
@@ -44,7 +46,7 @@ export default function Starton2022() {
       onLeave: () => anim.pause(0),
       onLeaveBack: () => anim.pause(0),
     });
-  });
+  }, [isClient]);
 
   return (
     <section className="mt-4" ref={container}>

@@ -1,5 +1,6 @@
 'use client';
 
+import useIsClient from '@/app/common/hooks/useIsClient';
 import epitech from '@/public/epitech.webp';
 import { Card, CardContent, CardHeader, CardTitle } from '@/ui/card';
 import { useGSAP } from '@gsap/react';
@@ -10,9 +11,10 @@ import { useRef } from 'react';
 
 export default function Epitech() {
   const container = useRef<HTMLElement>(null);
+  const isClient = useIsClient();
 
   let offset = 100;
-  if (window.innerWidth < 1024) {
+  if (isClient && window.innerWidth < 1024) {
     offset = 0;
   }
 
@@ -45,7 +47,7 @@ export default function Epitech() {
       onLeave: () => anim.pause(0),
       onLeaveBack: () => anim.pause(0),
     });
-  });
+  }, [isClient]);
 
   return (
     <section className="h-full" ref={container}>

@@ -1,5 +1,6 @@
 'use client';
 
+import useIsClient from '@/app/common/hooks/useIsClient';
 import reactLogo from '@/public/logo_react.png';
 import tailwindLogo from '@/public/logo_tailwind.png';
 import gnLogo from '@/public/photo_gn.png';
@@ -13,12 +14,13 @@ import Badge from '../badge';
 
 export default function GnConsulting() {
   const container = useRef<HTMLElement>(null);
+  const isClient = useIsClient();
 
   useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger);
 
     let offset = -100;
-    if (window.innerWidth < 1024) {
+    if (isClient && window.innerWidth < 1024) {
       offset = 0;
     }
     const anim = gsap.fromTo(
@@ -47,7 +49,7 @@ export default function GnConsulting() {
       onLeaveBack: () => anim.pause(0),
       onLeave: () => anim.pause(0),
     });
-  });
+  }, [isClient]);
 
   return (
     <section className="h-full" ref={container}>

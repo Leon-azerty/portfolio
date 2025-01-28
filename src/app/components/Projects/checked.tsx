@@ -1,5 +1,6 @@
 'use client';
 
+import useIsClient from '@/app/common/hooks/useIsClient';
 import checked from '@/public/checked.png';
 import nextjsLogo from '@/public/logo_nextjs.png';
 import reactLogo from '@/public/logo_react.png';
@@ -27,9 +28,10 @@ function BadgeLine({ className }: { className?: string }) {
 
 export default function Checked() {
   const container = useRef<HTMLDivElement>(null);
+  const isClient = useIsClient();
 
   let offset = -100;
-  if (window.innerWidth < 1024) {
+  if (isClient && window.innerWidth < 1024) {
     offset = 0;
   }
   useGSAP(() => {
@@ -61,7 +63,7 @@ export default function Checked() {
       onLeaveBack: () => anim.pause(0),
       onLeave: () => anim.pause(0),
     });
-  });
+  }, [isClient]);
 
   return (
     <section className="mt-4 opacity-0" ref={container}>

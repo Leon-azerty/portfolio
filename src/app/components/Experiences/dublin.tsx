@@ -1,5 +1,6 @@
 'use client';
 
+import useIsClient from '@/app/common/hooks/useIsClient';
 import flagIreland from '@/public/flag_ireland.png';
 import { Card, CardContent, CardTitle } from '@/ui/card';
 import { useGSAP } from '@gsap/react';
@@ -10,9 +11,10 @@ import { useRef } from 'react';
 
 export default function Dublin() {
   const container = useRef<HTMLElement>(null);
+  const isClient = useIsClient();
 
   let offset = -100;
-  if (window.innerWidth < 1024) {
+  if (isClient && window.innerWidth < 1024) {
     offset = 0;
   }
 
@@ -45,7 +47,7 @@ export default function Dublin() {
       onLeave: () => anim.pause(0),
       onLeaveBack: () => anim.pause(0),
     });
-  });
+  }, [isClient]);
 
   return (
     <section className="mt-4" ref={container}>

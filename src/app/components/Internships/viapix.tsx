@@ -1,5 +1,6 @@
 'use client';
 
+import useIsClient from '@/app/common/hooks/useIsClient';
 import delphiLogo from '@/public/logo_delphi.png';
 import pytorchLogo from '@/public/logo_pytorch.png';
 import viapixLogo from '@/public/logo_viapix.png';
@@ -14,12 +15,13 @@ import Badge from '../badge';
 
 export default function Viapix() {
   const container = useRef<HTMLElement>(null);
+  const isClient = useIsClient();
 
   useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger);
 
     let offset = 100;
-    if (window.innerWidth < 1024) {
+    if (isClient && window.innerWidth < 1024) {
       offset = 0;
     }
     const anim = gsap.fromTo(
@@ -50,7 +52,7 @@ export default function Viapix() {
       onLeave: () => anim.pause(0),
       onLeaveBack: () => anim.pause(0),
     });
-  });
+  }, [isClient]);
 
   return (
     <section className="h-full" ref={container}>

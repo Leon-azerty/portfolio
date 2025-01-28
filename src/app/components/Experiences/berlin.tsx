@@ -1,5 +1,6 @@
 'use client';
 
+import useIsClient from '@/app/common/hooks/useIsClient';
 import flagGermany from '@/public/flag_germany.png';
 import { Card, CardContent, CardTitle } from '@/ui/card';
 import { useGSAP } from '@gsap/react';
@@ -10,12 +11,13 @@ import { useRef } from 'react';
 
 export default function Berlin() {
   const container = useRef<HTMLElement>(null);
+  const isClient = useIsClient();
 
   useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger);
 
     let offset = 100;
-    if (window.innerWidth < 1024) {
+    if (isClient && window.innerWidth < 1024) {
       offset = 0;
     }
 
@@ -45,7 +47,7 @@ export default function Berlin() {
       onLeave: () => anim.pause(0),
       onLeaveBack: () => anim.pause(0),
     });
-  });
+  }, [isClient]);
 
   return (
     <section className="mt-4" ref={container}>

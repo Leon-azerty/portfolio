@@ -1,5 +1,6 @@
 'use client';
 
+import useIsClient from '@/app/common/hooks/useIsClient';
 import { Card, CardContent, CardTitle } from '@/ui/card';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
@@ -9,12 +10,13 @@ import { TfiCup } from 'react-icons/tfi';
 
 export default function Starton2021() {
   const container = useRef<HTMLElement>(null);
+  const isClient = useIsClient();
 
   useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger);
 
     let offset = 100;
-    if (window.innerWidth < 1024) {
+    if (isClient && window.innerWidth < 1024) {
       offset = 0;
     }
     const anim = gsap.fromTo(
@@ -43,7 +45,7 @@ export default function Starton2021() {
       onLeave: () => anim.pause(0),
       onLeaveBack: () => anim.pause(0),
     });
-  });
+  }, [isClient]);
 
   return (
     <section className="mt-4" ref={container}>

@@ -1,5 +1,6 @@
 'use client';
 
+import useIsClient from '@/app/common/hooks/useIsClient';
 import nextjsLogo from '@/public/logo_nextjs.png';
 import reactLogo from '@/public/logo_react.png';
 import tailwindLogo from '@/public/logo_tailwind.png';
@@ -26,9 +27,10 @@ function BadgeLine() {
 
 export default function Portfolio() {
   const container = useRef<HTMLElement>(null);
+  const isClient = useIsClient();
 
   let offset = 100;
-  if (window.innerWidth < 1024) {
+  if (isClient && window.innerWidth < 1024) {
     offset = 0;
   }
   useGSAP(() => {
@@ -60,7 +62,7 @@ export default function Portfolio() {
       onLeaveBack: () => anim.pause(0),
       onLeave: () => anim.pause(0),
     });
-  });
+  }, [isClient]);
 
   return (
     <section className="mt-4" ref={container}>
