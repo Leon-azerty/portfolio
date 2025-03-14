@@ -6,19 +6,19 @@ import Link from 'next/link';
 export default function Navbar() {
   return (
     <nav className="fixed start-0 top-0 z-50 w-full border-b bg-background">
-      <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4">
+      <div className="mx-auto flex max-w-(--breakpoint-xl) flex-wrap items-center justify-between p-4">
         <span className="self-center whitespace-nowrap text-2xl font-semibold dark:text-white">Maxime NOEL</span>
         <div className="flex space-x-3 rtl:space-x-reverse md:order-2 md:space-x-0">
           <Button
             variant={'cta'}
-            className="rounded-lg px-4 py-2 text-center text-sm font-medium  focus:outline-none focus:ring-4 "
+            className="rounded-lg px-4 py-2 text-center text-sm font-medium  focus:outline-hidden focus:ring-4 "
           >
             Contact me
           </Button>
           <button
             data-collapse-toggle="navbar-sticky"
             type="button"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 md:hidden"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-hidden focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 md:hidden"
             aria-controls="navbar-sticky"
             aria-expanded="false"
           >
