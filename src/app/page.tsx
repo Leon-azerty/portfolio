@@ -26,7 +26,7 @@ export default function Home() {
         <Contact />
         <Footer />
       </main>
-      <div className="fixed bottom-0 right-0 p-4">
+      <div className="fixed right-0 bottom-0 p-4">
         <ModeToggle />
       </div>
       <SideBar />
