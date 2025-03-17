@@ -3,6 +3,7 @@ import Footer from '../components/footer';
 import Navbar from '../components/navbar';
 import Checked from '../components/Projects/checked';
 import Portfolio from '../components/Projects/portfolio';
+import PwaMarmiton from '../components/Projects/pwaMarmiton';
 import SpriteCloud from '../components/Projects/spriteCloud';
 
 export default function Page() {
@@ -15,6 +16,8 @@ export default function Page() {
         <Portfolio />
         <div className="my-10">&nbsp;</div>
         <SpriteCloud />
+        <div className="my-10">&nbsp;</div>
+        <PwaMarmiton />
       </section>
       <Contact />
       <Footer />
