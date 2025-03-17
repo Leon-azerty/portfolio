@@ -1,6 +1,7 @@
 'use client';
 
 import useIsClient from '@/app/common/hooks/useIsClient';
+import { cn } from '@/lib/utils';
 import nextjsLogo from '@/public/logo_nextjs.png';
 import reactLogo from '@/public/logo_react.png';
 import tailwindLogo from '@/public/logo_tailwind.png';
@@ -20,7 +21,7 @@ import Badge from '../badge';
 
 function BadgeLine({ className }: { className?: string }) {
   return (
-    <div className={`whitespace-no-wrap mt-4 flex overflow-x-auto ${className}`} /* animate-infinite-left-to-right */>
+    <div className={cn('whitespace-no-wrap mt-4 flex overflow-x-auto', className)} /* animate-infinite-left-to-right */>
       <Badge alt="logo of React" src={reactLogo} text="React" className="bg-react" />
       <Badge alt="logo of Nextjs" src={nextjsLogo} text="Nextjs" className="bg-nextjs" />
       <Badge alt="logo of Neon" src={neon} text="Neon" className="bg-neon" />
@@ -106,8 +107,9 @@ export default function SpriteCloud() {
             </CardHeader>
             <CardContent className="text-pretty">
               I created my first SaaS product, called SpriteCloud, while trying to create my own spritesheets for a game
+              jam.
               <br />
-              jam. After encountering numerous challenges with existing software solutions, I developed my own
+              After encountering numerous challenges with existing software solutions, I developed my own
               <br />
               browser-based tool for creating spritesheets. Starting with a proof of concept, I progressed to an MVP,
               <br />
