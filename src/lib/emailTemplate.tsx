@@ -1,5 +1,4 @@
 import { Body, Container, Head, Heading, Hr, Html, Preview, Tailwind, Text } from '@react-email/components';
-import * as React from 'react';
 
 interface EmailTemplateProps {
   name: string;
@@ -8,7 +7,7 @@ interface EmailTemplateProps {
   message: String;
 }
 
-export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({ name, subject, email, message }) => {
+export const EmailTemplate = ({ name, subject, email, message }: EmailTemplateProps) => {
   const previewText = `${subject}`;
 
   return (

@@ -1,6 +1,6 @@
 'use client';
 
-import { type ThemeProviderProps } from 'next-themes/dist/types';
+import { ThemeProviderProps } from 'next-themes';
 import { createContext, useState } from 'react';
 
 type SidebarContextType = {

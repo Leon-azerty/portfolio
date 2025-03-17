@@ -20,7 +20,7 @@ function CatchLine({ className }: { className: string }) {
 export default function Hero() {
   return (
     <section id="about" className="mt-32 lg:mt-60">
-      <div className="min-w-screen flex items-center justify-around p-4 lg:mt-10 lg:justify-start xl:px-14 2xl:mt-20">
+      <div className="flex min-w-screen items-center justify-around p-4 lg:mt-10 lg:justify-start xl:px-14 2xl:mt-20">
         <HeroImage />
         <div className="right-element ml-2">
           <p className="animate-slidein opacity-0 [--slidein-delay:300ms] md:text-xl lg:min-w-max xl:text-3xl">
@@ -29,7 +29,7 @@ export default function Hero() {
           <p className="animate-slidein opacity-0 [--slidein-delay:300ms] md:text-xl lg:min-w-max xl:text-3xl">
             Web Developper
           </p>
-          <div className="flex animate-slidein flex-wrap items-center opacity-0 [--slidein-delay:500ms]">
+          <div className="animate-slidein flex flex-wrap items-center opacity-0 [--slidein-delay:500ms]">
             <a href="https://github.com/Leon-azerty" target="_blank">
               <GitHubLogoIcon className="m-2 ml-0 h-6 w-6" />
             </a>
@@ -43,7 +43,7 @@ export default function Hero() {
               Resume
             </a>
           </div>
-          <CatchLine className="hidden animate-slidein opacity-0 [--slidein-delay:700ms] lg:block" />
+          <CatchLine className="animate-slidein hidden opacity-0 [--slidein-delay:700ms] lg:block" />
           <Button variant={'cta'} className="animate-slidein opacity-0 [--slidein-delay:700ms]">
             <Link href="#contact">{"Let's Build Together"}</Link>
           </Button>
