@@ -16,8 +16,9 @@ export default function Navbar() {
           <Button
             variant={'cta'}
             className="rounded-lg px-4 py-2 text-center text-sm font-medium focus:ring-4 focus:outline-hidden"
+            asChild
           >
-            Contact me
+            <Link href="/#contact">Contact me</Link>
           </Button>
           <Menu
             onClick={() => {
