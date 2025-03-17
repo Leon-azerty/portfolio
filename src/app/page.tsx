@@ -7,29 +7,21 @@ import Chevron from '@/components/chevron';
 import Contact from '@/components/contact';
 import Footer from '@/components/footer';
 import Line from '@/components/line';
-import SideBar from '@/components/sideBar';
 import Stack from '@/components/stack';
-import { ModeToggle } from './components/ModeToggle';
 
 export default function Home() {
   return (
-    <div className="relative">
-      <main className="px-4 md:px-20 lg:px-28 xl:px-32">
-        <NavBar />
-        <Hero />
-        <Chevron />
-        <Internships />
-        <Line />
-        <Projects />
-        <Experiences />
-        <Stack />
-        <Contact />
-        <Footer />
-      </main>
-      <div className="fixed right-0 bottom-0 p-4">
-        <ModeToggle />
-      </div>
-      <SideBar />
-    </div>
+    <main className="px-4 md:px-20 lg:px-28 xl:px-32">
+      <NavBar />
+      <Hero />
+      <Chevron />
+      <Internships />
+      <Line />
+      <Projects />
+      <Experiences />
+      <Stack />
+      <Contact />
+      <Footer />
+    </main>
   );
 }
