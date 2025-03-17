@@ -54,7 +54,7 @@ export default function Berlin() {
       <Card className="p-4">
         <CardTitle className="flex items-center">
           <Image src={flagGermany} width="30" alt="German's flag" />
-          <p className="ml-2">8 months Berlin</p>
+          <p className="ml-2">8 months in Berlin</p>
         </CardTitle>
         <CardContent className="p-0 pt-4 lg:h-24">
           During my second year in Epitech I had the oppurtinity to study in Berlin
