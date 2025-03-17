@@ -27,7 +27,7 @@ export default function GnConsulting() {
       container.current,
       {
         opacity: 0,
-        x: -offset,
+        x: offset,
       },
       {
         opacity: 1,
@@ -70,7 +70,7 @@ export default function GnConsulting() {
         <Badge alt="logo of Tailwind" src={tailwindLogo} text="Tailwind" className="bg-tailwind" />
       </div>
 
-      <Card className=" h-full">
+      <Card className="h-full">
         <CardHeader className="hidden lg:block">
           <CardTitle className="flex items-center">
             <div className="flex">
