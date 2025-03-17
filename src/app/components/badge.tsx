@@ -1,3 +1,4 @@
+import { cn } from '@/lib/utils';
 import Image, { StaticImageData } from 'next/image';
 
 export default function Badge({
@@ -13,7 +14,10 @@ export default function Badge({
 }) {
   return (
     <div
-      className={`inline-flex items-center rounded-full border border-slate-200 px-2.5 py-0.5 mr-2 text-xs font-semibold transition-colors focus:outline-hidden focus:ring-2 focus:ring-slate-950 focus:ring-offset-2 dark:border-slate-800 dark:focus:ring-slate-300 text-white min-w-max ${className}`}
+      className={cn(
+        'mr-2 inline-flex min-w-max items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold text-white transition-colors focus:ring-2 focus:ring-slate-950 focus:ring-offset-2 focus:outline-hidden dark:border-slate-800 dark:focus:ring-slate-300',
+        className
+      )}
     >
       <Image
         src={src}
@@ -23,7 +27,7 @@ export default function Badge({
           height: 'auto',
         }}
       />
-      <p className="text-white text-lg ml-2">{text}</p>
+      <p className="ml-2 text-lg text-white">{text}</p>
     </div>
   );
 }
