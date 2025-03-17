@@ -1,50 +1,37 @@
 'use client';
 
 import { Button } from '@/ui/button';
+import { Menu } from 'lucide-react';
 import Link from 'next/link';
+import { useContext } from 'react';
+import { SidebarContext } from '../common/sidebar-provider';
 
 export default function Navbar() {
+  let { setIsOpen } = useContext(SidebarContext);
   return (
-    <nav className="fixed start-0 top-0 z-50 w-full border-b bg-background">
+    <nav className="bg-background fixed start-0 top-0 z-50 w-full border-b">
       <div className="mx-auto flex max-w-(--breakpoint-xl) flex-wrap items-center justify-between p-4">
-        <span className="self-center whitespace-nowrap text-2xl font-semibold dark:text-white">Maxime NOEL</span>
-        <div className="flex space-x-3 rtl:space-x-reverse md:order-2 md:space-x-0">
+        <span className="self-center text-2xl font-semibold whitespace-nowrap">Maxime NOEL</span>
+        <div className="flex space-x-3 md:order-2 md:space-x-0 rtl:space-x-reverse">
           <Button
             variant={'cta'}
-            className="rounded-lg px-4 py-2 text-center text-sm font-medium  focus:outline-hidden focus:ring-4 "
+            className="rounded-lg px-4 py-2 text-center text-sm font-medium focus:ring-4 focus:outline-hidden"
           >
             Contact me
           </Button>
-          <button
-            data-collapse-toggle="navbar-sticky"
-            type="button"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-hidden focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 md:hidden"
-            aria-controls="navbar-sticky"
-            aria-expanded="false"
-          >
-            <span className="sr-only">Open main menu</span>
-            <svg
-              className="h-5 w-5"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 17 14"
-            >
-              <path
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M1 1h15M1 7h15M1 13h15"
-              />
-            </svg>
-          </button>
+          <Menu
+            onClick={() => {
+              console.log('ici');
+              setIsOpen((prev) => !prev);
+            }}
+            className="hover:bg-muted inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-sm focus:ring-2 focus:outline-hidden md:hidden"
+          />
         </div>
         <div className="hidden w-full items-center justify-between md:order-1 md:flex md:w-auto" id="navbar-sticky">
-          <ul className="mt-4 flex flex-col rounded-lg border p-4 font-medium rtl:space-x-reverse  md:mt-0 md:flex-row md:space-x-8 md:border-0 ">
+          <ul className="mt-4 flex flex-col rounded-lg border p-4 font-medium md:mt-0 md:flex-row md:space-x-8 md:border-0 rtl:space-x-reverse">
             <li>
               <Link
-                className="block rounded px-3 py-2 hover:text-yellow hover:underline md:bg-transparent md:p-0 "
+                className="hover:text-yellow block rounded px-3 py-2 hover:underline md:bg-transparent md:p-0"
                 aria-current="page"
                 href="#about"
               >
@@ -53,7 +40,7 @@ export default function Navbar() {
             </li>
             <li>
               <Link
-                className="block rounded px-3 py-2 hover:text-yellow hover:underline md:bg-transparent md:p-0 "
+                className="hover:text-yellow block rounded px-3 py-2 hover:underline md:bg-transparent md:p-0"
                 aria-current="page"
                 href="#internships"
               >
@@ -62,7 +49,7 @@ export default function Navbar() {
             </li>
             <li>
               <Link
-                className="block rounded px-3 py-2 hover:text-yellow hover:underline md:bg-transparent md:p-0 "
+                className="hover:text-yellow block rounded px-3 py-2 hover:underline md:bg-transparent md:p-0"
                 aria-current="page"
                 href="#projects"
               >
@@ -71,7 +58,7 @@ export default function Navbar() {
             </li>
             <li>
               <Link
-                className="block rounded px-3 py-2 hover:text-yellow hover:underline md:bg-transparent md:p-0 "
+                className="hover:text-yellow block rounded px-3 py-2 hover:underline md:bg-transparent md:p-0"
                 aria-current="page"
                 href="#experiences"
               >
@@ -80,7 +67,7 @@ export default function Navbar() {
             </li>
             <li>
               <Link
-                className="block rounded px-3 py-2 hover:text-yellow hover:underline md:bg-transparent md:p-0 "
+                className="hover:text-yellow block rounded px-3 py-2 hover:underline md:bg-transparent md:p-0"
                 aria-current="page"
                 href="#stack"
               >
@@ -89,7 +76,7 @@ export default function Navbar() {
             </li>
             <li>
               <Link
-                className="block rounded px-3 py-2 hover:text-yellow hover:underline md:bg-transparent md:p-0 "
+                className="hover:text-yellow block rounded px-3 py-2 hover:underline md:bg-transparent md:p-0"
                 aria-current="page"
                 href="#contact"
               >

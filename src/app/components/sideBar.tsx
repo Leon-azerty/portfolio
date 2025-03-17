@@ -19,11 +19,11 @@ export default function SideBar() {
   let { isOpen, setIsOpen } = useContext(SidebarContext);
   if (!isOpen) return null;
   return (
-    <div className="fixed left-0 top-0 z-50 h-full w-52 border-r-2 border-gray-300 bg-white p-4 pt-6 shadow-2xl dark:bg-[#121212]">
+    <div className="bg-background fixed top-0 left-0 z-50 h-full w-52 border-r-2 p-4 pt-6 shadow-2xl">
       <div className="mb-10 flex items-center justify-between">
         <div>
           <p className="text-lg">Maxime NOËL</p>
-          <p className="italic text-gray-500">Web Developper</p>
+          <p className="text-gray-500 italic">Web Developper</p>
         </div>
         <Button
           variant="outline"
