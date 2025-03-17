@@ -45,7 +45,7 @@ export default function Hero() {
           </div>
           <CatchLine className="animate-slidein hidden opacity-0 [--slidein-delay:700ms] lg:block" />
           <Button variant={'cta'} className="animate-slidein opacity-0 [--slidein-delay:700ms]">
-            <Link href="#contact">{"Let's Build Together"}</Link>
+            <Link href="#contact">Let's Build Together</Link>
           </Button>
         </div>
       </div>
