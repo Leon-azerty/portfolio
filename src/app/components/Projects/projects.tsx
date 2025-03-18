@@ -1,5 +1,5 @@
-import Checked from './checked';
 import Portfolio from './portfolio';
+import PwaMarmiton from './pwaMarmiton';
 import SeeMoreBtn from './seeMoreBtn';
 import SpriteCloud from './spriteCloud';
 
@@ -10,11 +10,11 @@ export default function Projects() {
         <p className="text-4xl">Projects</p>
         <SeeMoreBtn />
       </div>
-      <Checked />
+      <SpriteCloud />
       <div className="my-10">&nbsp;</div>
       <Portfolio />
       <div className="my-10">&nbsp;</div>
-      <SpriteCloud />
+      <PwaMarmiton />
       <div className="flex justify-end">
         <SeeMoreBtn start="90%" />
       </div>

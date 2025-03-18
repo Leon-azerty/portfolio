@@ -83,7 +83,7 @@ export default function SpriteCloud() {
       </div>
 
       <div className="flex flex-col xl:flex-row xl:items-start">
-        <div className="flex justify-center">
+        <div className="flex justify-center xl:min-w-3/12">
           <Image
             alt="screenshot of SpriteCloud"
             src={SpriteCloudImage}
@@ -93,7 +93,7 @@ export default function SpriteCloud() {
             sizes="100vw"
           />
         </div>
-        <div className="flex flex-col xl:ml-4 xl:flex-col-reverse">
+        <div className="flex flex-col xl:ml-4 xl:max-w-7/12 xl:flex-col-reverse">
           <BadgeLine />
 
           <Card className="mt-4 xl:mt-0">

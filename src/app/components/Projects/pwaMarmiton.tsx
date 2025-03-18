@@ -44,7 +44,7 @@ export default function PwaMarmiton() {
       container.current,
       {
         opacity: 0,
-        x: offset,
+        x: -offset,
       },
       {
         opacity: 1,
@@ -78,7 +78,7 @@ export default function PwaMarmiton() {
       </div>
 
       <div className="flex flex-col xl:flex-row xl:items-start">
-        <div className="flex justify-center">
+        <div className="flex justify-center xl:min-w-3/12">
           <Image
             alt="screenshot of PWA - Marmiton"
             src={SpriteCloudImage}
@@ -88,7 +88,7 @@ export default function PwaMarmiton() {
             sizes="100vw"
           />
         </div>
-        <div className="flex flex-col xl:ml-4 xl:flex-col-reverse">
+        <div className="flex flex-col xl:ml-4 xl:max-w-7/12 xl:flex-col-reverse">
           <BadgeLine />
 
           <Card className="mt-4 xl:mt-0">
@@ -101,10 +101,13 @@ export default function PwaMarmiton() {
               </CardDescription>
             </CardHeader>
             <CardContent className="text-pretty">
-              I created my first SaaS product, called SpriteCloud, while trying to create my own spritesheets for a game
+              PWA - Marmiton is a clone of Marmiton. A user can create a recipe and view recipes from other users.
               <br />
-              jam. After encountering numerous challenges with existing software solutions, I developed my own
-              <br />
+              However, it comes with the advantages of a Progressive Web App (PWA), such as advanced cache management,
+              push notifications, and other benefits like having an app icon on the phone and offline functionality.
+              <br /> By using a service worker and Next.js, we achieve very high standards.
+              <br /> In addition to efficient management, Server-Side Rendering (SSR) ensures an optimal user experience
+              with minimal perceived loading time.{' '}
             </CardContent>
           </Card>
         </div>
