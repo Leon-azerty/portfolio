@@ -6,7 +6,7 @@ import reactLogo from '@/public/logo_react.png';
 import supabase from '@/public/logo_supabase.png';
 import tailwindLogo from '@/public/logo_tailwind.png';
 import typescriptLogo from '@/public/logo_typescript.png';
-import SpriteCloudImage from '@/public/spritecloud.png';
+import PWAMarmiton from '@/public/PWAMarmiton.png';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/ui/card';
 import { useGSAP } from '@gsap/react';
 import { ExternalLinkIcon } from '@radix-ui/react-icons';
@@ -81,7 +81,7 @@ export default function PwaMarmiton() {
         <div className="flex justify-center xl:min-w-3/12">
           <Image
             alt="screenshot of PWA - Marmiton"
-            src={SpriteCloudImage}
+            src={PWAMarmiton}
             width={100}
             height={100}
             className="w-80 rounded-2xl sm:w-[500px] md:w-[550px] lg:w-[650px] xl:w-[700px] 2xl:w-[800px]"
