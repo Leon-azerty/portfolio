@@ -177,7 +177,7 @@ export default function Contact() {
             </div>
           </form>
         </Form>
-        <div className="bg-background relative hidden h-[650px] w-[650px] flex-col items-center justify-center overflow-hidden rounded-lg md:flex">
+        <div className="bg-background relative hidden h-[650px] w-[650px] flex-col items-center justify-center overflow-hidden rounded-lg lg:flex">
           <HyperText className="text-foreground z-10 text-center text-5xl font-medium tracking-tighter whitespace-pre-wrap">
             Contact
           </HyperText>
