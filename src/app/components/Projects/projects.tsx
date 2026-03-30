@@ -5,7 +5,7 @@ import SpriteCloud from './spriteCloud';
 
 export default function Projects() {
   return (
-    <section id="projects" className="overflow-hidden">
+    <section id="projects" className="overflow-hidden pt-32">
       <div className="flex items-end space-x-2">
         <p className="text-4xl">Projects</p>
         <SeeMoreBtn />

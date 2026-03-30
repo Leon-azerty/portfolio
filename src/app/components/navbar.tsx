@@ -22,7 +22,6 @@ export default function Navbar() {
           </Button>
           <Menu
             onClick={() => {
-              console.log('ici');
               setIsOpen((prev) => !prev);
             }}
             className="hover:bg-muted inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-sm focus:ring-2 focus:outline-hidden md:hidden"
@@ -34,7 +33,7 @@ export default function Navbar() {
               <Link
                 className="hover:text-yellow block rounded px-3 py-2 hover:underline md:bg-transparent md:p-0"
                 aria-current="page"
-                href="#about"
+                href="/#about"
               >
                 About
               </Link>
@@ -43,7 +42,7 @@ export default function Navbar() {
               <Link
                 className="hover:text-yellow block rounded px-3 py-2 hover:underline md:bg-transparent md:p-0"
                 aria-current="page"
-                href="#internships"
+                href="/#internships"
               >
                 Internships
               </Link>
@@ -52,7 +51,7 @@ export default function Navbar() {
               <Link
                 className="hover:text-yellow block rounded px-3 py-2 hover:underline md:bg-transparent md:p-0"
                 aria-current="page"
-                href="#projects"
+                href="/#projects"
               >
                 Projects
               </Link>
@@ -61,7 +60,7 @@ export default function Navbar() {
               <Link
                 className="hover:text-yellow block rounded px-3 py-2 hover:underline md:bg-transparent md:p-0"
                 aria-current="page"
-                href="#experiences"
+                href="/#experiences"
               >
                 Experiences
               </Link>
@@ -70,7 +69,7 @@ export default function Navbar() {
               <Link
                 className="hover:text-yellow block rounded px-3 py-2 hover:underline md:bg-transparent md:p-0"
                 aria-current="page"
-                href="#stack"
+                href="/#stack"
               >
                 Stack
               </Link>
@@ -79,7 +78,7 @@ export default function Navbar() {
               <Link
                 className="hover:text-yellow block rounded px-3 py-2 hover:underline md:bg-transparent md:p-0"
                 aria-current="page"
-                href="#contact"
+                href="/#contact"
               >
                 Contact
               </Link>

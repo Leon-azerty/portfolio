@@ -5,7 +5,7 @@ import Viapix from './viapix';
 
 export default function Internships() {
   return (
-    <section className="z-20 mt-96 min-h-fit" id="internships">
+    <section className="z-20 mt-64 pt-32 min-h-fit" id="internships">
       <p className="text-4xl">Internships</p>
       <div className="lg:grid lg:grid-cols-2 lg:gap-4">
         <Piwio />
